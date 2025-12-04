@@ -1,6 +1,6 @@
 import SectionCard from '../components/SectionCard.jsx';
 import photoGarden from '../../Desherbage-et-Tonte.png.webp';
-import photoDisinfection from '../../désinfectation.png.avif';
+import photoDisinfection from '../../desinfection.png.avif';
 import photoCleaning from '../../tailhait.jpg';
 
 function Home() {
