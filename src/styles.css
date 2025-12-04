@@ -191,18 +191,22 @@ body.is-scrolled .navbar-inner {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
 }
 
 .brand-logo {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  background: transparent;
+  box-shadow: none;
 }
 
 .brand-logo-small {
@@ -227,11 +231,13 @@ body.is-scrolled .navbar-inner {
   font-weight: 800;
   letter-spacing: 0.08em;
   font-size: 18px;
+  color: var(--welki-blue-deep);
 }
 
 .brand-tagline {
   font-size: 12px;
-  opacity: 0.85;
+  opacity: 0.9;
+  color: var(--welki-green);
 }
 
 .nav-links {

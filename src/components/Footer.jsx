@@ -4,7 +4,7 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <div className="brand-logo brand-logo-small">
-            <img src="/logo.png" alt="Logo Welki" className="brand-logo-img" />
+            <img src="/welki.png" alt="Logo Welki" className="brand-logo-img" />
           </div>
           <div>
             <p className="footer-title">WELKI</p>

@@ -6,7 +6,7 @@ function Navbar() {
       <div className="navbar-inner">
         <div className="brand">
           <div className="brand-logo">
-            <img src="/logo.png" alt="Logo Welki" className="brand-logo-img" />
+            <img src="/welki.png" alt="Logo Welki" className="brand-logo-img" />
           </div>
           <div className="brand-text">
             <span className="brand-name">WELKI</span>
