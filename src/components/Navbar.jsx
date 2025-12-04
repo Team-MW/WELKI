@@ -5,7 +5,9 @@ function Navbar() {
     <header className="navbar">
       <div className="navbar-inner">
         <div className="brand">
-          <div className="brand-logo">W</div>
+          <div className="brand-logo">
+            <img src="/logo.png" alt="Logo Welki" className="brand-logo-img" />
+          </div>
           <div className="brand-text">
             <span className="brand-name">WELKI</span>
             <span className="brand-tagline">Hygiène & Services 3D</span>
@@ -37,6 +39,9 @@ function Navbar() {
             Devis / Contact
           </NavLink>
         </nav>
+      </div>
+      <div className="scroll-progress">
+        <div className="scroll-progress-bar" />
       </div>
     </header>
   );

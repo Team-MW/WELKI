@@ -1,4 +1,7 @@
 import SectionCard from '../components/SectionCard.jsx';
+import photoGarden from '../../Desherbage-et-Tonte.png.webp';
+import photoDisinfection from '../../désinfectation.png.avif';
+import photoCleaning from '../../tailhait.jpg';
 
 function Home() {
   return (
@@ -29,20 +32,27 @@ function Home() {
             <span>Interventions rapides</span>
           </div>
         </div>
-        <div className="hero-panel">
-          <div className="hero-panel-card">
-            <p className="hero-panel-title">Intervention 3D</p>
-            <p className="hero-panel-text">
-              Dératisation, désinsectisation, désinfection dans les habitats,
-              locaux professionnels et copropriétés.
-            </p>
+      </section>
+
+      <section className="home-bubbles">
+        <div className="home-bubbles-wrap">
+          <div className="home-bubble home-bubble-main">
+            <img
+              src={photoDisinfection}
+              alt="Intervention de désinfection par une équipe Welki"
+            />
           </div>
-          <div className="hero-panel-card hero-panel-accent">
-            <p className="hero-panel-title">Élagage & entretien</p>
-            <p className="hero-panel-text">
-              Tonte, taille, désherbage, remise en état avant/après location et
-              fin de chantier.
-            </p>
+          <div className="home-bubble home-bubble-top">
+            <img
+              src={photoGarden}
+              alt="Élagage, tonte et désherbage réalisés par Welki"
+            />
+          </div>
+          <div className="home-bubble home-bubble-bottom">
+            <img
+              src={photoCleaning}
+              alt="Nettoyage et entretien de locaux par Welki"
+            />
           </div>
         </div>
       </section>
@@ -83,6 +93,108 @@ function Home() {
           <li>Désinfection complète des surfaces.</li>
         </ul>
       </SectionCard>
+
+      <section className="home-why">
+        <div className="home-why-header">
+          <span className="page-kicker">Pourquoi choisir WELKI ?</span>
+          <h2>
+            Un partenaire unique pour la propreté, la sécurité et l&apos;image de vos sites.
+          </h2>
+        </div>
+        <div className="home-why-grid">
+          <div className="home-why-item">
+            <div className="home-why-icon">01</div>
+            <h3>Expertise certifiée</h3>
+            <p>
+              Techniciens <strong>certifiés Certibiocide</strong>, protocoles mis à jour
+              et interventions tracées pour les particuliers, pros et collectivités.
+            </p>
+          </div>
+          <div className="home-why-item">
+            <div className="home-why-icon">02</div>
+            <h3>Réactivité & transparence</h3>
+            <p>
+              Diagnostic rapide, devis clair avant toute intervention et compte-rendu
+              détaillé à la fin de la prestation.
+            </p>
+          </div>
+          <div className="home-why-item">
+            <div className="home-why-icon">03</div>
+            <h3>Accompagnement sur-mesure</h3>
+            <p>
+              Solutions adaptées à vos contraintes (horaires, accès, budget) et
+              <strong> suivi possible toute l&apos;année</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-process">
+        <div className="home-process-header">
+          <span className="page-kicker">Notre méthode</span>
+          <h2>Un déroulé d&apos;intervention simple et rassurant</h2>
+        </div>
+        <ol className="home-process-steps">
+          <li className="home-process-step">
+            <span className="home-process-step-number">1</span>
+            <div>
+              <h3>Prise de contact</h3>
+              <p>
+                Vous nous expliquez votre situation par téléphone, e-mail ou via le
+                formulaire de devis.
+              </p>
+            </div>
+          </li>
+          <li className="home-process-step">
+            <span className="home-process-step-number">2</span>
+            <div>
+              <h3>Diagnostic & devis</h3>
+              <p>
+                Nous réalisons un diagnostic (sur place ou à distance) et vous envoyons
+                un devis détaillé et sans surprise.
+              </p>
+            </div>
+          </li>
+          <li className="home-process-step">
+            <span className="home-process-step-number">3</span>
+            <div>
+              <h3>Intervention</h3>
+              <p>
+                Mise en place des traitements ou opérations d&apos;élagage / nettoyage,
+                dans le respect des règles de sécurité.
+              </p>
+            </div>
+          </li>
+          <li className="home-process-step">
+            <span className="home-process-step-number">4</span>
+            <div>
+              <h3>Suivi & conseils</h3>
+              <p>
+                Conseils de prévention, possibilité de contrats de suivi et
+                disponibilités en cas de nouvelle urgence.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section className="home-cta-banner">
+        <div className="home-cta-text">
+          <h2>Besoin d&apos;une intervention rapide ou d&apos;un devis ?</h2>
+          <p>
+            Contactez-nous dès maintenant : une équipe WELKI revient vers vous
+            rapidement pour sécuriser vos locaux et vos espaces.
+          </p>
+        </div>
+        <div className="home-cta-actions">
+          <a href="/contact" className="btn btn-primary">
+            Demander un devis en ligne
+          </a>
+          <a href="tel:0608070696" className="btn btn-outline">
+            Appeler le 06.08.07.06.96
+          </a>
+        </div>
+      </section>
     </div>
   );
 }

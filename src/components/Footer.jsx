@@ -3,7 +3,9 @@ function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <div className="brand-logo brand-logo-small">W</div>
+          <div className="brand-logo brand-logo-small">
+            <img src="/logo.png" alt="Logo Welki" className="brand-logo-img" />
+          </div>
           <div>
             <p className="footer-title">WELKI</p>
             <p className="footer-subtitle">
@@ -18,8 +20,16 @@ function Footer() {
             <p>welki@gmail.com</p>
           </div>
           <div>
-            <p className="footer-heading">Zones d&apos;intervention</p>
-            <p>Île-de-France et alentours</p>
+            <p className="footer-heading">Liens utiles</p>
+            <p>
+              <a href="/">Accueil</a>
+            </p>
+            <p>
+              <a href="/services">Nos services</a>
+            </p>
+            <p>
+              <a href="/contact">Devis / Contact</a>
+            </p>
           </div>
           <div>
             <p className="footer-heading">Horaires</p>
@@ -29,6 +39,12 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} WELKI. Tous droits réservés.</p>
+        <p className="footer-credit">
+          Réalisé par{' '}
+          <a href="https://microdidact.com/" target="_blank" rel="noopener noreferrer">
+            Microdidact
+          </a>
+        </p>
       </div>
     </footer>
   );
