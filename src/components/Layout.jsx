@@ -1,69 +1,68 @@
-import { useEffect } from 'react';
-import Navbar from './Navbar.jsx';
-import Footer from './Footer.jsx';
-import WhatsAppButton from './WhatsAppButton.jsx';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Header from './Header';
+import { motion } from 'framer-motion';
 
-function Layout({ children }) {
-  useEffect(() => {
-    const root = document.documentElement;
+const Layout = ({ children, title, description }) => {
+    return (
+        <div className="flex flex-col min-h-screen">
+            <Helmet>
+                <title>{title ? `${title} | Welki2` : 'Welki2 - Modern Web Development'}</title>
+                <meta name="description" content={description || "Votre partenaire pour le développement web moderne."} />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Helmet>
 
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? scrollTop / docHeight : 0;
-      root.style.setProperty('--scroll-progress', String(progress));
+            <Header />
 
-      document.body.classList.toggle('is-scrolled', scrollTop > 32);
-      document.body.classList.toggle('show-scroll-top', scrollTop > 360);
-    };
+            <motion.main
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.3 }}
+                className="flex-grow pt-16"
+            >
+                {children}
+            </motion.main>
 
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
+            <footer className="bg-gray-900 text-white py-12 border-t-4 border-welki-green">
+                <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center md:text-left">
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('scroll-reveal-visible');
-          }
-        });
-      },
-      { threshold: 0.18 }
+                    <div>
+                        <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+                            <div className="text-2xl font-black text-white">WELKI</div>
+                        </div>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Votre expert certifié Certibiocide pour l'hygiène 3D (dératisation, désinsectisation, désinfection),
+                            l'entretien des espaces verts et le nettoyage professionnel.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-bold mb-4 text-welki-green uppercase tracking-wider">Contact</h4>
+                        <ul className="space-y-2 text-gray-300">
+                            <li>📞 06.08.07.06.96</li>
+                            <li>✉️ WELKI@GMAIL.COM</li>
+                            <li>📍 Intervention Rapide</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-bold mb-4 text-welki-green uppercase tracking-wider">Nos Services</h4>
+                        <ul className="space-y-2 text-gray-300">
+                            <li>• Dératisation & Désinsectisation</li>
+                            <li>• Élagage & Espaces Verts</li>
+                            <li>• Nettoyage & Entretien</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div className="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
+                    <p>&copy; {new Date().getFullYear()} Welki. Tous droits réservés.</p>
+                    <a href="/mentions-legales" className="hover:text-white transition-colors mt-2 md:mt-0">Mentions Légales</a>
+                </div>
+            </footer >
+        </div >
     );
-
-    document
-      .querySelectorAll('.scroll-reveal')
-      .forEach((el) => observer.observe(el));
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      observer.disconnect();
-    };
-  }, []);
-
-  const handleScrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  return (
-    <div className="app-shell">
-      <Navbar />
-      <main className="main-content">{children}</main>
-      <Footer />
-      <WhatsAppButton />
-      <button
-        type="button"
-        className="scroll-top-button"
-        onClick={handleScrollTop}
-        aria-label="Revenir en haut de la page"
-      >
-        ↑
-      </button>
-    </div>
-  );
-}
+};
 
 export default Layout;
-
-
