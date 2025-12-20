@@ -57,8 +57,13 @@ const Layout = ({ children, title, description }) => {
 
                 </div>
                 <div className="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
-                    <p>&copy; {new Date().getFullYear()} Welki. Tous droits réservés.</p>
-                    <a href="/mentions-legales" className="hover:text-white transition-colors mt-2 md:mt-0">Mentions Légales</a>
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                        <p>&copy; {new Date().getFullYear()} Welki. Tous droits réservés.</p>
+                        <a href="/mentions-legales" className="hover:text-white transition-colors">Mentions Légales</a>
+                    </div>
+                    <div className="mt-4 md:mt-0 font-medium">
+                        Développé par <a href="https://microdidact.com/" target="_blank" rel="noopener noreferrer" className="text-welki-green font-bold hover:underline transition-all">Microdidact</a>
+                    </div>
                 </div>
             </footer >
         </div >

@@ -13,21 +13,21 @@ const Services = ({ defaultTab }) => {
             title: "Dératisation, Désinsectisation & Désinfection",
             description: "Nous utilisons des méthodes certifiées pour éradiquer tout type de nuisibles tout en préservant votre sécurité.",
             bgClass: "bg-gray-950",
-            textClass: "text-blue-400",
+            textClass: "text-[#E71D36]",
             descClass: "text-gray-300"
         },
         'green': {
             title: "Élagage & Entretien de Jardin",
             description: "Nos paysagistes interviennent pour la taille, l'abattage et l'entretien régulier de vos extérieurs.",
             bgClass: "bg-gray-950",
-            textClass: "text-green-400",
+            textClass: "text-[#037971]",
             descClass: "text-gray-300"
         },
         'clean': {
             title: "Entretien & Nettoyage Pro",
             description: "Services de nettoyage pour copropriétés, bureaux et fin de chantier.",
             bgClass: "bg-gray-950",
-            textClass: "text-gray-200",
+            textClass: "text-[#0241cd]",
             descClass: "text-gray-300"
         }
     };
@@ -57,7 +57,7 @@ const Services = ({ defaultTab }) => {
                     <Section id="3d">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/40 text-blue-300 font-bold text-sm mb-4 border border-blue-800">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E71D36]/10 text-[#E71D36] font-bold text-sm mb-4 border border-[#E71D36]/30">
                                     <ShieldAlert size={16} /> HYGIÈNE 3D
                                 </div>
                                 <h2 className="text-3xl font-bold text-white mb-6">Dératisation, Désinsectisation & Désinfection</h2>
@@ -67,7 +67,7 @@ const Services = ({ defaultTab }) => {
 
                                 <div className="space-y-6">
                                     <div className="flex gap-4">
-                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-blue-400 border border-gray-800">
+                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-[#E71D36] border border-gray-800">
                                             <Rat />
                                         </div>
                                         <div>
@@ -76,7 +76,7 @@ const Services = ({ defaultTab }) => {
                                         </div>
                                     </div>
                                     <div className="flex gap-4">
-                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-blue-400 border border-gray-800">
+                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-[#E71D36] border border-gray-800">
                                             <Bug />
                                         </div>
                                         <div>
@@ -85,7 +85,7 @@ const Services = ({ defaultTab }) => {
                                         </div>
                                     </div>
                                     <div className="flex gap-4">
-                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-blue-400 border border-gray-800">
+                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-[#E71D36] border border-gray-800">
                                             <Droplets />
                                         </div>
                                         <div>
@@ -97,7 +97,7 @@ const Services = ({ defaultTab }) => {
                             </div>
                             <div className="h-full min-h-[400px] bg-gray-900 rounded-3xl overflow-hidden shadow-2xl relative border border-gray-800">
                                 {/* Placeholder for Pest Control Image */}
-                                <div className="absolute inset-0 bg-blue-900/10 flex items-center justify-center text-blue-500 font-bold">
+                                <div className="absolute inset-0 bg-[#E71D36]/10 flex items-center justify-center text-[#E71D36] font-bold">
                                     IMAGE INTERVENTION 3D
                                 </div>
                             </div>
@@ -111,12 +111,12 @@ const Services = ({ defaultTab }) => {
                         <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
                             <div className="order-2 md:order-1 h-full min-h-[400px] bg-gray-900 rounded-3xl overflow-hidden shadow-2xl relative border border-gray-800">
                                 {/* Placeholder for Gardening Image */}
-                                <div className="absolute inset-0 bg-green-900/10 flex items-center justify-center text-green-500 font-bold">
+                                <div className="absolute inset-0 bg-[#037971]/10 flex items-center justify-center text-[#037971] font-bold">
                                     IMAGE JARDIN / ÉLAGAGE
                                 </div>
                             </div>
                             <div className="order-1 md:order-2">
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-900/40 text-green-300 font-bold text-sm mb-4 border border-green-800">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#037971]/10 text-[#037971] font-bold text-sm mb-4 border border-[#037971]/30">
                                     <Leaf size={16} /> ESPACES VERTS
                                 </div>
                                 <h2 className="text-3xl font-bold text-white mb-6">Élagage & Entretien de Jardin</h2>
@@ -126,7 +126,7 @@ const Services = ({ defaultTab }) => {
 
                                 <div className="space-y-6">
                                     <div className="flex gap-4">
-                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-green-400 border border-gray-800">
+                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-[#037971] border border-gray-800">
                                             <Scissors />
                                         </div>
                                         <div>
@@ -135,7 +135,7 @@ const Services = ({ defaultTab }) => {
                                         </div>
                                     </div>
                                     <div className="flex gap-4">
-                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-green-400 border border-gray-800">
+                                        <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-[#037971] border border-gray-800">
                                             <Ruler />
                                         </div>
                                         <div>
@@ -154,7 +154,7 @@ const Services = ({ defaultTab }) => {
                     <Section id="clean">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-800 text-gray-300 font-bold text-sm mb-4 border border-gray-700">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0241cd]/10 text-[#0241cd] font-bold text-sm mb-4 border border-[#0241cd]/30">
                                     <Sparkles size={16} /> NETTOYAGE
                                 </div>
                                 <h2 className="text-3xl font-bold text-white mb-6">Entretien & Nettoyage Pro</h2>
@@ -172,7 +172,7 @@ const Services = ({ defaultTab }) => {
                                         "Shampouinage moquettes"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-center text-gray-300">
-                                            <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
+                                            <div className="w-2 h-2 bg-[#0241cd] rounded-full mr-3"></div>
                                             {item}
                                         </li>
                                     ))}
@@ -180,7 +180,7 @@ const Services = ({ defaultTab }) => {
                             </div>
                             <div className="h-full min-h-[400px] bg-gray-900 rounded-3xl overflow-hidden shadow-2xl relative border border-gray-800">
                                 {/* Placeholder for Cleaning Image */}
-                                <div className="absolute inset-0 bg-gray-800/50 flex items-center justify-center text-gray-400 font-bold">
+                                <div className="absolute inset-0 bg-[#0241cd]/10 flex items-center justify-center text-[#0241cd] font-bold">
                                     IMAGE NETTOYAGE
                                 </div>
                             </div>

@@ -9,9 +9,9 @@ const Header = () => {
 
     const links = [
         { name: 'Accueil', path: '/' },
-        { name: 'Nettoyage', path: '/nettoyage' },
         { name: 'Hygiène 3D', path: '/hygiene-3d' },
         { name: 'Espaces Verts', path: '/espaces-verts' },
+        { name: 'Nettoyage', path: '/nettoyage' },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -21,33 +21,33 @@ const Header = () => {
         switch (location.pathname) {
             case '/hygiene-3d':
                 return {
-                    main: 'text-blue-400',
-                    bg: 'bg-blue-900',
-                    border: 'border-blue-700',
-                    hoverText: 'hover:text-blue-300',
-                    activeBorder: 'border-blue-400',
-                    mobileActive: 'bg-blue-900',
-                    shadow: 'shadow-blue-900/40'
+                    main: 'text-[#E71D36]',
+                    bg: 'bg-[#E71D36]',
+                    border: 'border-[#E71D36]',
+                    hoverText: 'hover:text-[#ff4d63]',
+                    activeBorder: 'border-[#E71D36]',
+                    mobileActive: 'bg-[#E71D36]',
+                    shadow: 'shadow-[#E71D36]/40'
                 };
             case '/espaces-verts':
                 return {
-                    main: 'text-green-400',
-                    bg: 'bg-green-900',
-                    border: 'border-green-700',
-                    hoverText: 'hover:text-green-300',
-                    activeBorder: 'border-green-400',
-                    mobileActive: 'bg-green-900',
-                    shadow: 'shadow-green-900/40'
+                    main: 'text-[#037971]',
+                    bg: 'bg-[#037971]',
+                    border: 'border-[#037971]',
+                    hoverText: 'hover:text-[#04a096]',
+                    activeBorder: 'border-[#037971]',
+                    mobileActive: 'bg-[#037971]',
+                    shadow: 'shadow-[#037971]/40'
                 };
             case '/nettoyage':
                 return {
-                    main: 'text-gray-300',
-                    bg: 'bg-gray-800',
-                    border: 'border-gray-600',
-                    hoverText: 'hover:text-white',
-                    activeBorder: 'border-white',
-                    mobileActive: 'bg-gray-800',
-                    shadow: 'shadow-gray-900/40'
+                    main: 'text-[#0241cd]',
+                    bg: 'bg-[#0241cd]',
+                    border: 'border-[#0241cd]',
+                    hoverText: 'hover:text-[#3366ff]',
+                    activeBorder: 'border-[#0241cd]',
+                    mobileActive: 'bg-[#0241cd]',
+                    shadow: 'shadow-[#0241cd]/40'
                 };
             default:
                 return {

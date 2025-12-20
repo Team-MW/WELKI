@@ -46,7 +46,7 @@ const Contact = () => {
                                     <a href="tel:0608070696" className="text-2xl font-bold text-white hover:text-welki-green transition-colors">
                                         06.08.07.06.96
                                     </a>
-                                    <p className="text-sm text-green-400 font-medium mt-1 flex items-center">
+                                    <p className="text-sm text-welki-green font-medium mt-1 flex items-center">
                                         <CheckCircle size={12} className="mr-1" /> Disponible 7j/7 pour urgences
                                     </p>
                                 </div>

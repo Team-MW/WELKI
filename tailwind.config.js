@@ -9,7 +9,7 @@ export default {
       colors: {
         welki: {
           blue: '#0056b3', // Royal Blue from logo/headers
-          green: '#28a745', // Green from nature/gardening text
+          green: '#037971', // Green from nature/gardening text
           'light-blue': '#e6f0ff', // Light background accents
           'dark-blue': '#003d80',
         }
