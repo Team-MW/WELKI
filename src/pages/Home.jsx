@@ -13,100 +13,96 @@ const Home = () => {
         <Layout title="Accueil">
             <div className="bg-gray-950 min-h-screen text-white">
 
-                {/* 1. HERO SECTION - 3 Diagonal Parts */}
-                <section className="relative min-h-[95vh] pt-20 md:pt-0 flex flex-col md:flex-row overflow-hidden bg-gray-950">
+                {/* 1. HERO SECTION - 3 Diagonal Parts - Mobile Optimized as Columns */}
+                <section className="relative h-[50vh] md:h-[95vh] flex flex-row overflow-hidden bg-gray-950">
 
-                    {/* Global Mobile Heading (Visible only on mobile/small screens) */}
-                    <div className="md:hidden pt-24 pb-8 px-4 text-center bg-gray-950 z-10">
-                        <h1 className="text-4xl font-black text-white mb-2">WELKI</h1>
-                        <p className="text-xl text-gray-400 font-bold">Votre Expert Multi-Services</p>
-                    </div>
+                    {/* Global Mobile Heading REMOVED as per request to match desktop layout */}
 
                     {/* Section 1: HYGIÈNE 3D */}
-                    <Link to="/hygiene-3d" className="relative group flex-1 min-h-[33vh] md:min-h-screen md:-ms-16 md:skew-x-[-12deg] overflow-hidden border-r-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer">
+                    <Link to="/hygiene-3d" className="relative group flex-1 h-full overflow-hidden border-r-2 md:border-r-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer">
                         {/* Background */}
                         <div className="absolute inset-0 bg-[#003d80] group-hover:bg-[#002f63] transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-blue-400/20 to-transparent"></div>
 
-                        {/* Content (Unskewed) */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:skew-x-[12deg] p-8 text-center">
+                        {/* Content (No Skew) */}
+                        <div className="absolute inset-0 flex flex-col justify-center items-center p-1 text-center">
                             <motion.div
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.1 }}
-                                className="bg-white/10 p-6 rounded-full backdrop-blur-sm mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
+                                className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-2 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
-                                <ShieldCheck size={48} className="text-white" />
+                                <ShieldCheck className="text-white w-6 h-6 md:w-12 md:h-12" />
                             </motion.div>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 uppercase tracking-tighter shadow-black drop-shadow-lg">
+                            <h2 className="text-xs md:text-5xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight">
                                 Hygiène <br /><span className="text-blue-300">3D</span>
                             </h2>
-                            <ul className="text-blue-100 text-sm md:text-lg font-medium space-y-1 opacity-90">
+                            <ul className="hidden md:block text-blue-100 text-lg font-medium space-y-1 opacity-90">
                                 <li>Dératisation</li>
                                 <li>Désinsectisation</li>
                                 <li>Désinfection</li>
                             </ul>
-                            <div className="mt-8 px-6 py-2 bg-white text-[#003d80] font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <div className="hidden md:block mt-8 px-6 py-2 bg-white text-[#003d80] font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                 En savoir plus
                             </div>
                         </div>
                     </Link>
 
                     {/* Section 2: ESPACES VERTS */}
-                    <Link to="/espaces-verts" className="relative group flex-1 min-h-[33vh] md:min-h-screen md:-ms-8 md:skew-x-[-12deg] overflow-hidden border-r-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-10">
+                    <Link to="/espaces-verts" className="relative group flex-1 h-full overflow-hidden border-r-2 md:border-r-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-10">
                         {/* Background */}
                         <div className="absolute inset-0 bg-welki-green group-hover:bg-green-700 transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-300/20 to-transparent"></div>
 
-                        {/* Content (Unskewed) */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:skew-x-[12deg] p-8 text-center pt-12 md:pt-8">
+                        {/* Content (No Skew) */}
+                        <div className="absolute inset-0 flex flex-col justify-center items-center p-1 text-center pt-8">
                             <motion.div
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.2 }}
-                                className="bg-white/10 p-6 rounded-full backdrop-blur-sm mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
+                                className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-2 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
-                                <TreePine size={48} className="text-white" />
+                                <TreePine className="text-white w-6 h-6 md:w-12 md:h-12" />
                             </motion.div>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-lg">
+                            <h2 className="text-xs md:text-5xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
                                 Espaces <br /><span className="text-green-200">Verts</span>
                             </h2>
-                            <ul className="text-green-50 text-sm md:text-lg font-medium space-y-1 opacity-90">
+                            <ul className="hidden md:block text-green-50 text-lg font-medium space-y-1 opacity-90">
                                 <li>Élagage</li>
                                 <li>Entretien Jardin</li>
                                 <li>Paysagisme</li>
                             </ul>
-                            <div className="mt-8 px-6 py-2 bg-white text-welki-green font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <div className="hidden md:block mt-8 px-6 py-2 bg-white text-welki-green font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                 En savoir plus
                             </div>
                         </div>
                     </Link>
 
                     {/* Section 3: NETTOYAGE */}
-                    <Link to="/nettoyage" className="relative group flex-1 min-h-[33vh] md:min-h-screen md:-me-16 md:skew-x-[-12deg] overflow-hidden hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-0">
+                    <Link to="/nettoyage" className="relative group flex-1 h-full overflow-hidden hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-0">
                         {/* Background */}
                         <div className="absolute inset-0 bg-slate-700 group-hover:bg-slate-800 transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-gray-500/20 to-transparent"></div>
 
-                        {/* Content (Unskewed) */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:skew-x-[12deg] p-8 text-center ps-12 md:ps-8">
+                        {/* Content (No Skew) */}
+                        <div className="absolute inset-0 flex flex-col justify-center items-center p-1 text-center ps-4 md:ps-8">
                             <motion.div
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.3 }}
-                                className="bg-white/10 p-6 rounded-full backdrop-blur-sm mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
+                                className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-2 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
-                                <Sparkles size={48} className="text-white" />
+                                <Sparkles className="text-white w-6 h-6 md:w-12 md:h-12" />
                             </motion.div>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-lg">
+                            <h2 className="text-xs md:text-5xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
                                 Nettoyage <br /><span className="text-gray-300">Pro</span>
                             </h2>
-                            <ul className="text-gray-200 text-sm md:text-lg font-medium space-y-1 opacity-90">
+                            <ul className="hidden md:block text-gray-200 text-lg font-medium space-y-1 opacity-90">
                                 <li>Bureaux</li>
                                 <li>Immeubles</li>
                                 <li>Fin de chantier</li>
                             </ul>
-                            <div className="mt-8 px-6 py-2 bg-white text-slate-700 font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <div className="hidden md:block mt-8 px-6 py-2 bg-white text-slate-700 font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                 En savoir plus
                             </div>
                         </div>
@@ -121,7 +117,7 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+                            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center"
                         >
                             {[
                                 { text: "Intervention 7j/7", icon: <CheckCircle2 /> },
@@ -273,8 +269,8 @@ const Home = () => {
                 </Section>
 
                 {/* 4. ABOUT / TRUST SECTION - Glassmorphism & Modern Layout */}
-                <section className="py-24 bg-gray-950 relative overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16 relative z-10">
+                <section className="py-16 md:py-24 bg-gray-950 relative overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -409,7 +405,7 @@ const Home = () => {
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="min-w-[300px] md:min-w-[350px] bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-800 flex flex-col snap-center hover:shadow-md transition-shadow"
+                                    className="min-w-[85vw] md:min-w-[350px] bg-gray-900 p-6 md:p-8 rounded-3xl shadow-sm border border-gray-800 flex flex-col snap-center hover:shadow-md transition-shadow"
                                 >
                                     <div className="flex text-yellow-400 mb-4 text-sm gap-1">
                                         {[...Array(review.stars)].map((_, i) => <Star key={i} size={16} fill="currentColor" strokeWidth={0} />)}
