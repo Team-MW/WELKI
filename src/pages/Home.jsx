@@ -13,31 +13,31 @@ const Home = () => {
         <Layout title="Accueil">
             <div className="bg-gray-950 min-h-screen text-white">
 
-                {/* 1. HERO SECTION - 3 Diagonal Parts - Mobile Optimized as Columns */}
+                {/* 1. HERO SECTION - Triangle 'W' Layout */}
                 <section className="relative h-[50vh] md:h-[95vh] flex flex-row overflow-hidden bg-gray-950">
 
                     {/* Global Mobile Heading REMOVED as per request to match desktop layout */}
 
-                    {/* Section 1: HYGIÈNE 3D */}
-                    <Link to="/hygiene-3d" className="relative group flex-1 h-full overflow-hidden border-r-2 md:border-r-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer">
+                    {/* Section 1: HYGIÈNE 3D - Skewed Right (/) */}
+                    <Link to="/hygiene-3d" className="relative group flex-1 h-full skew-x-[12deg] overflow-hidden border-r-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-10 -me-12 origin-top">
                         {/* Background */}
                         <div className="absolute inset-0 bg-[#003d80] group-hover:bg-[#002f63] transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-blue-400/20 to-transparent"></div>
 
-                        {/* Content (No Skew) */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center p-1 text-center">
+                        {/* Content (Counter-Skew) */}
+                        <div className="absolute inset-0 flex flex-col justify-center items-center skew-x-[-12deg] p-1 text-center scale-110">
                             <motion.div
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.1 }}
                                 className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-2 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
-                                <ShieldCheck className="text-white w-6 h-6 md:w-12 md:h-12" />
+                                <ShieldCheck className="text-white w-6 h-6 md:w-16 md:h-16" />
                             </motion.div>
                             <h2 className="text-xs md:text-5xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight">
                                 Hygiène <br /><span className="text-blue-300">3D</span>
                             </h2>
-                            <ul className="hidden md:block text-blue-100 text-lg font-medium space-y-1 opacity-90">
+                            <ul className="hidden md:block text-blue-100 text-lg font-medium space-y-2 opacity-90">
                                 <li>Dératisation</li>
                                 <li>Désinsectisation</li>
                                 <li>Désinfection</li>
@@ -48,26 +48,26 @@ const Home = () => {
                         </div>
                     </Link>
 
-                    {/* Section 2: ESPACES VERTS */}
-                    <Link to="/espaces-verts" className="relative group flex-1 h-full overflow-hidden border-r-2 md:border-r-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-10">
+                    {/* Section 2: ESPACES VERTS - Triangle Middle UP */}
+                    <Link to="/espaces-verts" className="relative group flex-1 h-full hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-30 drop-shadow-2xl" style={{ clipPath: 'polygon(50% 0, 0 100%, 100% 100%)' }}>
                         {/* Background */}
                         <div className="absolute inset-0 bg-welki-green group-hover:bg-green-700 transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-300/20 to-transparent"></div>
 
-                        {/* Content (No Skew) */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center p-1 text-center pt-8">
+                        {/* Content - Aligned Bottom */}
+                        <div className="absolute inset-0 flex flex-col justify-end items-center p-1 text-center pb-8 md:pb-16 scale-110">
                             <motion.div
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.2 }}
                                 className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-2 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
-                                <TreePine className="text-white w-6 h-6 md:w-12 md:h-12" />
+                                <TreePine className="text-white w-6 h-6 md:w-16 md:h-16" />
                             </motion.div>
                             <h2 className="text-xs md:text-5xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
                                 Espaces <br /><span className="text-green-200">Verts</span>
                             </h2>
-                            <ul className="hidden md:block text-green-50 text-lg font-medium space-y-1 opacity-90">
+                            <ul className="hidden md:block text-green-50 text-lg font-medium space-y-2 opacity-90">
                                 <li>Élagage</li>
                                 <li>Entretien Jardin</li>
                                 <li>Paysagisme</li>
@@ -78,26 +78,26 @@ const Home = () => {
                         </div>
                     </Link>
 
-                    {/* Section 3: NETTOYAGE */}
-                    <Link to="/nettoyage" className="relative group flex-1 h-full overflow-hidden hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-0">
+                    {/* Section 3: NETTOYAGE - Skewed Left (\) */}
+                    <Link to="/nettoyage" className="relative group flex-1 h-full skew-x-[-12deg] overflow-hidden border-l-4 border-white/10 hover:flex-[1.5] transition-[flex] duration-500 ease-in-out cursor-pointer z-10 -ms-12 origin-top">
                         {/* Background */}
                         <div className="absolute inset-0 bg-slate-700 group-hover:bg-slate-800 transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-gray-500/20 to-transparent"></div>
 
-                        {/* Content (No Skew) */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center p-1 text-center ps-4 md:ps-8">
+                        {/* Content (Counter-Skew) */}
+                        <div className="absolute inset-0 flex flex-col justify-center items-center skew-x-[12deg] p-1 text-center ps-4 md:ps-8 scale-110">
                             <motion.div
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.3 }}
                                 className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-2 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
-                                <Sparkles className="text-white w-6 h-6 md:w-12 md:h-12" />
+                                <Sparkles className="text-white w-6 h-6 md:w-16 md:h-16" />
                             </motion.div>
                             <h2 className="text-xs md:text-5xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
                                 Nettoyage <br /><span className="text-gray-300">Pro</span>
                             </h2>
-                            <ul className="hidden md:block text-gray-200 text-lg font-medium space-y-1 opacity-90">
+                            <ul className="hidden md:block text-gray-200 text-lg font-medium space-y-2 opacity-90">
                                 <li>Bureaux</li>
                                 <li>Immeubles</li>
                                 <li>Fin de chantier</li>
