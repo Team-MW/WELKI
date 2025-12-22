@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const Contact = () => {
 
@@ -35,11 +34,7 @@ const Contact = () => {
                 </div>
 
                 {/* Coordonnées Card - Horizontal */}
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
+                <div
                     className="bg-gray-950 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-800 w-full"
                 >
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-8">
@@ -96,7 +91,7 @@ const Contact = () => {
                             <li className="flex items-center"><CheckCircle size={14} className="mr-2 text-welki-green" /> Respect des normes</li>
                         </ul>
                     </div>
-                </motion.div>
+                </div>
 
             </Section>
         </Layout >

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from './Header';
-import { motion } from 'framer-motion';
 
 const Layout = ({ children, title, description }) => {
     return (
