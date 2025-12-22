@@ -59,9 +59,7 @@ const Services = ({ defaultTab }) => {
                     <div className="space-y-24">
                         {/* 1. MAIN SERVICES CARDS */}
                         <Section id="3d">
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                            <div
                                 className="grid md:grid-cols-3 gap-8"
                             >
                                 {/* Dératisation */}
@@ -117,7 +115,7 @@ const Services = ({ defaultTab }) => {
                                         ))}
                                     </ul>
                                 </div>
-                            </motion.div>
+                            </div>
                         </Section>
 
                         {/* 2. METHODOLOGY / HOW WE WORK */}
@@ -149,12 +147,12 @@ const Services = ({ defaultTab }) => {
                                             desc: "Conseils et rebouchage des accès pour éviter toute réinfestation future."
                                         }
                                     ].map((step, i) => (
-                                        <motion.div
+                                        <div
                                             key={i}
-                                            initial={{ opacity: 0, y: 30 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: i * 0.2 }}
-                                            viewport={{ once: true }}
+                                            
+                                            
+                                            
+                                            
                                             className="relative flex flex-col items-center text-center z-10"
                                         >
                                             <div className="w-24 h-24 bg-gray-900 border-4 border-[#E71D36] rounded-full flex items-center justify-center text-[#E71D36] mb-6 shadow-lg shadow-[#E71D36]/20">
@@ -162,7 +160,7 @@ const Services = ({ defaultTab }) => {
                                             </div>
                                             <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                                             <p className="text-gray-400 max-w-xs">{step.desc}</p>
-                                        </motion.div>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
@@ -221,9 +219,9 @@ const Services = ({ defaultTab }) => {
                     <div className="space-y-24">
                         {/* 1. MAIN SERVICES CARDS */}
                         <Section id="green">
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                            <div
+                                
+                                
                                 className="grid md:grid-cols-3 gap-8"
                             >
                                 {/* Élagage */}
@@ -279,7 +277,7 @@ const Services = ({ defaultTab }) => {
                                         ))}
                                     </ul>
                                 </div>
-                            </motion.div>
+                            </div>
                         </Section>
 
                         {/* 2. METHODOLOGY */}
@@ -310,12 +308,12 @@ const Services = ({ defaultTab }) => {
                                             desc: "Chantier laissé propre. Évacuation et recyclage des déchets verts en centre agréé."
                                         }
                                     ].map((step, i) => (
-                                        <motion.div
+                                        <div
                                             key={i}
-                                            initial={{ opacity: 0, y: 30 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: i * 0.2 }}
-                                            viewport={{ once: true }}
+                                            
+                                            
+                                            
+                                            
                                             className="relative flex flex-col items-center text-center z-10"
                                         >
                                             <div className="w-24 h-24 bg-gray-900 border-4 border-[#037971] rounded-full flex items-center justify-center text-[#037971] mb-6 shadow-lg shadow-[#037971]/20">
@@ -323,7 +321,7 @@ const Services = ({ defaultTab }) => {
                                             </div>
                                             <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                                             <p className="text-gray-400 max-w-xs">{step.desc}</p>
-                                        </motion.div>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
@@ -389,9 +387,9 @@ const Services = ({ defaultTab }) => {
                     <div className="space-y-24">
                         {/* 1. MAIN SERVICES CARDS */}
                         <Section id="clean">
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                            <div
+                                
+                                
                                 className="grid md:grid-cols-3 gap-8"
                             >
                                 {/* Immeubles */}
@@ -447,7 +445,7 @@ const Services = ({ defaultTab }) => {
                                         ))}
                                     </ul>
                                 </div>
-                            </motion.div>
+                            </div>
                         </Section>
 
                         {/* 2. METHODOLOGY */}
@@ -478,12 +476,12 @@ const Services = ({ defaultTab }) => {
                                             desc: "Suivi régulier de la qualité propreté et satisfaction client."
                                         }
                                     ].map((step, i) => (
-                                        <motion.div
+                                        <div
                                             key={i}
-                                            initial={{ opacity: 0, y: 30 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: i * 0.2 }}
-                                            viewport={{ once: true }}
+                                            
+                                            
+                                            
+                                            
                                             className="relative flex flex-col items-center text-center z-10"
                                         >
                                             <div className="w-24 h-24 bg-gray-900 border-4 border-[#0241cd] rounded-full flex items-center justify-center text-[#0241cd] mb-6 shadow-lg shadow-[#0241cd]/20">
@@ -491,7 +489,7 @@ const Services = ({ defaultTab }) => {
                                             </div>
                                             <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                                             <p className="text-gray-400 max-w-xs">{step.desc}</p>
-                                        </motion.div>
+                                        </div>
                                     ))}
                                 </div>
                             </div>

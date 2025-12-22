@@ -34,14 +34,9 @@ const Home = () => {
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
-                            <motion.div
-                                initial={{ scale: 0.8, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{ delay: 0.1 }}
-                                className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:translate-x-12"
-                            >
+                            <div className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:translate-x-12">
                                 <ShieldCheck className="text-white w-8 h-8 md:w-16 md:h-16" />
-                            </motion.div>
+                            </div>
                             <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight md:ml-12">
                                 Hygiène <br className="hidden md:block" /><span className="text-red-200">3D</span>
                             </h2>
@@ -72,14 +67,14 @@ const Home = () => {
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
-                            <motion.div
-                                initial={{ scale: 0.8, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{ delay: 0.2 }}
+                            <div
+                                
+                                
+                                
                                 className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
                                 <TreePine className="text-white w-8 h-8 md:w-16 md:h-16" />
-                            </motion.div>
+                            </div>
                             <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
                                 Espaces <br className="hidden md:block" /><span className="text-white">Verts</span>
                             </h2>
@@ -111,14 +106,14 @@ const Home = () => {
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full">
                             <div className="w-full md:w-[40%] flex flex-col items-center md:items-end">
-                                <motion.div
-                                    initial={{ scale: 0.8, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
-                                    transition={{ delay: 0.3 }}
+                                <div
+                                    
+                                    
+                                    
                                     className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:-translate-x-12"
                                 >
                                     <Sparkles className="text-white w-8 h-8 md:w-16 md:h-16" />
-                                </motion.div>
+                                </div>
                                 <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter drop-shadow-lg leading-tight md:mr-12">
                                     Nettoyage <br className="hidden md:block" /><span className="text-blue-200">Pro</span>
                                 </h2>
@@ -139,10 +134,10 @@ const Home = () => {
                 {/* 2. REASSURANCE STRIP - Interactive & Clean */}
                 <div className="bg-gray-900 py-12 border-b border-gray-800 relative z-20 shadow-sm">
                     <div className="max-w-7xl mx-auto px-4">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                        <div
+                            
+                            
+                            
                             className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center"
                         >
                             {[
@@ -151,7 +146,7 @@ const Home = () => {
                                 { text: "Produits Homologués", icon: <ShieldCheck /> },
                                 { text: "Satisfaction Client", icon: <Star /> }
                             ].map((item, i) => (
-                                <motion.div
+                                <div
                                     key={i}
                                     whileHover={{ scale: 1.05, y: -5 }}
                                     className="flex flex-col items-center justify-center group p-4 rounded-2xl hover:bg-gray-800 transition-colors cursor-default"
@@ -160,9 +155,9 @@ const Home = () => {
                                         {React.cloneElement(item.icon, { size: 24 })}
                                     </div>
                                     <span className="text-gray-300 group-hover:text-white font-bold text-lg transition-colors">{item.text}</span>
-                                </motion.div>
+                                </div>
                             ))}
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
 
@@ -175,15 +170,15 @@ const Home = () => {
                     <div className="relative z-10">
                         <div className="text-center max-w-3xl mx-auto mb-16">
                             <motion.span
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
+                                
+                                
                                 className="text-welki-green font-bold tracking-widest uppercase text-sm mb-2 block"
                             >
                                 Nos Services
                             </motion.span>
                             <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                
+                                
                                 className="text-white font-black text-4xl md:text-5xl mb-6"
                             >
                                 Nos Domaines d'Intervention
@@ -197,11 +192,11 @@ const Home = () => {
                         <div className="grid md:grid-cols-3 gap-8 px-4">
                             {/* Card 1: 3D */}
                             {/* Card 1: 3D - Red */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
+                            <div
+                                
+                                
+                                
+                                
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#E71D36] hover:shadow-2xl hover:shadow-[#E71D36]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
                             >
@@ -225,15 +220,15 @@ const Home = () => {
                                 <Link to="/hygiene-3d" className="w-full py-3 rounded-xl border-2 border-gray-700 text-[#E71D36] font-bold flex items-center justify-center hover:bg-[#E71D36] hover:text-white transition-all group-hover:border-[#E71D36] hover:border-[#E71D36]">
                                     En savoir plus <ArrowRight size={18} className="ml-2" />
                                 </Link>
-                            </motion.div>
+                            </div>
 
                             {/* Card 2: Green */}
                             {/* Card 2: Green - Green */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
+                            <div
+                                
+                                
+                                
+                                
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#037971] hover:shadow-2xl hover:shadow-[#037971]/20 transition-all duration-300 flex flex-col group relative md:-mt-8 z-10 border-x border-b border-gray-800"
                             >
@@ -260,15 +255,15 @@ const Home = () => {
                                 <Link to="/espaces-verts" className="w-full py-3 rounded-xl bg-[#037971] text-white font-bold flex items-center justify-center hover:bg-[#025e57] shadow-lg shadow-[#037971]/40 transition-all">
                                     En savoir plus <ArrowRight size={18} className="ml-2" />
                                 </Link>
-                            </motion.div>
+                            </div>
 
                             {/* Card 3: Cleaning */}
                             {/* Card 3: Cleaning - Blue */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.3 }}
+                            <div
+                                
+                                
+                                
+                                
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#0241cd] hover:shadow-2xl hover:shadow-[#0241cd]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
                             >
@@ -292,7 +287,7 @@ const Home = () => {
                                 <Link to="/nettoyage" className="w-full py-3 rounded-xl border-2 border-gray-700 text-[#0241cd] font-bold flex items-center justify-center hover:bg-[#0241cd] hover:text-white transition-all group-hover:border-[#0241cd] hover:border-[#0241cd]">
                                     En savoir plus <ArrowRight size={18} className="ml-2" />
                                 </Link>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </Section>
@@ -306,22 +301,22 @@ const Home = () => {
 
                     <div className="max-w-7xl mx-auto px-4 relative z-10">
                         <div className="flex flex-col md:flex-row items-center gap-16">
-                            <motion.div
-                                initial={{ opacity: 0, x: -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                            <div
+                                
+                                
+                                
                                 className="flex-1"
                             >
                                 <motion.span
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
+                                    
+                                    
                                     className="text-[#037971] font-bold tracking-widest uppercase text-sm mb-2 block"
                                 >
                                     Notre Rayon d'Action
                                 </motion.span>
                                 <motion.h2
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    
+                                    
                                     className="text-white font-black text-4xl md:text-5xl mb-6"
                                 >
                                     Intervention dans tout le <br />
@@ -342,11 +337,11 @@ const Home = () => {
                                         { name: 'Lot (46)', city: 'Cahors' },
                                         { name: 'Aveyron (12)', city: 'Rodez' }
                                     ].map((zone, i) => (
-                                        <motion.div
+                                        <div
                                             key={zone.name}
-                                            initial={{ opacity: 0, scale: 0.9 }}
-                                            whileInView={{ opacity: 1, scale: 1 }}
-                                            transition={{ delay: i * 0.05 }}
+                                            
+                                            
+                                            
                                             className="flex items-center text-gray-300 p-2 rounded-lg hover:bg-gray-800/50 transition-colors cursor-default"
                                         >
                                             <div className="bg-[#037971]/20 p-2 rounded-full mr-3 text-[#037971]">
@@ -356,16 +351,16 @@ const Home = () => {
                                                 <div className="font-bold text-white">{zone.city}</div>
                                                 <div className="text-xs text-gray-500">{zone.name}</div>
                                             </div>
-                                        </motion.div>
+                                        </div>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </div>
 
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-                                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ type: "spring", duration: 1 }}
+                            <div
+                                
+                                
+                                
+                                
                                 className="flex-1 relative"
                             >
                                 <div className="absolute inset-0 bg-[#037971] blur-[100px] opacity-20 rounded-full"></div>
@@ -374,7 +369,7 @@ const Home = () => {
                                     alt="Carte Zone d'Intervention Midi-Pyrénées"
                                     className="w-full h-auto drop-shadow-2xl relative z-10 transform hover:scale-105 transition-transform duration-500 rounded-xl"
                                 />
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -382,10 +377,10 @@ const Home = () => {
                 {/* 4. ABOUT / TRUST SECTION - Glassmorphism & Modern Layout */}
                 <section className="py-16 md:py-24 bg-gray-950 relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10">
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                        <div
+                            
+                            
+                            
                             className="flex-1 order-2 md:order-1"
                         >
                             <div className="relative group">
@@ -408,13 +403,13 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
+                        <div
+                            
+                            
+                            
+                            
                             className="flex-1 order-1 md:order-2"
                         >
                             <div className="inline-block px-4 py-2 bg-blue-900/40 text-blue-300 font-bold rounded-full text-sm mb-6 border border-blue-800">
@@ -432,7 +427,7 @@ const Home = () => {
                                     { title: "Cadre Légal Respecté", desc: "Interventions conformes aux normes sanitaires.", icon: <CheckCircle2 /> },
                                     { title: "Professionnalisme & Discrétion", desc: "Techniciens formés, équipés et discrets.", icon: <ShieldCheck /> }
                                 ].map((item, i) => (
-                                    <motion.div
+                                    <div
                                         key={i}
                                         whileHover={{ x: 10 }}
                                         className="flex items-start p-4 rounded-xl hover:bg-gray-900 transition-colors cursor-default"
@@ -446,10 +441,10 @@ const Home = () => {
                                                 <p className="text-gray-500">{item.desc}</p>
                                             </div>
                                         </div>
-                                    </motion.div>
+                                    </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                 </section>
 
@@ -461,16 +456,16 @@ const Home = () => {
                         {/* Header */}
                         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                             <motion.h2
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                
+                                
                                 className="text-4xl font-black text-white"
                             >
                                 Paroles de clients
                             </motion.h2>
 
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                            <div
+                                
+                                
                                 className="flex items-center gap-2 bg-gray-900 px-4 py-2 rounded-full shadow-sm border border-gray-800"
                             >
                                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -484,7 +479,7 @@ const Home = () => {
                                 </div>
                                 <span className="font-bold text-white ml-1">4.9/5</span>
                                 <span className="text-gray-400 text-sm">(127 avis)</span>
-                            </motion.div>
+                            </div>
                         </div>
 
                         {/* Testimonial Cards Carousel */}
@@ -515,11 +510,11 @@ const Home = () => {
                                     stars: 5
                                 }
                             ].map((review, i) => (
-                                <motion.div
+                                <div
                                     key={i}
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: i * 0.1 }}
+                                    
+                                    
+                                    
                                     className="min-w-[85vw] md:min-w-[350px] bg-gray-900 p-6 md:p-8 rounded-3xl shadow-sm border border-gray-800 flex flex-col snap-center hover:shadow-md transition-shadow"
                                 >
                                     <div className="flex text-yellow-400 mb-4 text-sm gap-1">
@@ -530,7 +525,7 @@ const Home = () => {
                                         {review.text}
                                     </p>
                                     <p className="font-bold text-gray-200 mt-auto">{review.author}</p>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
 
@@ -557,9 +552,9 @@ const Home = () => {
                     <div className="absolute inset-0 bg-gray-950"></div>
                     <div className="relative z-10 max-w-4xl mx-auto px-4">
                         <motion.h2
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ bg: "spring" }}
+                            
+                            
+                            
                             className="text-4xl md:text-5xl font-black mb-8"
                         >
                             Besoin d'un devis immédiat ?

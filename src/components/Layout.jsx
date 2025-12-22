@@ -14,15 +14,9 @@ const Layout = ({ children, title, description }) => {
 
             <Header />
 
-            <motion.main
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
-                className="flex-grow pt-16"
-            >
+            <main className="flex-grow pt-16">
                 {children}
-            </motion.main>
+            </main>
 
             <footer className="bg-gray-950 text-white py-12 border-t-4 border-welki-green">
                 <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center md:text-left">

@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* All service links point to the main Services page for now, or could have anchors */}
