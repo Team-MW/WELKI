@@ -1,13 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { motion } from 'framer-motion';
 import { ArrowRight, ShieldCheck, TreePine, Sparkles, CheckCircle2, FileCheck, Star, MapPin, Mountain } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
-import midiPyreneesMap from '../assets/midi-pyrenees-map.png';
-
-
+import occitanieMap from '../assets/occitanie-map.png';
 
 
 const Home = () => {
@@ -170,34 +167,46 @@ const Home = () => {
                 </section>
 
                 {/* 2. REASSURANCE STRIP - Interactive & Clean */}
-                <div className="bg-gray-900 py-12 border-b border-gray-800 relative z-20 shadow-sm">
-                    <div className="max-w-7xl mx-auto px-4">
-                        <div
+                <div className="bg-gray-900 py-6 md:py-8 border-b border-gray-800 relative z-20 shadow-sm overflow-hidden">
+                    {/* SEPARATORS EXTENSION */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path
+                            d="M 30 0 L 35 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                        />
+                        <path
+                            d="M 65 0 L 70 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                        />
+                    </svg>
 
-
-
-                            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center"
-                        >
+                    <div className="w-full h-full relative z-10">
+                        <div className="flex flex-col md:flex-row w-full h-full">
                             {[
                                 { text: "Intervention 7j/7", icon: <CheckCircle2 /> },
                                 { text: "Devis 100% Gratuit", icon: <FileCheck /> },
-                                { text: "Produits Homologués", icon: <ShieldCheck /> },
-                                { text: "Satisfaction Client", icon: <Star /> }
+                                { text: "Produits Homologués", icon: <ShieldCheck /> }
                             ].map((item, i) => (
                                 <div
                                     key={i}
-                                    whileHover={{ scale: 1.05, y: -5 }}
-                                    className="flex flex-col items-center justify-center group p-4 rounded-2xl hover:bg-gray-800 transition-colors cursor-default"
+                                    className="flex-1 flex flex-col items-center justify-center group p-4 hover:bg-gray-800 transition-colors cursor-default relative"
                                 >
-                                    <div className="text-[#037971] mb-3 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-[#037971] group-hover:text-white transition-colors shadow-sm border border-gray-700">
+                                    <div className="text-[#037971] mb-2 w-10 h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-[#037971] group-hover:text-white transition-colors shadow-sm border border-gray-700">
                                         {React.cloneElement(item.icon, { size: 24 })}
                                     </div>
-                                    <span className="text-gray-300 group-hover:text-white font-bold text-lg transition-colors">{item.text}</span>
+                                    <span className="text-gray-300 group-hover:text-white font-bold text-sm md:text-lg transition-colors text-center">{item.text}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
-
                 </div>
 
                 {/* 3. EXPERTISE SECTION - Cards with Depth */}
@@ -208,20 +217,20 @@ const Home = () => {
 
                     <div className="relative z-10">
                         <div className="text-center max-w-3xl mx-auto mb-16">
-                            <motion.span
+                            <span
 
 
                                 className="text-welki-green font-bold tracking-widest uppercase text-sm mb-2 block"
                             >
                                 Nos Services
-                            </motion.span>
-                            <motion.h2
+                            </span>
+                            <h2
 
 
                                 className="text-white font-black text-4xl md:text-5xl mb-6"
                             >
                                 Nos Domaines d'Intervention
-                            </motion.h2>
+                            </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                                 Une expertise globale pour la gestion de votre environnement.
                                 Nous garantissons efficacité et discrétion.
@@ -374,21 +383,21 @@ const Home = () => {
 
                                 className="flex-1"
                             >
-                                <motion.span
+                                <span
 
 
                                     className="text-[#037971] font-bold tracking-widest uppercase text-sm mb-2 block"
                                 >
                                     Notre Rayon d'Action
-                                </motion.span>
-                                <motion.h2
+                                </span>
+                                <h2
 
 
                                     className="text-white font-black text-4xl md:text-5xl mb-6"
                                 >
                                     Intervention dans tout le <br />
-                                    <span className="text-[#037971]">Midi-Pyrénées</span>
-                                </motion.h2>
+                                    <span className="text-[#037971]">Région Occitanie</span>
+                                </h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                                     Nos équipes mobiles sillonnent la région pour vous garantir une réactivité optimale. Que vous soyez à Toulouse ou dans les départements voisins, nous sommes à vos côtés.
                                 </p>
@@ -396,13 +405,13 @@ const Home = () => {
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-6">
                                     {[
                                         { name: 'Haute-Garonne (31)', city: 'Toulouse' },
+                                        { name: 'Hérault (34)', city: 'Montpellier' },
+                                        { name: 'Gard (30)', city: 'Nîmes' },
+                                        { name: 'Pyrénées-Orientales (66)', city: 'Perpignan' },
+                                        { name: 'Hérault (34)', city: 'Béziers' },
+                                        { name: 'Aude (11)', city: 'Narbonne' },
                                         { name: 'Tarn (81)', city: 'Albi' },
-                                        { name: 'Tarn-et-Garonne (82)', city: 'Montauban' },
-                                        { name: 'Gers (32)', city: 'Auch' },
-                                        { name: 'Hautes-Pyrénées (65)', city: 'Tarbes' },
-                                        { name: 'Ariège (09)', city: 'Foix' },
-                                        { name: 'Lot (46)', city: 'Cahors' },
-                                        { name: 'Aveyron (12)', city: 'Rodez' }
+                                        { name: 'Tarn-et-Garonne (82)', city: 'Montauban' }
                                     ].map((zone, i) => (
                                         <div
                                             key={zone.name}
@@ -432,8 +441,8 @@ const Home = () => {
                             >
                                 <div className="absolute inset-0 bg-[#037971] blur-[100px] opacity-20 rounded-full"></div>
                                 <img
-                                    src={midiPyreneesMap}
-                                    alt="Carte Zone d'Intervention Midi-Pyrénées"
+                                    src={occitanieMap}
+                                    alt="Carte Zone d'Intervention Région Occitanie"
                                     className="w-full h-auto drop-shadow-2xl relative z-10 transform hover:scale-105 transition-transform duration-500 rounded-xl"
                                 />
                             </div>
@@ -458,8 +467,7 @@ const Home = () => {
                                         Ce certificat individuel est délivré par le Ministère de la Transition écologique. Il atteste de la compétence des professionnels à utiliser les produits biocides en toute sécurité et efficacité.
                                     </p>
                                     <div className="flex items-center gap-6 mt-8 pt-8 border-t border-gray-700">
-                                        <motion.img
-                                            whileHover={{ scale: 1.1, rotate: 5 }}
+                                        <img
                                             src={certibiocideImg}
                                             alt="Logo Certibiocide"
                                             className="h-20 w-auto drop-shadow-md brightness-90 contrast-125"
@@ -522,13 +530,13 @@ const Home = () => {
                     <div className="max-w-7xl mx-auto px-4">
                         {/* Header */}
                         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                            <motion.h2
+                            <h2
 
 
                                 className="text-4xl font-black text-white"
                             >
                                 Paroles de clients
-                            </motion.h2>
+                            </h2>
 
                             <div
 
@@ -617,11 +625,11 @@ const Home = () => {
                 <section className="py-24 relative overflow-hidden text-center text-white bg-gray-950">
                     <div className="absolute inset-0 bg-gray-950"></div>
                     <div className="relative z-10 max-w-4xl mx-auto px-4">
-                        <motion.h2
+                        <h2
                             className="text-4xl md:text-5xl font-black mb-8"
                         >
                             Besoin d'un devis immédiat ?
-                        </motion.h2>
+                        </h2>
                         <p className="text-xl mb-12 text-gray-300 font-medium max-w-2xl mx-auto">
                             Décrivez-nous votre besoin, nous vous répondons dans l'heure avec une solution chiffrée.
                         </p>

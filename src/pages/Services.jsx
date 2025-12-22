@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 import Section from '../components/Section';
 import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import certibiocideImg from '../assets/certibiocide-1.png';
 import img3DMain from '../assets/full-shot-man-holding-disinfectant-tank.jpg';
 import img3DDisinfection from '../assets/unrecognizable-person-white-chemical-protection-suit-doing-disinfection-public-areas-stop-spreading-highly-contagious-corona-virus.jpg';
@@ -67,11 +66,7 @@ const Services = ({ defaultTab }) => {
                                 className="grid md:grid-cols-3 gap-8"
                             >
                                 {/* Dératisation */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.1 }}
+                                <div
                                     className="bg-gray-900 rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36] transition-all duration-300 group"
                                 >
                                     <div className="w-16 h-16 bg-[#E71D36]/10 rounded-2xl flex items-center justify-center text-[#E71D36] mb-6 group-hover:scale-110 transition-transform">
@@ -88,14 +83,10 @@ const Services = ({ defaultTab }) => {
                                             </li>
                                         ))}
                                     </ul>
-                                </motion.div>
+                                </div>
 
                                 {/* Désinsectisation */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.2 }}
+                                <div
                                     className="bg-gray-900 rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36] transition-all duration-300 group"
                                 >
                                     <div className="w-16 h-16 bg-[#E71D36]/10 rounded-2xl flex items-center justify-center text-[#E71D36] mb-6 group-hover:scale-110 transition-transform">
@@ -112,14 +103,10 @@ const Services = ({ defaultTab }) => {
                                             </li>
                                         ))}
                                     </ul>
-                                </motion.div>
+                                </div>
 
                                 {/* Désinfection */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.3 }}
+                                <div
                                     className="bg-gray-900 rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36] transition-all duration-300 group"
                                 >
                                     <div className="w-16 h-16 bg-[#E71D36]/10 rounded-2xl flex items-center justify-center text-[#E71D36] mb-6 group-hover:scale-110 transition-transform">
@@ -136,7 +123,7 @@ const Services = ({ defaultTab }) => {
                                             </li>
                                         ))}
                                     </ul>
-                                </motion.div>
+                                </div>
                             </div>
                         </Section>
 
@@ -156,12 +143,7 @@ const Services = ({ defaultTab }) => {
                                     </div>
                                 </div>
 
-                                <motion.div
-                                    initial={{ opacity: 0, x: 30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6 }}
-                                >
+                                <div>
                                     <h3 className="text-[#E71D36] font-bold uppercase tracking-widest text-sm mb-4">Nuisibles Ciblés</h3>
                                     <h2 className="text-3xl md:text-4xl font-black text-white mb-8">Nous traitons tous types d'infestations</h2>
                                     <div className="grid grid-cols-2 gap-4">
@@ -173,19 +155,18 @@ const Services = ({ defaultTab }) => {
                                             { name: "Fourmis", icon: Droplets },
                                             { name: "Mites & Puces", icon: Scissors }
                                         ].map((pest, i) => (
-                                            <motion.div
+                                            <div
                                                 key={i}
-                                                whileHover={{ scale: 1.05 }}
                                                 className="flex items-center p-3 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#E71D36]/50 transition-colors"
                                             >
                                                 <div className="text-[#E71D36] bg-[#E71D36]/10 p-2 rounded-lg mr-3">
                                                     <pest.icon size={20} />
                                                 </div>
                                                 <span className="font-bold text-gray-200">{pest.name}</span>
-                                            </motion.div>
+                                            </div>
                                         ))}
                                     </div>
-                                </motion.div>
+                                </div>
                             </div>
                         </section>
 
@@ -337,7 +318,8 @@ const Services = ({ defaultTab }) => {
                             </div>
                         </Section>
                     </div >
-                )}
+                )
+                }
 
                 {/* Espaces Verts Section */}
                 {
