@@ -311,6 +311,17 @@ const Services = ({ defaultTab }) => {
                                                 </p>
                                             </div>
                                         </div>
+                                        <div className="flex gap-4">
+                                            <div className="bg-[#E71D36]/10 p-3 rounded-xl h-fit">
+                                                <Briefcase className="text-[#E71D36]" size={24} />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold text-lg mb-1">Gestion Centralisée</h4>
+                                                <p className="text-gray-400 text-sm">
+                                                    Un seul interlocuteur pour l'ensemble de vos services (3D, Espaces Verts, Nettoyage).
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex-1 flex justify-center">
@@ -476,6 +487,17 @@ const Services = ({ defaultTab }) => {
                                                     <h4 className="font-bold text-lg mb-1">Contrats Annuels</h4>
                                                     <p className="text-gray-400 text-sm">
                                                         Planifiez l'entretien de votre résidence sur l'année. Nous gérons le calendrier des interventions.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex gap-4">
+                                                <div className="bg-[#037971]/10 p-3 rounded-xl h-fit">
+                                                    <UserCheck className="text-[#037971]" size={24} />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold text-lg mb-1">Offre Globale</h4>
+                                                    <p className="text-gray-400 text-sm">
+                                                        Combinez l'entretien de vos espaces verts avec nos autres prestations sur une seule facture.
                                                     </p>
                                                 </div>
                                             </div>
@@ -652,6 +674,17 @@ const Services = ({ defaultTab }) => {
                                                     <h4 className="font-bold text-lg mb-1">Produits Écolabel</h4>
                                                     <p className="text-gray-400 text-sm">
                                                         Nous privilégions l'utilisation de produits respectueux de l'environnement et de la santé des occupants.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex gap-4">
+                                                <div className="bg-[#0241cd]/10 p-3 rounded-xl h-fit">
+                                                    <Briefcase className="text-[#0241cd]" size={24} />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold text-lg mb-1">Interlocuteur Unique</h4>
+                                                    <p className="text-gray-400 text-sm">
+                                                        Simplifiez vos échanges avec un gestionnaire dédié pour tous vos besoins.
                                                     </p>
                                                 </div>
                                             </div>
