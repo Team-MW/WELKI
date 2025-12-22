@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-    const [formState, setFormState] = useState({ name: '', phone: '', email: '', message: '' });
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert('Votre demande a bien été envoyée ! Nous vous recontacterons sous 24h.');
-        setFormState({ name: '', phone: '', email: '', message: '' });
-    };
 
     return (
         <Layout title="Contact" description="Demandez votre devis gratuit chez Welki.">
@@ -95,68 +88,16 @@ const Contact = () => {
                         transition={{ delay: 0.2 }}
                         className="bg-gray-950 p-8 rounded-3xl shadow-xl border border-gray-800"
                     >
-                        <h3 className="text-2xl font-bold mb-6 text-white">Envoyer une demande</h3>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label className="block text-sm font-bold text-gray-400 mb-2">Nom</label>
-                                    <input
-                                        type="text"
-                                        required
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-900 text-white placeholder-gray-500 focus:border-welki-blue focus:ring-4 focus:ring-blue-900/20 outline-none transition-all"
-                                        value={formState.name}
-                                        onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-bold text-gray-400 mb-2">Téléphone</label>
-                                    <input
-                                        type="tel"
-                                        required
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-900 text-white placeholder-gray-500 focus:border-welki-blue focus:ring-4 focus:ring-blue-900/20 outline-none transition-all"
-                                        value={formState.phone}
-                                        onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-bold text-gray-400 mb-2">Email</label>
-                                <input
-                                    type="email"
-                                    required
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-900 text-white placeholder-gray-500 focus:border-welki-blue focus:ring-4 focus:ring-blue-900/20 outline-none transition-all"
-                                    value={formState.email}
-                                    onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                                />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-bold text-gray-400 mb-2">Type d'intervention</label>
-                                <select className="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-900 text-white focus:border-welki-blue focus:ring-4 focus:ring-blue-900/20 outline-none transition-all">
-                                    <option>Dératisation / Désinsectisation</option>
-                                    <option>Espaces Verts / Élagage</option>
-                                    <option>Nettoyage / Débarras</option>
-                                    <option>Autre</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-bold text-gray-400 mb-2">Message</label>
-                                <textarea
-                                    rows="4"
-                                    required
-                                    className="w-full px-4 py-3 rounded-xl border border-gray-700 bg-gray-900 text-white placeholder-gray-500 focus:border-welki-blue focus:ring-4 focus:ring-blue-900/20 outline-none transition-all"
-                                    placeholder="Détaillez votre besoin..."
-                                    value={formState.message}
-                                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                                ></textarea>
-                            </div>
-
-                            <button type="submit" className="w-full py-4 bg-welki-blue hover:bg-blue-600 text-white font-bold rounded-xl shadow-lg transition-all hover:scale-[1.02] flex justify-center items-center">
-                                Envoyer la demande <Send size={18} className="ml-2" />
-                            </button>
-                        </form>
+                        <iframe
+                            src="https://tally.so/r/5B48RQ?transparentBackground=1"
+                            width="100%"
+                            height="600"
+                            frameBorder="0"
+                            marginHeight="0"
+                            marginWidth="0"
+                            title="Formulaire De Contact"
+                            className="bg-transparent"
+                        ></iframe>
                     </motion.div>
                 </div>
             </Section>
