@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
+
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://tally.so/widgets/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
 
     return (
         <Layout title="Contact" description="Demandez votre devis gratuit chez Welki.">
@@ -22,9 +33,10 @@ const Contact = () => {
                     className="w-full mb-12"
                 >
                     <iframe
-                        src="https://tally.so/r/5B48RQ?transparentBackground=1"
+                        data-tally-src="https://tally.so/r/5B48RQ?transparentBackground=1&dynamicHeight=1"
+                        src="https://tally.so/r/5B48RQ?transparentBackground=1&dynamicHeight=1"
                         width="100%"
-                        height="1500"
+                        height="1000"
                         frameBorder="0"
                         marginHeight="0"
                         marginWidth="0"

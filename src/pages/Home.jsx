@@ -28,21 +28,19 @@ const Home = () => {
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
                             md:[clip-path:polygon(0_0,_35%_0,_25%_40%,_40%_60%,_30%_100%,_0_100%)]
                         "
+                        style={{
+                            backgroundImage: `url(${img3DHero})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
                     >
                         <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Hygiène 3D"></Link>
-                        {/* Background */}
-                        <div className="absolute inset-0 bg-[#E71D36] group-hover:bg-[#c0182c] transition-colors duration-500"></div>
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-red-400/20 to-transparent"></div>
+                        {/* Background Overlay */}
+                        <div className="absolute inset-0 bg-[#E71D36]/60 group-hover:bg-[#c0182c]/70 transition-colors duration-500"></div>
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
-                            <div className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/30 mb-3 md:mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl transform md:translate-x-2">
-                                <img
-                                    src={img3DHero}
-                                    alt="Hygiène 3D"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+
                             <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight md:ml-2">
                                 Hygiène <br className="hidden md:block" /><span className="text-red-200">3D</span>
                             </h2>
@@ -70,23 +68,19 @@ const Home = () => {
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
                             md:[clip-path:polygon(35%_0,_70%_0,_60%_40%,_75%_60%,_65%_100%,_30%_100%,_40%_60%,_25%_40%)]
                         "
+                        style={{
+                            backgroundImage: `url(${imgGreenHero})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
                     >
                         <Link to="/espaces-verts" className="absolute inset-0 z-10" aria-label="Espaces Verts"></Link>
-                        {/* Background */}
-                        <div className="absolute inset-0 bg-[#037971] group-hover:bg-[#025e57] transition-colors duration-500"></div>
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#037971]/40 to-transparent"></div>
+                        {/* Background Overlay */}
+                        <div className="absolute inset-0 bg-[#037971]/60 group-hover:bg-[#025e57]/70 transition-colors duration-500"></div>
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
-                            <div
-                                className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/30 mb-3 md:mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl"
-                            >
-                                <img
-                                    src={imgGreenHero}
-                                    alt="Espaces Verts"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+
                             <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
                                 Espaces <br className="hidden md:block" /><span className="text-white">Verts</span>
                             </h2>
@@ -114,24 +108,20 @@ const Home = () => {
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
                             md:[clip-path:polygon(70%_0,_100%_0,_100%_100%,_65%_100%,_75%_60%,_60%_40%)]
                         "
+                        style={{
+                            backgroundImage: `url(${imgCleanHero})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
                     >
                         <Link to="/nettoyage" className="absolute inset-0 z-10" aria-label="Nettoyage"></Link>
-                        {/* Background */}
-                        <div className="absolute inset-0 bg-[#0241cd] group-hover:bg-[#0033a8] transition-colors duration-500"></div>
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-blue-400/20 to-transparent"></div>
+                        {/* Background Overlay */}
+                        <div className="absolute inset-0 bg-[#0241cd]/60 group-hover:bg-[#0033a8]/70 transition-colors duration-500"></div>
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full">
                             <div className="w-full md:w-[40%] flex flex-col items-center md:items-end">
-                                <div
-                                    className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/30 mb-3 md:mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl transform md:-translate-x-12"
-                                >
-                                    <img
-                                        src={imgCleanHero}
-                                        alt="Nettoyage Pro"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
+
                                 <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter drop-shadow-lg leading-tight md:mr-12">
                                     Nettoyage <br className="hidden md:block" /><span className="text-blue-200">Pro</span>
                                 </h2>
