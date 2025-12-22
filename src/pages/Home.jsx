@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
 import midiPyreneesMap from '../assets/midi-pyrenees-map.png';
 
+
+
+
 const Home = () => {
-
-
     return (
+
         <Layout title="Accueil">
             <div className="bg-gray-950 min-h-screen text-white">
 
@@ -19,8 +21,7 @@ const Home = () => {
                 <section className="relative flex flex-col md:block h-auto md:h-[95vh] bg-gray-950 overflow-hidden">
 
                     {/* Section 1: HYGIÈNE 3D - Mobile: Top / Desktop: Left Lightning */}
-                    <Link
-                        to="/hygiene-3d"
+                    <div
                         className="
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
@@ -28,32 +29,37 @@ const Home = () => {
                             md:[clip-path:polygon(0_0,_35%_0,_25%_40%,_40%_60%,_30%_100%,_0_100%)]
                         "
                     >
+                        <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Hygiène 3D"></Link>
                         {/* Background */}
                         <div className="absolute inset-0 bg-[#E71D36] group-hover:bg-[#c0182c] transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-red-400/20 to-transparent"></div>
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
-                            <div className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:translate-x-12">
+                            <div className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:translate-x-2">
                                 <ShieldCheck className="text-white w-8 h-8 md:w-16 md:h-16" />
                             </div>
-                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight md:ml-12">
+                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight md:ml-2">
                                 Hygiène <br className="hidden md:block" /><span className="text-red-200">3D</span>
                             </h2>
-                            <ul className="hidden md:block text-red-100 text-lg font-medium space-y-2 opacity-90 md:ml-12">
+                            <ul className="hidden md:block text-red-100 text-lg font-medium space-y-2 opacity-90 md:ml-2">
                                 <li>Dératisation</li>
                                 <li>Désinsectisation</li>
                                 <li>Désinfection</li>
                             </ul>
-                            <div className="hidden md:block mt-8 px-6 py-2 bg-white text-[#E71D36] font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:ml-12 w-fit">
-                                En savoir plus
+                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:ml-2 pointer-events-auto">
+                                <Link to="/hygiene-3d" className="px-4 py-1.5 bg-white text-[#E71D36] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
+                                    En savoir plus
+                                </Link>
+                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#E71D36] transition-colors shadow-lg cursor-pointer relative z-20">
+                                    Demander un devis
+                                </Link>
                             </div>
                         </div>
-                    </Link>
+                    </div>
 
                     {/* Section 2: ESPACES VERTS - Mobile: Middle / Desktop: Middle Lightning */}
-                    <Link
-                        to="/espaces-verts"
+                    <div
                         className="
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
@@ -61,6 +67,7 @@ const Home = () => {
                             md:[clip-path:polygon(35%_0,_70%_0,_60%_40%,_75%_60%,_65%_100%,_30%_100%,_40%_60%,_25%_40%)]
                         "
                     >
+                        <Link to="/espaces-verts" className="absolute inset-0 z-10" aria-label="Espaces Verts"></Link>
                         {/* Background */}
                         <div className="absolute inset-0 bg-[#037971] group-hover:bg-[#025e57] transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#037971]/40 to-transparent"></div>
@@ -83,15 +90,19 @@ const Home = () => {
                                 <li>Entretien Jardin</li>
                                 <li>Paysagisme</li>
                             </ul>
-                            <div className="hidden md:block mt-8 px-6 py-2 bg-white text-[#037971] font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                En savoir plus
+                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 justify-center pointer-events-auto">
+                                <Link to="/espaces-verts" className="px-4 py-1.5 bg-white text-[#037971] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
+                                    En savoir plus
+                                </Link>
+                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#037971] transition-colors shadow-lg cursor-pointer relative z-20">
+                                    Demander un devis
+                                </Link>
                             </div>
                         </div>
-                    </Link>
+                    </div>
 
                     {/* Section 3: NETTOYAGE - Mobile: Bottom / Desktop: Right Lightning */}
-                    <Link
-                        to="/nettoyage"
+                    <div
                         className="
                             relative w-full h-[34vh] md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
@@ -99,6 +110,7 @@ const Home = () => {
                             md:[clip-path:polygon(70%_0,_100%_0,_100%_100%,_65%_100%,_75%_60%,_60%_40%)]
                         "
                     >
+                        <Link to="/nettoyage" className="absolute inset-0 z-10" aria-label="Nettoyage"></Link>
                         {/* Background */}
                         <div className="absolute inset-0 bg-[#0241cd] group-hover:bg-[#0033a8] transition-colors duration-500"></div>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-blue-400/20 to-transparent"></div>
@@ -122,12 +134,17 @@ const Home = () => {
                                     <li>Immeubles</li>
                                     <li>Fin de chantier</li>
                                 </ul>
-                                <div className="hidden md:block mt-8 px-6 py-2 bg-white text-[#0241cd] font-bold rounded-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:mr-12 w-fit">
-                                    En savoir plus
+                                <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:mr-12 pointer-events-auto">
+                                    <Link to="/nettoyage" className="px-4 py-1.5 bg-white text-[#0241cd] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
+                                        En savoir plus
+                                    </Link>
+                                    <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#0241cd] transition-colors shadow-lg cursor-pointer relative z-20">
+                                        Demander un devis
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </div>
 
 
                     {/* LIGHTNING BOLT SEPARATORS (Desktop Only) */}
@@ -597,14 +614,10 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* 7. CTA - Dark Mode */}
                 <section className="py-24 relative overflow-hidden text-center text-white bg-gray-950">
                     <div className="absolute inset-0 bg-gray-950"></div>
                     <div className="relative z-10 max-w-4xl mx-auto px-4">
                         <motion.h2
-
-
-
                             className="text-4xl md:text-5xl font-black mb-8"
                         >
                             Besoin d'un devis immédiat ?
@@ -618,7 +631,7 @@ const Home = () => {
                     </div>
                 </section>
             </div>
-        </Layout>
+        </Layout >
     );
 };
 
