@@ -24,7 +24,7 @@ const Contact = () => {
                     <iframe
                         src="https://tally.so/r/5B48RQ?transparentBackground=1"
                         width="100%"
-                        height="600"
+                        height="1500"
                         frameBorder="0"
                         marginHeight="0"
                         marginWidth="0"
