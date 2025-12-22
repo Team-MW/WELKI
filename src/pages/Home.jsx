@@ -180,6 +180,7 @@ const Home = () => {
                             ))}
                         </div>
                     </div>
+
                 </div>
 
                 {/* 3. EXPERTISE SECTION - Cards with Depth */}
@@ -308,6 +309,34 @@ const Home = () => {
                                 <Link to="/nettoyage" className="w-full py-3 rounded-xl border-2 border-gray-700 text-[#0241cd] font-bold flex items-center justify-center hover:bg-[#0241cd] hover:text-white transition-all group-hover:border-[#0241cd] hover:border-[#0241cd]">
                                     En savoir plus <ArrowRight size={18} className="ml-2" />
                                 </Link>
+                            </div>
+                        </div>
+
+                        {/* NEW: Single Point of Contact Banner */}
+                        <div className="mt-16 max-w-4xl mx-auto px-4">
+                            <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 shadow-2xl relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-[#037971]/5 group-hover:bg-[#037971]/10 transition-colors duration-500"></div>
+                                <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+                                    <div className="flex-1">
+                                        <div className="inline-block px-4 py-1 bg-[#037971]/20 text-[#037971] rounded-full font-bold text-sm mb-4">
+                                            SIMPLIFIEZ-VOUS LA VIE
+                                        </div>
+                                        <h3 className="text-2xl font-black text-white mb-2">
+                                            1 Client = 1 Interlocuteur Unique
+                                        </h3>
+                                        <p className="text-gray-400 font-medium">
+                                            Pas de multiplication des prestataires. WELKI centralise tout pour vous.
+                                            <br />
+                                            <span className="text-gray-300">Hygiène 3D + Espaces Verts + Nettoyage = Une seule facture.</span>
+                                        </p>
+                                    </div>
+                                    <div className="flex-shrink-0">
+                                        <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-white text-gray-900 font-bold hover:bg-[#037971] hover:text-white transition-all shadow-lg hover:shadow-[#037971]/30">
+                                            Discuter de mon projet
+                                            <ArrowRight className="ml-2" size={20} />
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
