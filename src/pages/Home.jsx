@@ -5,6 +5,9 @@ import { ArrowRight, ShieldCheck, TreePine, Sparkles, CheckCircle2, FileCheck, S
 import { Link } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
 import occitanieMap from '../assets/occitanie-map.png';
+import imgGreenHero from '../assets/man-uniform-trimming-hedge-summer-time.jpg';
+import imgCleanHero from '../assets/full-shot-man-vacuuming-office-floor.jpg';
+import img3DHero from '../assets/people-wearing-protective-equipment-disinfecting-dangerous-area.jpg';
 
 
 const Home = () => {
@@ -33,8 +36,12 @@ const Home = () => {
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
-                            <div className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:translate-x-2">
-                                <ShieldCheck className="text-white w-8 h-8 md:w-16 md:h-16" />
+                            <div className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/30 mb-3 md:mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl transform md:translate-x-2">
+                                <img
+                                    src={img3DHero}
+                                    alt="Hygiène 3D"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                             <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight md:ml-2">
                                 Hygiène <br className="hidden md:block" /><span className="text-red-200">3D</span>
@@ -72,12 +79,13 @@ const Home = () => {
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
                             <div
-
-
-
-                                className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
+                                className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/30 mb-3 md:mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl"
                             >
-                                <TreePine className="text-white w-8 h-8 md:w-16 md:h-16" />
+                                <img
+                                    src={imgGreenHero}
+                                    alt="Espaces Verts"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                             <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
                                 Espaces <br className="hidden md:block" /><span className="text-white">Verts</span>
@@ -116,12 +124,13 @@ const Home = () => {
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full">
                             <div className="w-full md:w-[40%] flex flex-col items-center md:items-end">
                                 <div
-
-
-
-                                    className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:-translate-x-12"
+                                    className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/30 mb-3 md:mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl transform md:-translate-x-12"
                                 >
-                                    <Sparkles className="text-white w-8 h-8 md:w-16 md:h-16" />
+                                    <img
+                                        src={imgCleanHero}
+                                        alt="Nettoyage Pro"
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter drop-shadow-lg leading-tight md:mr-12">
                                     Nettoyage <br className="hidden md:block" /><span className="text-blue-200">Pro</span>
