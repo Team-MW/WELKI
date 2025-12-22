@@ -68,9 +68,9 @@ const Home = () => {
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
                             <div
-                                
-                                
-                                
+
+
+
                                 className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300"
                             >
                                 <TreePine className="text-white w-8 h-8 md:w-16 md:h-16" />
@@ -107,9 +107,9 @@ const Home = () => {
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full">
                             <div className="w-full md:w-[40%] flex flex-col items-center md:items-end">
                                 <div
-                                    
-                                    
-                                    
+
+
+
                                     className="bg-white/10 p-3 md:p-6 rounded-full backdrop-blur-sm mb-3 md:mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 transform md:-translate-x-12"
                                 >
                                     <Sparkles className="text-white w-8 h-8 md:w-16 md:h-16" />
@@ -135,9 +135,9 @@ const Home = () => {
                 <div className="bg-gray-900 py-12 border-b border-gray-800 relative z-20 shadow-sm">
                     <div className="max-w-7xl mx-auto px-4">
                         <div
-                            
-                            
-                            
+
+
+
                             className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center"
                         >
                             {[
@@ -170,15 +170,15 @@ const Home = () => {
                     <div className="relative z-10">
                         <div className="text-center max-w-3xl mx-auto mb-16">
                             <motion.span
-                                
-                                
+
+
                                 className="text-welki-green font-bold tracking-widest uppercase text-sm mb-2 block"
                             >
                                 Nos Services
                             </motion.span>
                             <motion.h2
-                                
-                                
+
+
                                 className="text-white font-black text-4xl md:text-5xl mb-6"
                             >
                                 Nos Domaines d'Intervention
@@ -193,10 +193,10 @@ const Home = () => {
                             {/* Card 1: 3D */}
                             {/* Card 1: 3D - Red */}
                             <div
-                                
-                                
-                                
-                                
+
+
+
+
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#E71D36] hover:shadow-2xl hover:shadow-[#E71D36]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
                             >
@@ -225,10 +225,10 @@ const Home = () => {
                             {/* Card 2: Green */}
                             {/* Card 2: Green - Green */}
                             <div
-                                
-                                
-                                
-                                
+
+
+
+
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#037971] hover:shadow-2xl hover:shadow-[#037971]/20 transition-all duration-300 flex flex-col group relative md:-mt-8 z-10 border-x border-b border-gray-800"
                             >
@@ -260,10 +260,10 @@ const Home = () => {
                             {/* Card 3: Cleaning */}
                             {/* Card 3: Cleaning - Blue */}
                             <div
-                                
-                                
-                                
-                                
+
+
+
+
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#0241cd] hover:shadow-2xl hover:shadow-[#0241cd]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
                             >
@@ -302,21 +302,21 @@ const Home = () => {
                     <div className="max-w-7xl mx-auto px-4 relative z-10">
                         <div className="flex flex-col md:flex-row items-center gap-16">
                             <div
-                                
-                                
-                                
+
+
+
                                 className="flex-1"
                             >
                                 <motion.span
-                                    
-                                    
+
+
                                     className="text-[#037971] font-bold tracking-widest uppercase text-sm mb-2 block"
                                 >
                                     Notre Rayon d'Action
                                 </motion.span>
                                 <motion.h2
-                                    
-                                    
+
+
                                     className="text-white font-black text-4xl md:text-5xl mb-6"
                                 >
                                     Intervention dans tout le <br />
@@ -339,9 +339,9 @@ const Home = () => {
                                     ].map((zone, i) => (
                                         <div
                                             key={zone.name}
-                                            
-                                            
-                                            
+
+
+
                                             className="flex items-center text-gray-300 p-2 rounded-lg hover:bg-gray-800/50 transition-colors cursor-default"
                                         >
                                             <div className="bg-[#037971]/20 p-2 rounded-full mr-3 text-[#037971]">
@@ -357,10 +357,10 @@ const Home = () => {
                             </div>
 
                             <div
-                                
-                                
-                                
-                                
+
+
+
+
                                 className="flex-1 relative"
                             >
                                 <div className="absolute inset-0 bg-[#037971] blur-[100px] opacity-20 rounded-full"></div>
@@ -378,9 +378,9 @@ const Home = () => {
                 <section className="py-16 md:py-24 bg-gray-950 relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10">
                         <div
-                            
-                            
-                            
+
+
+
                             className="flex-1 order-2 md:order-1"
                         >
                             <div className="relative group">
@@ -406,10 +406,10 @@ const Home = () => {
                         </div>
 
                         <div
-                            
-                            
-                            
-                            
+
+
+
+
                             className="flex-1 order-1 md:order-2"
                         >
                             <div className="inline-block px-4 py-2 bg-blue-900/40 text-blue-300 font-bold rounded-full text-sm mb-6 border border-blue-800">
@@ -456,16 +456,16 @@ const Home = () => {
                         {/* Header */}
                         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                             <motion.h2
-                                
-                                
+
+
                                 className="text-4xl font-black text-white"
                             >
                                 Paroles de clients
                             </motion.h2>
 
                             <div
-                                
-                                
+
+
                                 className="flex items-center gap-2 bg-gray-900 px-4 py-2 rounded-full shadow-sm border border-gray-800"
                             >
                                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -512,9 +512,9 @@ const Home = () => {
                             ].map((review, i) => (
                                 <div
                                     key={i}
-                                    
-                                    
-                                    
+
+
+
                                     className="min-w-[85vw] md:min-w-[350px] bg-gray-900 p-6 md:p-8 rounded-3xl shadow-sm border border-gray-800 flex flex-col snap-center hover:shadow-md transition-shadow"
                                 >
                                     <div className="flex text-yellow-400 mb-4 text-sm gap-1">
@@ -552,9 +552,9 @@ const Home = () => {
                     <div className="absolute inset-0 bg-gray-950"></div>
                     <div className="relative z-10 max-w-4xl mx-auto px-4">
                         <motion.h2
-                            
-                            
-                            
+
+
+
                             className="text-4xl md:text-5xl font-black mb-8"
                         >
                             Besoin d'un devis immédiat ?
