@@ -129,6 +129,27 @@ const Home = () => {
                         </div>
                     </Link>
 
+
+                    {/* LIGHTNING BOLT SEPARATORS (Desktop Only) */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path
+                            d="M 35 0 L 25 40 L 40 60 L 30 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                        />
+                        <path
+                            d="M 70 0 L 60 40 L 75 60 L 65 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                        />
+                    </svg>
+
                 </section>
 
                 {/* 2. REASSURANCE STRIP - Interactive & Clean */}
