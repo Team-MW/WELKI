@@ -1,13 +1,20 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel } from 'lucide-react';
+import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel, AlertTriangle, UtensilsCrossed, Wind, TrendingUp, Baby } from 'lucide-react';
+
 import { useSearchParams } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
 import img3DMain from '../assets/full-shot-man-holding-disinfectant-tank.jpg';
 import img3DDisinfection from '../assets/unrecognizable-person-white-chemical-protection-suit-doing-disinfection-public-areas-stop-spreading-highly-contagious-corona-virus.jpg';
 import imgGreenMain from '../assets/man-uniform-trimming-hedge-summer-time.jpg';
+
 import imgCleanMain from '../assets/full-shot-man-vacuuming-office-floor.jpg';
+import imgCafardBg from '../assets/cafard.jpg';
+import imgRatBg from '../assets/rat.jpg';
+
+import imgGreenBg from '../assets/espacevert.jpg';
+import imgCleanBg from '../assets/netoyagepro.jpg';
 
 const Services = ({ defaultTab }) => {
     // Simple scroll to section logic using URL params or props could be implemented
@@ -19,21 +26,24 @@ const Services = ({ defaultTab }) => {
             description: "Nous utilisons des méthodes certifiées pour éradiquer tout type de nuisibles tout en préservant votre sécurité.",
             bgClass: "bg-gray-950",
             textClass: "text-[#E71D36]",
-            descClass: "text-gray-300"
+            descClass: "text-gray-100",
+            bgImage: imgCafardBg
         },
         'green': {
             title: "Élagage & Entretien de Jardin",
             description: "Nos paysagistes interviennent pour la taille, l'abattage et l'entretien régulier de vos extérieurs.",
             bgClass: "bg-gray-950",
             textClass: "text-[#037971]",
-            descClass: "text-gray-300"
+            descClass: "text-gray-100",
+            bgImage: imgGreenBg
         },
         'clean': {
             title: "Entretien & Nettoyage Pro",
             description: "Services de nettoyage pour copropriétés, bureaux et fin de chantier.",
             bgClass: "bg-gray-950",
             textClass: "text-[#0241cd]",
-            descClass: "text-gray-300"
+            descClass: "text-gray-100",
+            bgImage: imgCleanBg
         }
     };
 
@@ -48,8 +58,20 @@ const Services = ({ defaultTab }) => {
     return (
         <Layout title="Nos Services" description="Découvrez nos prestations en hygiène 3D et entretien.">
             <div className="bg-gray-950 min-h-screen text-white">
-                <Section className="pt-32 pb-16">
-                    <div className="text-center">
+                <Section
+                    className="pt-64 pb-32 relative overflow-hidden"
+                    style={currentContent.bgImage ? {
+                        backgroundImage: `url(${currentContent.bgImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    } : {}}
+                >
+                    {/* Overlay if background image exists */}
+                    {currentContent.bgImage && (
+                        <div className="absolute inset-0 bg-black/40 z-0"></div>
+                    )}
+
+                    <div className="text-center relative z-10">
                         <h1 className={`text-3xl md:text-5xl font-black mb-6 px-4 ${currentContent.textClass}`}>{currentContent.title}</h1>
                         <p className={`text-xl max-w-3xl mx-auto px-4 ${currentContent.descClass}`}>
                             {currentContent.description}
@@ -129,8 +151,14 @@ const Services = ({ defaultTab }) => {
 
 
                         {/* 1.5 VISUAL & TARGETS */}
-                        <section className="py-12">
-                            <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <section className="py-20 relative overflow-hidden">
+                            {/* Background Image with Overlay */}
+                            <div className="absolute inset-0 z-0">
+                                <img src={imgRatBg} alt="" className="w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-gray-900/40"></div>
+                            </div>
+
+                            <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative group rounded-3xl overflow-hidden cursor-pointer shadow-2xl border border-gray-800 h-[500px]">
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
                                     <img src={img3DMain} alt="Expert Hygiène 3D" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
@@ -167,6 +195,61 @@ const Services = ({ defaultTab }) => {
                                         ))}
                                     </div>
                                 </div>
+                            </div>
+                        </section>
+
+                        {/* 1.8 DANGERS SECTION (New) */}
+                        <section className="py-12 bg-gray-900/30 rounded-3xl border border-gray-800 p-8 md:p-12">
+                            <div className="text-center mb-12">
+                                <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+                                    Les <span className="text-[#E71D36]">dangers</span> et nuisances
+                                </h2>
+                                <p className="text-gray-400 text-lg">Pourquoi il est <span className="text-[#E71D36] font-bold">urgent</span> d'agir rapidement</p>
+                            </div>
+
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {[
+                                    {
+                                        icon: AlertTriangle,
+                                        title: "Maladies et bactéries",
+                                        desc: "Les cafards transportent de nombreuses bactéries et peuvent transmettre des maladies."
+                                    },
+                                    {
+                                        icon: UtensilsCrossed,
+                                        title: "Contamination alimentaire",
+                                        desc: "Ils souillent la nourriture et les surfaces de cuisine par leurs déjections."
+                                    },
+                                    {
+                                        icon: Wind,
+                                        title: "Allergies et asthme",
+                                        desc: "Leurs déjections et mues peuvent déclencher allergies et crises d'asthme."
+                                    },
+                                    {
+                                        icon: TrendingUp,
+                                        title: "Reproduction explosive",
+                                        desc: "Une femelle peut produire jusqu'à 400 descendants en une année."
+                                    },
+                                    {
+                                        icon: Home,
+                                        title: "Invasion totale",
+                                        desc: "Ils colonisent rapidement cuisine, salle de bain et tous les recoins humides."
+                                    },
+                                    {
+                                        icon: Baby,
+                                        title: "Risque sanitaire",
+                                        desc: "Particulièrement dangereux pour les enfants, personnes âgées et immunodéprimées."
+                                    }
+                                ].map((item, i) => (
+                                    <div key={i} className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center group relative overflow-hidden hover:-translate-y-2 border-b-4 border-transparent hover:border-[#E71D36]">
+                                        <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center text-[#E71D36] mb-6 shadow-sm group-hover:bg-[#E71D36] group-hover:text-white transition-colors duration-300">
+                                            <item.icon size={36} strokeWidth={2} />
+                                        </div>
+                                        <h3 className="text-gray-900 font-extrabold text-xl mb-3">{item.title}</h3>
+                                        <p className="text-gray-600 text-base leading-relaxed">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                         </section>
 

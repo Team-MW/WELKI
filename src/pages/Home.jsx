@@ -20,93 +20,13 @@ const Home = () => {
                 {/* 1. HERO SECTION - Lightning Bolt Layout - Responsive Refactor */}
                 <section className="relative flex flex-col md:block h-auto md:h-[95vh] bg-gray-950 overflow-hidden">
 
-                    {/* Section 1: HYGIÈNE 3D - Mobile: Top / Desktop: Left Lightning */}
+                    {/* Section 1: NETTOYAGE - Mobile: Top / Desktop: Left Lightning */}
                     <div
                         className="
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
                             md:[clip-path:polygon(0_0,_35%_0,_25%_40%,_40%_60%,_30%_100%,_0_100%)]
-                        "
-                        style={{
-                            backgroundImage: `url(${img3DHero})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
-                    >
-                        <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Hygiène 3D"></Link>
-                        {/* Background Overlay */}
-                        <div className="absolute inset-0 bg-[#E71D36]/60 group-hover:bg-[#c0182c]/70 transition-colors duration-500"></div>
-
-                        {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
-
-                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter shadow-black drop-shadow-lg leading-tight md:ml-2">
-                                Hygiène <br className="hidden md:block" /><span className="text-red-200">3D</span>
-                            </h2>
-                            <ul className="hidden md:block text-red-100 text-lg font-medium space-y-2 opacity-90 md:ml-2">
-                                <li>Dératisation</li>
-                                <li>Désinsectisation</li>
-                                <li>Désinfection</li>
-                            </ul>
-                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:ml-2 pointer-events-auto">
-                                <Link to="/hygiene-3d" className="px-4 py-1.5 bg-white text-[#E71D36] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
-                                    En savoir plus
-                                </Link>
-                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#E71D36] transition-colors shadow-lg cursor-pointer relative z-20">
-                                    Demander un devis
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Section 2: ESPACES VERTS - Mobile: Middle / Desktop: Middle Lightning */}
-                    <div
-                        className="
-                            relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-500 ease-in-out cursor-pointer 
-                            z-10 hover:z-50 md:hover:scale-[1.05] origin-center
-                            md:[clip-path:polygon(35%_0,_70%_0,_60%_40%,_75%_60%,_65%_100%,_30%_100%,_40%_60%,_25%_40%)]
-                        "
-                        style={{
-                            backgroundImage: `url(${imgGreenHero})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
-                    >
-                        <Link to="/espaces-verts" className="absolute inset-0 z-10" aria-label="Espaces Verts"></Link>
-                        {/* Background Overlay */}
-                        <div className="absolute inset-0 bg-[#037971]/60 group-hover:bg-[#025e57]/70 transition-colors duration-500"></div>
-
-                        {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
-
-                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
-                                Espaces <br className="hidden md:block" /><span className="text-white">Verts</span>
-                            </h2>
-                            <ul className="hidden md:block text-white text-lg font-medium space-y-2 opacity-90">
-                                <li>Élagage</li>
-                                <li>Entretien Jardin</li>
-                                <li>Paysagisme</li>
-                            </ul>
-                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 justify-center pointer-events-auto">
-                                <Link to="/espaces-verts" className="px-4 py-1.5 bg-white text-[#037971] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
-                                    En savoir plus
-                                </Link>
-                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#037971] transition-colors shadow-lg cursor-pointer relative z-20">
-                                    Demander un devis
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Section 3: NETTOYAGE - Mobile: Bottom / Desktop: Right Lightning */}
-                    <div
-                        className="
-                            relative w-full h-[34vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-500 ease-in-out cursor-pointer 
-                            z-10 hover:z-50 md:hover:scale-[1.05] origin-center
-                            md:[clip-path:polygon(70%_0,_100%_0,_100%_100%,_65%_100%,_75%_60%,_60%_40%)]
                         "
                         style={{
                             backgroundImage: `url(${imgCleanHero})`,
@@ -119,22 +39,102 @@ const Home = () => {
                         <div className="absolute inset-0 bg-[#0241cd]/60 group-hover:bg-[#0033a8]/70 transition-colors duration-500"></div>
 
                         {/* Content */}
+                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
+
+                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter drop-shadow-lg leading-tight md:ml-2">
+                                Nettoyage <br className="hidden md:block" /><span className="text-blue-200">Pro</span>
+                            </h2>
+                            <ul className="hidden md:block text-blue-100 text-lg font-medium space-y-2 opacity-90 md:ml-2">
+                                <li>Bureaux</li>
+                                <li>Immeubles</li>
+                                <li>Fin de chantier</li>
+                            </ul>
+                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:ml-2 pointer-events-auto">
+                                <Link to="/nettoyage" className="px-4 py-1.5 bg-white text-[#0241cd] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
+                                    En savoir plus
+                                </Link>
+                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#0241cd] transition-colors shadow-lg cursor-pointer relative z-20">
+                                    Demander un devis
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Section 2: HYGIÈNE 3D - Mobile: Middle / Desktop: Middle Lightning */}
+                    <div
+                        className="
+                            relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            z-10 hover:z-50 md:hover:scale-[1.05] origin-center
+                            md:[clip-path:polygon(35%_0,_70%_0,_60%_40%,_75%_60%,_65%_100%,_30%_100%,_40%_60%,_25%_40%)]
+                        "
+                        style={{
+                            backgroundImage: `url(${img3DHero})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                    >
+                        <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Hygiène 3D"></Link>
+                        {/* Background Overlay */}
+                        <div className="absolute inset-0 bg-[#E71D36]/60 group-hover:bg-[#c0182c]/70 transition-colors duration-500"></div>
+
+                        {/* Content */}
+                        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
+
+                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
+                                Hygiène <br className="hidden md:block" /><span className="text-red-200">3D</span>
+                            </h2>
+                            <ul className="hidden md:block text-red-100 text-lg font-medium space-y-2 opacity-90">
+                                <li>Dératisation</li>
+                                <li>Désinsectisation</li>
+                                <li>Désinfection</li>
+                            </ul>
+                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 justify-center pointer-events-auto">
+                                <Link to="/hygiene-3d" className="px-4 py-1.5 bg-white text-[#E71D36] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
+                                    En savoir plus
+                                </Link>
+                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#E71D36] transition-colors shadow-lg cursor-pointer relative z-20">
+                                    Demander un devis
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Section 3: ESPACES VERTS - Mobile: Bottom / Desktop: Right Lightning */}
+                    <div
+                        className="
+                            relative w-full h-[34vh] md:absolute md:inset-0 md:h-full 
+                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            z-10 hover:z-50 md:hover:scale-[1.05] origin-center
+                            md:[clip-path:polygon(70%_0,_100%_0,_100%_100%,_65%_100%,_75%_60%,_60%_40%)]
+                        "
+                        style={{
+                            backgroundImage: `url(${imgGreenHero})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                    >
+                        <Link to="/espaces-verts" className="absolute inset-0 z-10" aria-label="Espaces Verts"></Link>
+                        {/* Background Overlay */}
+                        <div className="absolute inset-0 bg-[#037971]/60 group-hover:bg-[#025e57]/70 transition-colors duration-500"></div>
+
+                        {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full">
                             <div className="w-full md:w-[40%] flex flex-col items-center md:items-end">
 
                                 <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter drop-shadow-lg leading-tight md:mr-12">
-                                    Nettoyage <br className="hidden md:block" /><span className="text-blue-200">Pro</span>
+                                    Espaces <br className="hidden md:block" /><span className="text-white">Verts</span>
                                 </h2>
-                                <ul className="hidden md:block text-blue-100 text-lg font-medium space-y-2 opacity-90 md:mr-12">
-                                    <li>Bureaux</li>
-                                    <li>Immeubles</li>
-                                    <li>Fin de chantier</li>
+                                <ul className="hidden md:block text-white text-lg font-medium space-y-2 opacity-90 md:mr-12">
+                                    <li>Élagage</li>
+                                    <li>Entretien Jardin</li>
+                                    <li>Paysagisme</li>
                                 </ul>
                                 <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:mr-12 pointer-events-auto">
-                                    <Link to="/nettoyage" className="px-4 py-1.5 bg-white text-[#0241cd] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
+                                    <Link to="/espaces-verts" className="px-4 py-1.5 bg-white text-[#037971] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
                                         En savoir plus
                                     </Link>
-                                    <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#0241cd] transition-colors shadow-lg cursor-pointer relative z-20">
+                                    <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#037971] transition-colors shadow-lg cursor-pointer relative z-20">
                                         Demander un devis
                                     </Link>
                                 </div>
@@ -156,10 +156,12 @@ const Home = () => {
                         <path
                             d="M 70 0 L 60 40 L 75 60 L 65 100"
                             stroke="white"
-                            strokeWidth="3"
+                            strokeWidth="4"
+                            strokeLinecap="square"
+                            strokeLinejoin="miter"
                             vectorEffect="non-scaling-stroke"
                             fill="none"
-                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] z-30 relative"
                         />
                     </svg>
 
@@ -237,13 +239,37 @@ const Home = () => {
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8 px-4">
+                            {/* Card 3: Cleaning */}
+                            {/* Card 3: Cleaning - Blue */}
+                            <div
+                                whileHover={{ y: -10 }}
+                                className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#0241cd] hover:shadow-2xl hover:shadow-[#0241cd]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
+                            >
+                                <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center text-[#0241cd] mb-6 group-hover:scale-110 transition-transform duration-300 border border-gray-700">
+                                    <Sparkles size={36} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#0241cd] transition-colors">Nettoyage</h3>
+                                <p className="text-gray-400 mb-6 leading-relaxed flex-grow">
+                                    Services de propreté pour une hygiène irréprochable.
+                                </p>
+                                <ul className="space-y-3 mb-8 text-gray-300 font-medium">
+                                    {["Bureaux & Immeubles", "Fin de chantier", "Débarras"].map(item => (
+                                        <li key={item} className="flex items-center">
+                                            <div className="w-5 h-5 rounded-full bg-[#0241cd]/20 flex items-center justify-center text-[#0241cd] mr-3 shrink-0">
+                                                <CheckCircle2 size={12} />
+                                            </div>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Link to="/nettoyage" className="w-full py-3 rounded-xl border-2 border-gray-700 text-[#0241cd] font-bold flex items-center justify-center hover:bg-[#0241cd] hover:text-white transition-all group-hover:border-[#0241cd] hover:border-[#0241cd]">
+                                    En savoir plus <ArrowRight size={18} className="ml-2" />
+                                </Link>
+                            </div>
+
                             {/* Card 1: 3D */}
                             {/* Card 1: 3D - Red */}
                             <div
-
-
-
-
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#E71D36] hover:shadow-2xl hover:shadow-[#E71D36]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
                             >
@@ -272,10 +298,6 @@ const Home = () => {
                             {/* Card 2: Green */}
                             {/* Card 2: Green - Green */}
                             <div
-
-
-
-
                                 whileHover={{ y: -10 }}
                                 className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#037971] hover:shadow-2xl hover:shadow-[#037971]/20 transition-all duration-300 flex flex-col group relative md:-mt-8 z-10 border-x border-b border-gray-800"
                             >
@@ -300,38 +322,6 @@ const Home = () => {
                                     ))}
                                 </ul>
                                 <Link to="/espaces-verts" className="w-full py-3 rounded-xl bg-[#037971] text-white font-bold flex items-center justify-center hover:bg-[#025e57] shadow-lg shadow-[#037971]/40 transition-all">
-                                    En savoir plus <ArrowRight size={18} className="ml-2" />
-                                </Link>
-                            </div>
-
-                            {/* Card 3: Cleaning */}
-                            {/* Card 3: Cleaning - Blue */}
-                            <div
-
-
-
-
-                                whileHover={{ y: -10 }}
-                                className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#0241cd] hover:shadow-2xl hover:shadow-[#0241cd]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
-                            >
-                                <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center text-[#0241cd] mb-6 group-hover:scale-110 transition-transform duration-300 border border-gray-700">
-                                    <Sparkles size={36} />
-                                </div>
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#0241cd] transition-colors">Nettoyage</h3>
-                                <p className="text-gray-400 mb-6 leading-relaxed flex-grow">
-                                    Services de propreté pour une hygiène irréprochable.
-                                </p>
-                                <ul className="space-y-3 mb-8 text-gray-300 font-medium">
-                                    {["Bureaux & Immeubles", "Fin de chantier", "Débarras"].map(item => (
-                                        <li key={item} className="flex items-center">
-                                            <div className="w-5 h-5 rounded-full bg-[#0241cd]/20 flex items-center justify-center text-[#0241cd] mr-3 shrink-0">
-                                                <CheckCircle2 size={12} />
-                                            </div>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Link to="/nettoyage" className="w-full py-3 rounded-xl border-2 border-gray-700 text-[#0241cd] font-bold flex items-center justify-center hover:bg-[#0241cd] hover:text-white transition-all group-hover:border-[#0241cd] hover:border-[#0241cd]">
                                     En savoir plus <ArrowRight size={18} className="ml-2" />
                                 </Link>
                             </div>
