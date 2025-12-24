@@ -26,7 +26,7 @@ const Home = () => {
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
-                            md:[clip-path:polygon(0_0,_35%_0,_25%_40%,_40%_60%,_30%_100%,_0_100%)]
+                            md:[clip-path:polygon(0_0,_35%_0,_28%_40%,_38%_60%,_32%_100%,_0_100%)]
                         "
                         style={{
                             backgroundImage: `url(${imgCleanHero})`,
@@ -66,7 +66,7 @@ const Home = () => {
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
-                            md:[clip-path:polygon(35%_0,_70%_0,_60%_40%,_75%_60%,_65%_100%,_30%_100%,_40%_60%,_25%_40%)]
+                            md:[clip-path:polygon(35%_0,_70%_0,_64%_40%,_72%_60%,_67%_100%,_32%_100%,_38%_60%,_28%_40%)]
                         "
                         style={{
                             backgroundImage: `url(${img3DHero})`,
@@ -106,7 +106,7 @@ const Home = () => {
                             relative w-full h-[34vh] md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
-                            md:[clip-path:polygon(70%_0,_100%_0,_100%_100%,_65%_100%,_75%_60%,_60%_40%)]
+                            md:[clip-path:polygon(70%_0,_100%_0,_100%_100%,_67%_100%,_72%_60%,_64%_40%)]
                         "
                         style={{
                             backgroundImage: `url(${imgGreenHero})`,
@@ -146,7 +146,7 @@ const Home = () => {
                     {/* LIGHTNING BOLT SEPARATORS (Desktop Only) */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <path
-                            d="M 35 0 L 25 40 L 40 60 L 30 100"
+                            d="M 35 0 L 28 40 L 38 60 L 32 100"
                             stroke="white"
                             strokeWidth="3"
                             vectorEffect="non-scaling-stroke"
@@ -154,7 +154,7 @@ const Home = () => {
                             className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
                         />
                         <path
-                            d="M 70 0 L 60 40 L 75 60 L 65 100"
+                            d="M 70 0 L 64 40 L 72 60 L 67 100"
                             stroke="white"
                             strokeWidth="4"
                             strokeLinecap="square"
@@ -172,7 +172,7 @@ const Home = () => {
                     {/* SEPARATORS EXTENSION */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <path
-                            d="M 30 0 L 35 100"
+                            d="M 32 0 L 37 100"
                             stroke="white"
                             strokeWidth="3"
                             vectorEffect="non-scaling-stroke"
@@ -180,7 +180,7 @@ const Home = () => {
                             className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
                         />
                         <path
-                            d="M 65 0 L 70 100"
+                            d="M 67 0 L 72 100"
                             stroke="white"
                             strokeWidth="3"
                             vectorEffect="non-scaling-stroke"

@@ -27,7 +27,8 @@ const Services = ({ defaultTab }) => {
             bgClass: "bg-gray-950",
             textClass: "text-[#E71D36]",
             descClass: "text-gray-100",
-            bgImage: imgCafardBg
+            bgImage: imgCafardBg,
+            btnColor: "bg-[#E71D36]"
         },
         'green': {
             title: "Élagage & Entretien de Jardin",
@@ -35,7 +36,8 @@ const Services = ({ defaultTab }) => {
             bgClass: "bg-gray-950",
             textClass: "text-[#037971]",
             descClass: "text-gray-100",
-            bgImage: imgGreenBg
+            bgImage: imgGreenBg,
+            btnColor: "bg-[#037971]"
         },
         'clean': {
             title: "Entretien & Nettoyage Pro",
@@ -43,7 +45,8 @@ const Services = ({ defaultTab }) => {
             bgClass: "bg-gray-950",
             textClass: "text-[#0241cd]",
             descClass: "text-gray-100",
-            bgImage: imgCleanBg
+            bgImage: imgCleanBg,
+            btnColor: "bg-[#0241cd]"
         }
     };
 
@@ -52,14 +55,15 @@ const Services = ({ defaultTab }) => {
         description: "Des professionnels qualifiés pour des interventions efficaces et durables.",
         bgClass: "bg-gray-950",
         textClass: "text-welki-blue",
-        descClass: "text-gray-300"
+        descClass: "text-gray-300",
+        btnColor: "bg-welki-blue"
     };
 
     return (
         <Layout title="Nos Services" description="Découvrez nos prestations en hygiène 3D et entretien.">
             <div className="bg-gray-950 min-h-screen text-white">
                 <Section
-                    className="pt-64 pb-32 relative overflow-hidden"
+                    className="pt-32 pb-16 md:pt-64 md:pb-32 relative overflow-hidden"
                     style={currentContent.bgImage ? {
                         backgroundImage: `url(${currentContent.bgImage})`,
                         backgroundSize: 'cover',
@@ -68,14 +72,22 @@ const Services = ({ defaultTab }) => {
                 >
                     {/* Overlay if background image exists */}
                     {currentContent.bgImage && (
-                        <div className="absolute inset-0 bg-black/40 z-0"></div>
+                        <div className="absolute inset-0 bg-black/20 z-0"></div>
                     )}
 
-                    <div className="text-center relative z-10">
-                        <h1 className={`text-3xl md:text-5xl font-black mb-6 px-4 ${currentContent.textClass}`}>{currentContent.title}</h1>
-                        <p className={`text-xl max-w-3xl mx-auto px-4 ${currentContent.descClass}`}>
-                            {currentContent.description}
-                        </p>
+                    <div className="text-center relative z-10 flex flex-col items-center">
+                        <div className="bg-black/60 backdrop-blur-sm rounded-3xl p-8 max-w-4xl mx-4 shadow-2xl border border-gray-700/50">
+                            <h1 className={`text-3xl md:text-5xl font-black mb-6 px-4 ${currentContent.textClass}`}>{currentContent.title}</h1>
+                            <p className={`text-xl max-w-3xl mx-auto px-4 mb-8 ${currentContent.descClass}`}>
+                                {currentContent.description}
+                            </p>
+                            <a
+                                href="/contact"
+                                className={`${currentContent.btnColor} text-white font-bold py-4 px-8 rounded-full shadow-lg hover:brightness-110 transition-all transform hover:-translate-y-1 inline-block`}
+                            >
+                                Demander un devis
+                            </a>
+                        </div>
                     </div>
                 </Section>
 
@@ -151,48 +163,45 @@ const Services = ({ defaultTab }) => {
 
 
                         {/* 1.5 VISUAL & TARGETS */}
-                        <section className="py-20 relative overflow-hidden">
-                            {/* Background Image with Overlay */}
-                            <div className="absolute inset-0 z-0">
-                                <img src={imgRatBg} alt="" className="w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-gray-900/40"></div>
-                            </div>
-
-                            <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-                                <div className="relative group rounded-3xl overflow-hidden cursor-pointer shadow-2xl border border-gray-800 h-[500px]">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
-                                    <img src={img3DMain} alt="Expert Hygiène 3D" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                                    <div className="absolute bottom-8 left-8 right-8">
-                                        <div className="bg-[#E71D36] text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-2">EXPERTISE TOTALE</div>
-                                        <h3 className="text-3xl font-bold text-white leading-tight">Lutte Anti-Nuisibles</h3>
-                                        <p className="text-gray-200 text-sm mt-3">
-                                            Des solutions radicales et pérennes contre les rongeurs, insectes et agents pathogènes. Une intervention rapide et discrète.
-                                        </p>
+                        {/* 1.5 VISUAL & TARGETS */}
+                        <section className="py-20 bg-white">
+                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div className="grid md:grid-cols-2 gap-12 items-center">
+                                    <div className="relative group rounded-3xl overflow-hidden cursor-pointer shadow-2xl border border-gray-100 h-[500px]">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+                                        <img src={img3DMain} alt="Expert Hygiène 3D" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                                        <div className="absolute bottom-8 left-8 right-8">
+                                            <div className="bg-[#E71D36] text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-2">EXPERTISE TOTALE</div>
+                                            <h3 className="text-3xl font-bold text-white leading-tight">Lutte Anti-Nuisibles</h3>
+                                            <p className="text-gray-200 text-sm mt-3">
+                                                Des solutions radicales et pérennes contre les rongeurs, insectes et agents pathogènes. Une intervention rapide et discrète.
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div>
-                                    <h3 className="text-[#E71D36] font-bold uppercase tracking-widest text-sm mb-4">Nuisibles Ciblés</h3>
-                                    <h2 className="text-3xl md:text-4xl font-black text-white mb-8">Nous traitons tous types d'infestations</h2>
-                                    <div className="grid grid-cols-2 gap-4">
-                                        {[
-                                            { name: "Rats & Souris", icon: Rat },
-                                            { name: "Cafards / Blattes", icon: Bug },
-                                            { name: "Punaises de Lit", icon: Skull },
-                                            { name: "Frelons / Guêpes", icon: ShieldAlert },
-                                            { name: "Fourmis", icon: Droplets },
-                                            { name: "Mites & Puces", icon: Scissors }
-                                        ].map((pest, i) => (
-                                            <div
-                                                key={i}
-                                                className="flex items-center p-3 bg-gray-800 rounded-xl border border-gray-700 hover:border-[#E71D36]/50 transition-colors"
-                                            >
-                                                <div className="text-[#E71D36] bg-[#E71D36]/10 p-2 rounded-lg mr-3">
-                                                    <pest.icon size={20} />
+                                    <div>
+                                        <h3 className="text-[#E71D36] font-bold uppercase tracking-widest text-sm mb-4">Nuisibles Ciblés</h3>
+                                        <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">Nous traitons tous types d'infestations</h2>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            {[
+                                                { name: "Rats & Souris", icon: Rat },
+                                                { name: "Cafards / Blattes", icon: Bug },
+                                                { name: "Punaises de Lit", icon: Skull },
+                                                { name: "Frelons / Guêpes", icon: ShieldAlert },
+                                                { name: "Fourmis", icon: Droplets },
+                                                { name: "Mites & Puces", icon: Scissors }
+                                            ].map((pest, i) => (
+                                                <div
+                                                    key={i}
+                                                    className="flex items-center p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-[#E71D36]/50 transition-colors"
+                                                >
+                                                    <div className="text-[#E71D36] bg-[#E71D36]/10 p-2 rounded-lg mr-3">
+                                                        <pest.icon size={20} />
+                                                    </div>
+                                                    <span className="font-bold text-gray-700">{pest.name}</span>
                                                 </div>
-                                                <span className="font-bold text-gray-200">{pest.name}</span>
-                                            </div>
-                                        ))}
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -254,8 +263,13 @@ const Services = ({ defaultTab }) => {
                         </section>
 
                         {/* 2. METHODOLOGY */}
-                        <section className="py-12 bg-gray-900/50">
-                            <div className="max-w-7xl mx-auto px-4">
+                        <section className="py-20 relative overflow-hidden">
+                            {/* Background Image with Overlay */}
+                            <div className="absolute inset-0 z-0">
+                                <img src={imgRatBg} alt="" className="w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-gray-900/50"></div>
+                            </div>
+                            <div className="max-w-7xl mx-auto px-4 relative z-10">
                                 <div className="grid md:grid-cols-2 gap-16 items-center">
                                     <div className="order-2 md:order-1">
                                         <div className="text-left mb-10">
@@ -425,7 +439,7 @@ const Services = ({ defaultTab }) => {
                                             Intervention en hauteur sécurisée pour la santé de vos arbres et la sécurité des biens.
                                         </p>
                                         <ul className="space-y-2 text-gray-300 text-sm font-medium">
-                                            {['Taille douce & sanitaire', 'Abattage délicat', 'Dessouchage'].map(item => (
+                                            {['Taille douce & sanitaire', 'Abattage délicat', 'Dessouchage', 'Diagnostic phytosanitaire', 'Haubanage de sécurité'].map(item => (
                                                 <li key={item} className="flex items-center gap-2">
                                                     <CheckCircle size={14} className="text-[#037971]" /> {item}
                                                 </li>
@@ -443,7 +457,7 @@ const Services = ({ defaultTab }) => {
                                             Pour un extérieur toujours impeccable, ponctuellement ou en contrat annuel.
                                         </p>
                                         <ul className="space-y-2 text-gray-300 text-sm font-medium">
-                                            {['Tonte & Débroussaillage', 'Taille de haies', 'Ramassage feuilles'].map(item => (
+                                            {['Tonte & Débroussaillage', 'Taille de haies', 'Ramassage feuilles', 'Scarification pelouse', 'Apport d\'engrais bio'].map(item => (
                                                 <li key={item} className="flex items-center gap-2">
                                                     <CheckCircle size={14} className="text-[#037971]" /> {item}
                                                 </li>
@@ -461,7 +475,7 @@ const Services = ({ defaultTab }) => {
                                             Repensez vos espaces verts. Création de massifs, engazonnement et plantations.
                                         </p>
                                         <ul className="space-y-2 text-gray-300 text-sm font-medium">
-                                            {['Engazonnement (Rouleau/Semis)', 'Plantations', 'Paillage minéral/végétal'].map(item => (
+                                            {['Engazonnement (Rouleau/Semis)', 'Plantations & Massifs', 'Paillage minéral/végétal', 'Arrosage automatique', 'Maçonnerie paysagère'].map(item => (
                                                 <li key={item} className="flex items-center gap-2">
                                                     <CheckCircle size={14} className="text-[#037971]" /> {item}
                                                 </li>
@@ -489,9 +503,9 @@ const Services = ({ defaultTab }) => {
                                                 <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gray-800"></div>
 
                                                 {[
-                                                    { icon: Ruler, title: "1. Visite Technique", desc: "Évaluation de la santé des végétaux et des contraintes du terrain." },
-                                                    { icon: Scissors, title: "2. Taille Raisonnée", desc: "Respect de la physiologie de l'arbre et de la période de floraison." },
-                                                    { icon: Recycle, title: "3. Finitions & Déchets", desc: "Chantier laissé propre. Évacuation et recyclage des déchets verts." }
+                                                    { icon: Ruler, title: "1. Visite Technique", desc: "Évaluation précise de la santé des végétaux, analyse du sol et des contraintes d'accès." },
+                                                    { icon: Scissors, title: "2. Taille Raisonnée", desc: "Respect strict de la physiologie de l'arbre et des périodes de floraison pour une repousse saine." },
+                                                    { icon: Recycle, title: "3. Finitions & Déchets", desc: "Chantier laissé impeccable. Broyage sur place ou évacuation en centre de compostage agréé." }
                                                 ].map((step, i) => (
                                                     <div key={i} className="relative flex items-start z-10">
                                                         <div className="w-12 h-12 bg-gray-900 border-2 border-[#037971] rounded-full flex items-center justify-center text-[#037971] mr-6 shrink-0 shadow-lg bg-gray-900">
@@ -612,7 +626,7 @@ const Services = ({ defaultTab }) => {
                                             Entretien des parties communes d'immeubles. Gestion des poubelles et nettoyage des halls.
                                         </p>
                                         <ul className="space-y-2 text-gray-300 text-sm font-medium">
-                                            {['Entrée & Escaliers', 'Sortie containers poubelles', 'Vitrerie accessible'].map(item => (
+                                            {['Entrée & Escaliers', 'Sortie containers poubelles', 'Vitrerie accessible', 'Gestion des encombrants', 'Nettoyage parkings'].map(item => (
                                                 <li key={item} className="flex items-center gap-2">
                                                     <CheckCircle size={14} className="text-[#0241cd]" /> {item}
                                                 </li>
@@ -630,7 +644,7 @@ const Services = ({ defaultTab }) => {
                                             Un environnement de travail sain pour vos collaborateurs. Intervention hors horaires de bureau.
                                         </p>
                                         <ul className="space-y-2 text-gray-300 text-sm font-medium">
-                                            {['Dépoussiérage bureaux', 'Sanitaires & Cuisine', 'Sols & Moquettes'].map(item => (
+                                            {['Dépoussiérage bureaux', 'Sanitaires & Cuisine', 'Sols & Moquettes', 'Nettoyage vitres & cloisons', 'Désinfection points contact'].map(item => (
                                                 <li key={item} className="flex items-center gap-2">
                                                     <CheckCircle size={14} className="text-[#0241cd]" /> {item}
                                                 </li>
@@ -648,7 +662,7 @@ const Services = ({ defaultTab }) => {
                                             Remise en état après travaux ou avant état des lieux. Intervention de fond.
                                         </p>
                                         <ul className="space-y-2 text-gray-300 text-sm font-medium">
-                                            {['Évacuation gravats', 'Grattage sols & traces', 'Dépoussiérage fin'].map(item => (
+                                            {['Évacuation gravats', 'Grattage sols & traces', 'Dépoussiérage fin', 'Décapage mécanique', 'Lavage haute pression'].map(item => (
                                                 <li key={item} className="flex items-center gap-2">
                                                     <CheckCircle size={14} className="text-[#0241cd]" /> {item}
                                                 </li>
@@ -676,9 +690,9 @@ const Services = ({ defaultTab }) => {
                                                 <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gray-800"></div>
 
                                                 {[
-                                                    { icon: FileText, title: "1. Cahier des Charges", desc: "Définition précise des zones et fréquences d'intervention." },
-                                                    { icon: Sparkles, title: "2. Prestation", desc: "Intervention par équipes formées avec matériel professionnel." },
-                                                    { icon: UserCheck, title: "3. Contrôle", desc: "Suivi régulier de la qualité et satisfaction client." }
+                                                    { icon: FileText, title: "1. Cahier des Charges", desc: "Définition précise des zones, des fréquences de passage et des protocoles spécifiques." },
+                                                    { icon: Sparkles, title: "2. Prestation", desc: "Intervention par équipes formées, équipées de matériel professionnel et produits écolabellisés." },
+                                                    { icon: UserCheck, title: "3. Contrôle Qualité", desc: "Suivi régulier avec fiches de passage et interlocuteur dédié pour garantir votre satisfaction." }
                                                 ].map((step, i) => (
                                                     <div key={i} className="relative flex items-start z-10">
                                                         <div className="w-12 h-12 bg-gray-900 border-2 border-[#0241cd] rounded-full flex items-center justify-center text-[#0241cd] mr-6 shrink-0 shadow-lg bg-gray-900">

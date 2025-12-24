@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import logoImg from '../assets/welkilgo.png';
+
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
@@ -71,10 +73,11 @@ const Header = () => {
                     <div className="flex justify-between items-center h-20">
                         <div className="flex-shrink-0 flex items-center">
                             <Link to="/" className="flex items-center gap-2 group">
-                                <div className={`${theme.bg} text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl border-2 ${theme.border} group-hover:bg-white ${theme.hoverText} transition-colors`}>
-                                    W
-                                </div>
-                                <span className={`text-2xl font-black tracking-tight ${theme.main}`}>WELKI</span>
+                                <img
+                                    src={logoImg}
+                                    alt="WELKI Logo"
+                                    className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+                                />
                             </Link>
                         </div>
 
