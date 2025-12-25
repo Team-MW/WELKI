@@ -24,7 +24,7 @@ const Home = () => {
                     <div
                         className="
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            group transition-all duration-700 ease-in-out cursor-pointer 
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                         "
@@ -35,26 +35,29 @@ const Home = () => {
                         }}
                     >
                         <Link to="/nettoyage" className="absolute inset-0 z-10" aria-label="Nettoyage"></Link>
-                        {/* Background Overlay */}
-                        <div className="absolute inset-0 bg-[#0241cd]/60 group-hover:bg-[#0033a8]/70 transition-colors duration-500"></div>
+                        {/* Improved Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:from-[#0241cd]/90 group-hover:via-[#0241cd]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
 
-                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter drop-shadow-lg leading-tight md:ml-2">
-                                Nettoyage <br className="hidden md:block" /><span className="text-blue-200">Pro</span>
-                            </h2>
-                            <ul className="hidden md:block text-blue-100 text-lg font-medium space-y-2 opacity-90 md:ml-2">
-                                <li>Bureaux</li>
-                                <li>Immeubles</li>
-                                <li>Fin de chantier</li>
-                            </ul>
-                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:ml-2 pointer-events-auto">
-                                <Link to="/nettoyage" className="px-4 py-1.5 bg-white text-[#0241cd] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
-                                    En savoir plus
-                                </Link>
-                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#0241cd] transition-colors shadow-lg cursor-pointer relative z-20">
-                                    Demander un devis
+                            <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
+                                <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
+                                    /// PROPRETÉ & HYGIÈNE
+                                </span>
+                                <h2 className="text-4xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
+                                    Nettoyage <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Pro</span>
+                                </h2>
+                                <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>Bureaux & Tertiaire</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>Immeubles / Copro</li>
+                                    <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>Fin de chantier</li>
+                                </ul>
+                            </div>
+
+                            <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                                <Link to="/nettoyage" className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                    Découvrir
                                 </Link>
                             </div>
                         </div>
@@ -64,7 +67,7 @@ const Home = () => {
                     <div
                         className="
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            group transition-all duration-700 ease-in-out cursor-pointer 
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
                             md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
                         "
@@ -75,26 +78,29 @@ const Home = () => {
                         }}
                     >
                         <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Hygiène 3D"></Link>
-                        {/* Background Overlay */}
-                        <div className="absolute inset-0 bg-[#E71D36]/60 group-hover:bg-[#c0182c]/70 transition-colors duration-500"></div>
+                        {/* Improved Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:from-[#E71D36]/90 group-hover:via-[#E71D36]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
 
-                            <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-4 uppercase tracking-tighter drop-shadow-lg leading-tight">
-                                Hygiène <br className="hidden md:block" /><span className="text-red-200">3D</span>
-                            </h2>
-                            <ul className="hidden md:block text-red-100 text-lg font-medium space-y-2 opacity-90">
-                                <li>Dératisation</li>
-                                <li>Désinsectisation</li>
-                                <li>Désinfection</li>
-                            </ul>
-                            <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 justify-center pointer-events-auto">
-                                <Link to="/hygiene-3d" className="px-4 py-1.5 bg-white text-[#E71D36] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
-                                    En savoir plus
-                                </Link>
-                                <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#E71D36] transition-colors shadow-lg cursor-pointer relative z-20">
-                                    Demander un devis
+                            <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <span className="inline-block py-1 px-4 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                                    /// LUTTE ANTI-NUISIBLES
+                                </span>
+                                <h2 className="text-4xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                    Hygiène <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">3D</span>
+                                </h2>
+                                <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                    <li className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Dératisation</li>
+                                    <li className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Désinsectisation</li>
+                                    <li className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Désinfection</li>
+                                </ul>
+                            </div>
+
+                            <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                                <Link to="/hygiene-3d" className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                    Découvrir
                                 </Link>
                             </div>
                         </div>
@@ -104,7 +110,7 @@ const Home = () => {
                     <div
                         className="
                             relative w-full h-[34vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            group transition-all duration-700 ease-in-out cursor-pointer 
                             z-10 hover:z-50 md:hover:scale-[1.05] origin-center
                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                         "
@@ -115,27 +121,28 @@ const Home = () => {
                         }}
                     >
                         <Link to="/espaces-verts" className="absolute inset-0 z-10" aria-label="Espaces Verts"></Link>
-                        {/* Background Overlay */}
-                        <div className="absolute inset-0 bg-[#037971]/60 group-hover:bg-[#025e57]/70 transition-colors duration-500"></div>
+                        {/* Improved Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:from-[#037971]/90 group-hover:via-[#037971]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full">
-                            <div className="w-full md:w-[40%] flex flex-col items-center md:items-end">
+                            <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
 
-                                <h2 className="text-2xl md:text-6xl font-black text-white mb-2 md:mb-6 uppercase tracking-tighter drop-shadow-lg leading-tight md:mr-12">
-                                    Espaces <br className="hidden md:block" /><span className="text-white">Verts</span>
+                                <span className="inline-block py-1 pr-1 pl-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
+                                    /// EXPERTISE VÉGÉTALE
+                                </span>
+
+                                <h2 className="text-2xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
+                                    Espaces <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Verts</span>
                                 </h2>
-                                <ul className="hidden md:block text-white text-lg font-medium space-y-2 opacity-90 md:mr-12">
-                                    <li>Élagage</li>
-                                    <li>Entretien Jardin</li>
-                                    <li>Paysagisme</li>
+                                <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
+                                    <li className="flex items-center justify-end gap-2">Élagage<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
+                                    <li className="flex items-center justify-end gap-2">Entretien Jardin<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
+                                    <li className="flex items-center justify-end gap-2">Paysagisme<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
                                 </ul>
-                                <div className="hidden md:flex gap-3 mt-8 transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 md:mr-12 pointer-events-auto">
-                                    <Link to="/espaces-verts" className="px-4 py-1.5 bg-white text-[#037971] font-bold text-sm rounded-full hover:bg-gray-100 transition-colors shadow-lg relative z-20">
-                                        En savoir plus
-                                    </Link>
-                                    <Link to="/contact" className="px-4 py-1.5 border-2 border-white text-white font-bold text-sm rounded-full hover:bg-white hover:text-[#037971] transition-colors shadow-lg cursor-pointer relative z-20">
-                                        Demander un devis
+                                <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
+                                    <Link to="/espaces-verts" className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                        Découvrir
                                     </Link>
                                 </div>
                             </div>
@@ -143,67 +150,81 @@ const Home = () => {
                     </div>
 
 
-                    {/* LIGHTNING BOLT SEPARATORS (Desktop Only) */}
+                    {/* LIGHTNING BOLT SEPARATORS (Desktop Only) - Enhanced with Glow */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <defs>
+                            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
                         <path
                             d="M 36 0 L 32 50 L 35 50 L 31 100"
                             stroke="white"
                             strokeWidth="3"
                             vectorEffect="non-scaling-stroke"
                             fill="none"
-                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                            className="drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+                            style={{ filter: 'url(#glow)' }}
                         />
                         <path
                             d="M 71 0 L 67 50 L 70 50 L 66 100"
                             stroke="white"
-                            strokeWidth="4"
+                            strokeWidth="3"
                             strokeLinecap="square"
                             strokeLinejoin="miter"
                             vectorEffect="non-scaling-stroke"
                             fill="none"
-                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] z-30 relative"
+                            className="drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] z-30 relative"
+                            style={{ filter: 'url(#glow)' }}
                         />
                     </svg>
 
                 </section>
 
-                {/* 2. REASSURANCE STRIP - Interactive & Clean */}
-                <div className="bg-gray-900 py-6 md:py-8 border-b border-gray-800 relative z-20 shadow-sm overflow-hidden">
-                    {/* SEPARATORS EXTENSION */}
+                {/* 2. REASSURANCE STRIP - Interactive & Clean - REDESIGNED */}
+                <div className="bg-gray-950 py-10 md:py-12 border-b border-gray-900 relative z-20 shadow-2xl overflow-hidden">
+                    {/* GLOW SEPARATORS (EXTENSION OF BOLTS) */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="fadeLine" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="white" stopOpacity="0.8" />
+                                <stop offset="100%" stopColor="white" stopOpacity="0" />
+                            </linearGradient>
+                        </defs>
                         <path
                             d="M 31 0 L 29 100"
-                            stroke="white"
-                            strokeWidth="3"
+                            stroke="url(#fadeLine)"
+                            strokeWidth="2"
                             vectorEffect="non-scaling-stroke"
                             fill="none"
-                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                         />
                         <path
                             d="M 66 0 L 64 100"
-                            stroke="white"
-                            strokeWidth="3"
+                            stroke="url(#fadeLine)"
+                            strokeWidth="2"
                             vectorEffect="non-scaling-stroke"
                             fill="none"
-                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                            className="drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                         />
                     </svg>
 
                     <div className="w-full h-full relative z-10">
                         <div className="flex flex-col md:flex-row w-full h-full">
                             {[
-                                { text: "Intervention 7j/7", icon: <CheckCircle2 /> },
-                                { text: "Devis 100% Gratuit", icon: <FileCheck /> },
-                                { text: "Produits Homologués", icon: <ShieldCheck /> }
+                                { text: "Intervention 7j/7", icon: <CheckCircle2 />, color: "text-[#0241cd]", glow: "shadow-[#0241cd]" },
+                                { text: "Devis 100% Gratuit", icon: <FileCheck />, color: "text-[#E71D36]", glow: "shadow-[#E71D36]" },
+                                { text: "Produits Homologués", icon: <ShieldCheck />, color: "text-[#037971]", glow: "shadow-[#037971]" }
                             ].map((item, i) => (
                                 <div
                                     key={i}
-                                    className="flex-1 flex flex-col items-center justify-center group p-4 hover:bg-gray-800/50 transition-colors cursor-default relative"
+                                    className="flex-1 flex flex-col items-center justify-center group p-6 hover:bg-white/5 transition-all duration-300 cursor-default relative"
                                 >
-                                    <div className="text-[#037971] mb-2 w-10 h-10 md:w-12 md:h-12 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-[#037971] group-hover:text-white transition-all duration-300 shadow-[0_0_15px_-5px_rgba(3,121,113,0.3)] group-hover:shadow-[0_0_20px_rgba(3,121,113,0.6)] border border-gray-700 group-hover:border-[#037971] transform group-hover:scale-110">
-                                        {React.cloneElement(item.icon, { size: 24 })}
+                                    <div className={`w-16 h-16 md:w-20 md:h-20 bg-gray-900 border border-gray-800 rounded-3xl flex items-center justify-center ${item.color} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl group-hover:${item.glow}/50`}>
+                                        {React.cloneElement(item.icon, { size: 32, strokeWidth: 2 })}
                                     </div>
-                                    <span className="text-gray-300 group-hover:text-white font-bold text-sm md:text-lg transition-colors text-center">{item.text}</span>
+                                    <span className="text-white font-black uppercase tracking-widest text-sm md:text-base transition-colors text-center">{item.text}</span>
                                 </div>
                             ))}
                         </div>
