@@ -198,9 +198,9 @@ const Home = () => {
                             ].map((item, i) => (
                                 <div
                                     key={i}
-                                    className="flex-1 flex flex-col items-center justify-center group p-4 hover:bg-gray-800 transition-colors cursor-default relative"
+                                    className="flex-1 flex flex-col items-center justify-center group p-4 hover:bg-gray-800/50 transition-colors cursor-default relative"
                                 >
-                                    <div className="text-[#037971] mb-2 w-10 h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-[#037971] group-hover:text-white transition-colors shadow-sm border border-gray-700">
+                                    <div className="text-[#037971] mb-2 w-10 h-10 md:w-12 md:h-12 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-[#037971] group-hover:text-white transition-all duration-300 shadow-[0_0_15px_-5px_rgba(3,121,113,0.3)] group-hover:shadow-[0_0_20px_rgba(3,121,113,0.6)] border border-gray-700 group-hover:border-[#037971] transform group-hover:scale-110">
                                         {React.cloneElement(item.icon, { size: 24 })}
                                     </div>
                                     <span className="text-gray-300 group-hover:text-white font-bold text-sm md:text-lg transition-colors text-center">{item.text}</span>
@@ -217,136 +217,121 @@ const Home = () => {
                     <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#037971]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
                     <div className="relative z-10">
+
                         <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span
-
-
-                                className="text-welki-green font-bold tracking-widest uppercase text-sm mb-2 block"
-                            >
-                                Nos Services
+                            <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                /// NOS DOMAINES D'EXPERTISE
                             </span>
-                            <h2
-
-
-                                className="text-white font-black text-4xl md:text-5xl mb-6"
-                            >
-                                Nos Domaines d'Intervention
+                            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                Une Expertise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Globale</span>
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                                Une expertise globale pour la gestion de votre environnement.
-                                Nous garantissons efficacité et discrétion.
+                                Une gestion centralisée de votre environnement pour plus d'efficacité et de sérénité.
                             </p>
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8 px-4">
                             {/* Card 3: Cleaning */}
-                            {/* Card 3: Cleaning - Blue */}
-                            <div
-                                whileHover={{ y: -10 }}
-                                className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#0241cd] hover:shadow-2xl hover:shadow-[#0241cd]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
-                            >
-                                <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center text-[#0241cd] mb-6 group-hover:scale-110 transition-transform duration-300 border border-gray-700">
-                                    <Sparkles size={36} />
+                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/0 via-transparent to-[#0241cd]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="w-16 h-16 bg-[#0241cd]/10 rounded-2xl flex items-center justify-center text-[#0241cd] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(2,65,205,0.3)] shadow-inner border border-[#0241cd]/20 relative z-10">
+                                    <Sparkles size={32} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#0241cd] transition-colors">Nettoyage</h3>
-                                <p className="text-gray-400 mb-6 leading-relaxed flex-grow">
-                                    Services de propreté pour une hygiène irréprochable.
+                                <h3 className="text-2xl font-black text-white mb-4 relative z-10">Nettoyage</h3>
+                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                    Services de propreté pour une hygiène irréprochable. Bureaux, copropriétés et fin de chantier.
                                 </p>
-                                <ul className="space-y-3 mb-8 text-gray-300 font-medium">
+                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8">
                                     {["Bureaux & Immeubles", "Fin de chantier", "Débarras"].map(item => (
-                                        <li key={item} className="flex items-center">
-                                            <div className="w-5 h-5 rounded-full bg-[#0241cd]/20 flex items-center justify-center text-[#0241cd] mr-3 shrink-0">
+                                        <li key={item} className="flex items-center gap-3">
+                                            <div className="w-6 h-6 rounded-full bg-[#0241cd]/10 flex items-center justify-center border border-[#0241cd]/20 text-[#0241cd] shadow-[0_0_10px_rgba(2,65,205,0.2)]">
                                                 <CheckCircle2 size={12} />
                                             </div>
-                                            {item}
+                                            <span className="group-hover:text-white transition-colors">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
-                                <Link to="/nettoyage" className="w-full py-3 rounded-xl border-2 border-gray-700 text-[#0241cd] font-bold flex items-center justify-center hover:bg-[#0241cd] hover:text-white transition-all group-hover:border-[#0241cd] hover:border-[#0241cd]">
-                                    En savoir plus <ArrowRight size={18} className="ml-2" />
+                                <Link to="/nettoyage" className="w-full py-4 rounded-xl border border-[#0241cd]/30 text-white font-bold flex items-center justify-center hover:bg-[#0241cd] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(2,65,205,0.4)] group-hover:border-[#0241cd]">
+                                    En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
 
                             {/* Card 1: 3D */}
-                            {/* Card 1: 3D - Red */}
-                            <div
-                                whileHover={{ y: -10 }}
-                                className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#E71D36] hover:shadow-2xl hover:shadow-[#E71D36]/20 transition-all duration-300 flex flex-col group border-x border-b border-gray-800"
-                            >
-                                <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center text-[#E71D36] mb-6 group-hover:scale-110 transition-transform duration-300 border border-gray-700">
-                                    <ShieldCheck size={36} />
+                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(231,29,54,0.3)] hover:-translate-y-2">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/0 via-transparent to-[#E71D36]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="w-16 h-16 bg-[#E71D36]/10 rounded-2xl flex items-center justify-center text-[#E71D36] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(231,29,54,0.3)] shadow-inner border border-[#E71D36]/20 relative z-10">
+                                    <ShieldCheck size={32} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#E71D36] transition-colors">Hygiène 3D</h3>
-                                <p className="text-gray-400 mb-6 leading-relaxed flex-grow">
-                                    Lutte contre les nuisibles par techniques certifiées. Protection de votre domicile ou local professionnel.
+                                <h3 className="text-2xl font-black text-white mb-4 relative z-10">Hygiène 3D</h3>
+                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                    Lutte contre les nuisibles par techniques certifiées. Protection durable de votre environnement.
                                 </p>
-                                <ul className="space-y-3 mb-8 text-gray-300 font-medium">
+                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8">
                                     {["Dératisation", "Désinsectisation", "Désinfection"].map(item => (
-                                        <li key={item} className="flex items-center">
-                                            <div className="w-5 h-5 rounded-full bg-[#E71D36]/20 flex items-center justify-center text-[#E71D36] mr-3 shrink-0">
+                                        <li key={item} className="flex items-center gap-3">
+                                            <div className="w-6 h-6 rounded-full bg-[#E71D36]/10 flex items-center justify-center border border-[#E71D36]/20 text-[#E71D36] shadow-[0_0_10px_rgba(231,29,54,0.2)]">
                                                 <CheckCircle2 size={12} />
                                             </div>
-                                            {item}
+                                            <span className="group-hover:text-white transition-colors">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
-                                <Link to="/hygiene-3d" className="w-full py-3 rounded-xl border-2 border-gray-700 text-[#E71D36] font-bold flex items-center justify-center hover:bg-[#E71D36] hover:text-white transition-all group-hover:border-[#E71D36] hover:border-[#E71D36]">
-                                    En savoir plus <ArrowRight size={18} className="ml-2" />
+                                <Link to="/hygiene-3d" className="w-full py-4 rounded-xl border border-[#E71D36]/30 text-white font-bold flex items-center justify-center hover:bg-[#E71D36] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(231,29,54,0.4)] group-hover:border-[#E71D36]">
+                                    En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
 
                             {/* Card 2: Green */}
-                            {/* Card 2: Green - Green */}
-                            <div
-                                whileHover={{ y: -10 }}
-                                className="bg-gray-900 rounded-3xl shadow-xl p-8 border-t-8 border-[#037971] hover:shadow-2xl hover:shadow-[#037971]/20 transition-all duration-300 flex flex-col group relative md:-mt-8 z-10 border-x border-b border-gray-800"
-                            >
-                                <div className="absolute -top-4 -right-4 bg-[#037971] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform rotate-12">
-                                    POPULAIRE
+                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2 md:-mt-8">
+                                <div className="absolute -top-12 -right-12 bg-[#037971] w-24 h-24 rotate-45 z-20"></div>
+                                <div className="absolute top-4 right-4 z-30 text-white font-bold text-xs bg-[#037971] px-3 py-1 rounded-full shadow-lg">POPULAIRE</div>
+
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/0 via-transparent to-[#037971]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="w-16 h-16 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(3,121,113,0.3)] shadow-inner border border-[#037971]/20 relative z-10">
+                                    <TreePine size={32} />
                                 </div>
-                                <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:scale-110 transition-transform duration-300 border border-gray-700">
-                                    <TreePine size={36} />
-                                </div>
-                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">Espaces Verts</h3>
-                                <p className="text-gray-400 mb-6 leading-relaxed flex-grow">
-                                    Mise en valeur et entretien de vos extérieurs. Équipe équipée pour travaux en hauteur.
+                                <h3 className="text-2xl font-black text-white mb-4 relative z-10">Espaces Verts</h3>
+                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                    Mise en valeur et entretien de vos extérieurs. Paysagisme et travaux en hauteur sécurisés.
                                 </p>
-                                <ul className="space-y-3 mb-8 text-gray-300 font-medium">
+                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8">
                                     {["Élagage & Abattage", "Tonte & Taille", "Débroussaillage"].map(item => (
-                                        <li key={item} className="flex items-center">
-                                            <div className="w-5 h-5 rounded-full bg-[#037971]/20 flex items-center justify-center text-[#037971] mr-3 shrink-0">
+                                        <li key={item} className="flex items-center gap-3">
+                                            <div className="w-6 h-6 rounded-full bg-[#037971]/10 flex items-center justify-center border border-[#037971]/20 text-[#037971] shadow-[0_0_10px_rgba(3,121,113,0.2)]">
                                                 <CheckCircle2 size={12} />
                                             </div>
-                                            {item}
+                                            <span className="group-hover:text-white transition-colors">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
-                                <Link to="/espaces-verts" className="w-full py-3 rounded-xl bg-[#037971] text-white font-bold flex items-center justify-center hover:bg-[#025e57] shadow-lg shadow-[#037971]/40 transition-all">
-                                    En savoir plus <ArrowRight size={18} className="ml-2" />
+                                <Link to="/espaces-verts" className="w-full py-4 rounded-xl bg-[#037971] text-white font-bold flex items-center justify-center hover:bg-[#025e57] shadow-[0_0_20px_rgba(3,121,113,0.4)] transition-all relative z-10">
+                                    En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
                         </div>
 
                         {/* NEW: Single Point of Contact Banner */}
                         <div className="mt-16 max-w-4xl mx-auto px-4">
-                            <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 shadow-2xl relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-[#037971]/5 group-hover:bg-[#037971]/10 transition-colors duration-500"></div>
+                            <div className="bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 shadow-2xl relative overflow-hidden group hover:border-[#037971]/30 transition-all duration-500">
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#037971]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#037971] rounded-full blur-[100px] opacity-20 pointer-events-none group-hover:opacity-30 transition-opacity"></div>
+
                                 <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
                                     <div className="flex-1">
-                                        <div className="inline-block px-4 py-1 bg-[#037971]/20 text-[#037971] rounded-full font-bold text-sm mb-4">
+                                        <div className="inline-block px-4 py-1 bg-[#037971]/20 text-[#037971] rounded-full font-bold text-sm mb-4 border border-[#037971]/20">
                                             SIMPLIFIEZ-VOUS LA VIE
                                         </div>
-                                        <h3 className="text-2xl font-black text-white mb-2">
+                                        <h3 className="text-3xl font-black text-white mb-2 leading-tight">
                                             1 Client = 1 Interlocuteur Unique
                                         </h3>
-                                        <p className="text-gray-400 font-medium">
-                                            Pas de multiplication des prestataires. WELKI centralise tout pour vous.
+                                        <p className="text-gray-400 font-medium text-lg">
+                                            Pas de multiplication des prestataires. WELKI centralise tout.
                                             <br />
-                                            <span className="text-gray-300">Hygiène 3D + Espaces Verts + Nettoyage = Une seule facture.</span>
+                                            <span className="text-[#037971]">Hygiène 3D + Espaces Verts + Nettoyage = Une seule facture.</span>
                                         </p>
                                     </div>
                                     <div className="flex-shrink-0">
-                                        <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-white text-gray-900 font-bold hover:bg-[#037971] hover:text-white transition-all shadow-lg hover:shadow-[#037971]/30">
+                                        <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-[#037971] text-white font-bold hover:bg-[#025e57] transition-all shadow-[0_0_20px_-5px_rgba(3,121,113,0.4)] hover:shadow-[0_0_30px_-5px_rgba(3,121,113,0.6)] hover:-translate-y-1">
                                             Discuter de mon projet
                                             <ArrowRight className="ml-2" size={20} />
                                         </Link>
@@ -357,7 +342,7 @@ const Home = () => {
                     </div>
                 </Section>
 
-                {/* 5. ZONES INTERVENTION - Mobile & Responsive */}
+                {/* 5. ZONES INTERVENTION - REDESIGNED */}
                 <section className="py-24 bg-gray-900 relative overflow-hidden">
                     {/* Background decoration with Mountain icon */}
                     <div className="absolute -left-20 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none select-none">
@@ -366,29 +351,15 @@ const Home = () => {
 
                     <div className="max-w-7xl mx-auto px-4 relative z-10">
                         <div className="flex flex-col md:flex-row items-center gap-16">
-                            <div
-
-
-
-                                className="flex-1"
-                            >
-                                <span
-
-
-                                    className="text-[#037971] font-bold tracking-widest uppercase text-sm mb-2 block"
-                                >
-                                    Notre Rayon d'Action
+                            <div className="flex-1">
+                                <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                    /// NOTRE RAYON D'ACTION
                                 </span>
-                                <h2
-
-
-                                    className="text-white font-black text-4xl md:text-5xl mb-6"
-                                >
-                                    Intervention dans tout le <br />
-                                    <span className="text-[#037971]">Région Occitanie</span>
+                                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                    Une Présence <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Régionale</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                                    Nos équipes mobiles sillonnent la région pour vous garantir une réactivité optimale. Que vous soyez à Toulouse ou dans les départements voisins, nous sommes à vos côtés.
+                                    Nos équipes mobiles sillonnent la région Occitanie pour vous garantir une réactivité optimale.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-6">
@@ -404,16 +375,13 @@ const Home = () => {
                                     ].map((zone, i) => (
                                         <div
                                             key={zone.name}
-
-
-
-                                            className="flex items-center text-gray-300 p-2 rounded-lg hover:bg-gray-800/50 transition-colors cursor-default"
+                                            className="flex items-center text-gray-300 p-3 rounded-xl hover:bg-white/5 border border-transparent hover:border-[#037971]/30 transition-all cursor-default group"
                                         >
-                                            <div className="bg-[#037971]/20 p-2 rounded-full mr-3 text-[#037971]">
+                                            <div className="bg-[#037971]/10 p-2 rounded-lg mr-3 text-[#037971] group-hover:bg-[#037971] group-hover:text-white transition-colors">
                                                 <MapPin size={18} />
                                             </div>
                                             <div>
-                                                <div className="font-bold text-white">{zone.city}</div>
+                                                <div className="font-bold text-white group-hover:text-[#037971] transition-colors">{zone.city}</div>
                                                 <div className="text-xs text-gray-500">{zone.name}</div>
                                             </div>
                                         </div>
@@ -421,92 +389,93 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div
-
-
-
-
-                                className="flex-1 relative"
-                            >
+                            <div className="flex-1 relative">
                                 <div className="absolute inset-0 bg-[#037971] blur-[100px] opacity-20 rounded-full"></div>
-                                <img
-                                    src={occitanieMap}
-                                    alt="Carte Zone d'Intervention Région Occitanie"
-                                    className="w-full h-auto drop-shadow-2xl relative z-10 transform hover:scale-105 transition-transform duration-500 rounded-xl"
-                                />
+                                <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-2xl group">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent z-10 pointer-events-none"></div>
+                                    <img
+                                        src={occitanieMap}
+                                        alt="Carte Zone d'Intervention Région Occitanie"
+                                        className="w-full h-auto drop-shadow-2xl relative z-0 transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute bottom-6 left-6 z-20">
+                                        <div className="flex items-center gap-2 bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-full border border-gray-700">
+                                            <div className="w-2 h-2 rounded-full bg-[#037971] animate-pulse"></div>
+                                            <span className="text-white text-xs font-bold uppercase tracking-wide">Déplacements Quotidiens</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. ABOUT / TRUST SECTION - Glassmorphism & Modern Layout */}
-                <section className="py-16 md:py-24 bg-gray-950 relative overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10">
-                        <div
+                {/* 4. ABOUT / TRUST SECTION - REDESIGNED */}
+                <section className="py-24 bg-gray-950 relative overflow-hidden">
+                    {/* Decorative Elements */}
+                    <div className="absolute left-0 bottom-0 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
 
-
-
-                            className="flex-1 order-2 md:order-1"
-                        >
-                            <div className="relative group">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-blue-900 to-[#037971] rounded-3xl transform rotate-3 group-hover:rotate-1 transition-transform duration-500"></div>
-                                <div className="relative bg-gray-900/60 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-gray-700 shadow-xl">
-                                    <h3 className="text-2xl font-bold text-welki-blue mb-6">Pourquoi la certification CERTIBIOCIDE est importante ?</h3>
-                                    <p className="text-gray-300 mb-6 leading-relaxed">
-                                        Ce certificat individuel est délivré par le Ministère de la Transition écologique. Il atteste de la compétence des professionnels à utiliser les produits biocides en toute sécurité et efficacité.
+                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                        <div className="grid md:grid-cols-2 gap-20 items-center">
+                            <div className="order-2 md:order-1">
+                                <div className="text-left mb-12">
+                                    <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                        /// CONFIANCE & EXPERTISE
+                                    </span>
+                                    <h2 className="text-4xl md:text-5xl font-black mt-2 text-white leading-tight">
+                                        Votre Confiance, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Notre Priorité</span>
+                                    </h2>
+                                    <p className="text-gray-400 mt-6 text-lg border-l-2 border-[#037971] pl-6 py-2 bg-gradient-to-r from-[#037971]/5 to-transparent">
+                                        WELKI allie technicité, respect des normes et engagement environnemental.
                                     </p>
-                                    <div className="flex items-center gap-6 mt-8 pt-8 border-t border-gray-700">
+                                </div>
+
+                                <div className="space-y-8 relative pl-4">
+                                    <div className="absolute left-[2.35rem] top-8 bottom-8 w-0.5 bg-gradient-to-b from-[#037971] via-[#037971]/30 to-gray-800"></div>
+
+                                    <div className="relative flex items-start z-10 group">
+                                        <div className="w-14 h-14 bg-gray-900 border border-[#037971]/30 rounded-2xl flex items-center justify-center text-[#037971] mr-8 shrink-0 shadow-[0_0_20px_-5px_rgba(3,121,113,0.3)] group-hover:bg-[#037971] group-hover:text-white group-hover:shadow-[0_0_30px_rgba(3,121,113,0.5)] group-hover:scale-110 transition-all duration-300">
+                                            <ShieldCheck size={24} strokeWidth={2} />
+                                        </div>
+                                        <div className="pt-1">
+                                            <h3 className="text-2xl font-black mb-2 text-white group-hover:text-[#037971] transition-colors">Cadre Légal Respecté</h3>
+                                            <p className="text-gray-400 text-base leading-relaxed group-hover:text-gray-300 transition-colors">
+                                                Interventions conformes aux normes sanitaires strictes et réglementations en vigueur.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="relative flex items-start z-10 group">
+                                        <div className="w-14 h-14 bg-gray-900 border border-[#037971]/30 rounded-2xl flex items-center justify-center text-[#037971] mr-8 shrink-0 shadow-[0_0_20px_-5px_rgba(3,121,113,0.3)] group-hover:bg-[#037971] group-hover:text-white group-hover:shadow-[0_0_30px_rgba(3,121,113,0.5)] group-hover:scale-110 transition-all duration-300">
+                                            <FileCheck size={24} strokeWidth={2} />
+                                        </div>
+                                        <div className="pt-1">
+                                            <h3 className="text-2xl font-black mb-2 text-white group-hover:text-[#037971] transition-colors">Certification Certibiocide</h3>
+                                            <p className="text-gray-400 text-base leading-relaxed group-hover:text-gray-300 transition-colors">
+                                                Certificat délivré par le Ministère de la Transition écologique, gage de sécurité et d'efficacité.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="order-1 md:order-2 flex justify-center">
+                                <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_50px_-10px_rgba(3,121,113,0.2)] group h-[500px] w-full max-w-md hover:border-[#037971]/50 transition-all duration-500 bg-gray-900 flex items-center justify-center p-8">
+                                    <div className="absolute inset-0 bg-[#037971]/5 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-700"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent z-10"></div>
+
+                                    <div className="relative z-20 text-center">
+                                        <div className="absolute inset-0 bg-[#037971] blur-[80px] opacity-20 rounded-full animate-pulse"></div>
                                         <img
                                             src={certibiocideImg}
                                             alt="Logo Certibiocide"
-                                            className="h-20 w-auto drop-shadow-md brightness-90 contrast-125"
+                                            className="relative z-10 w-full max-w-[280px] opacity-90 contrast-125 hover:scale-105 transition-transform duration-500 drop-shadow-2xl mx-auto"
                                         />
-                                        <div className="text-sm font-bold text-gray-400 uppercase tracking-widest border-l-2 border-welki-green pl-6">
-                                            Gage de qualité<br />& de sécurité
+                                        <div className="mt-8 border-t border-[#037971]/30 pt-6">
+                                            <span className="text-white font-bold uppercase tracking-widest text-sm">Garantie d'État</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div
-
-
-
-
-                            className="flex-1 order-1 md:order-2"
-                        >
-                            <div className="inline-block px-4 py-2 bg-blue-900/40 text-blue-300 font-bold rounded-full text-sm mb-6 border border-blue-800">
-                                CONFIANCE & EXPERTISE
-                            </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
-                                Votre confiance, <br />
-                                <span className="text-welki-blue">notre priorité absolue</span>
-                            </h2>
-                            <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                                WELKI s'engage à fournir des prestations de haute qualité dans le respect strict des réglementations en vigueur. Nous allions technicité et respect de l'environnement.
-                            </p>
-                            <div className="space-y-6">
-                                {[
-                                    { title: "Cadre Légal Respecté", desc: "Interventions conformes aux normes sanitaires.", icon: <CheckCircle2 /> },
-                                    { title: "Professionnalisme & Discrétion", desc: "Techniciens formés, équipés et discrets.", icon: <ShieldCheck /> }
-                                ].map((item, i) => (
-                                    <div
-                                        key={i}
-                                        whileHover={{ x: 10 }}
-                                        className="flex items-start p-4 rounded-xl hover:bg-gray-900 transition-colors cursor-default"
-                                    >
-                                        <div className="flex items-center p-6 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-[#037971] transition-colors group">
-                                            <div className="w-12 h-12 rounded-xl bg-[#037971]/20 flex items-center justify-center text-welki-green mr-5 flex-shrink-0 border border-[#037971]/50">
-                                                {React.cloneElement(item.icon, { size: 24 })}
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-white text-xl mb-1">{item.title}</h4>
-                                                <p className="text-gray-500">{item.desc}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
                             </div>
                         </div>
                     </div>
@@ -514,35 +483,30 @@ const Home = () => {
 
 
 
-                {/* 6. REVIEWS SECTION - Matching User Request */}
+                {/* 6. REVIEWS SECTION - REDESIGNED */}
                 <section className="py-24 bg-gray-950 relative overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-4">
+                    <div className="max-w-7xl mx-auto px-4 relative z-10">
                         {/* Header */}
                         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                            <h2
+                            <div>
+                                <span className="text-welki-blue font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                    /// PAROLES DE CLIENTS
+                                </span>
+                                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                                    Ils nous font <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-welki-blue">Confiance</span>
+                                </h2>
+                            </div>
 
-
-                                className="text-4xl font-black text-white"
-                            >
-                                Paroles de clients
-                            </h2>
-
-                            <div
-
-
-                                className="flex items-center gap-2 bg-gray-900 px-4 py-2 rounded-full shadow-sm border border-gray-800"
-                            >
-                                <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
-                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.21.81-.63z" fill="#FBBC05" />
-                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
-                                </svg>
-                                <div className="flex text-yellow-500 text-lg">
-                                    {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" strokeWidth={0} />)}
+                            <div className="flex items-center gap-3 bg-gray-900/80 backdrop-blur-xl px-6 py-3 rounded-full shadow-lg border border-gray-800 hover:border-welki-blue/50 transition-colors">
+                                <div className="flex -space-x-1">
+                                    <svg viewBox="0 0 24 24" className="w-6 h-6 z-30" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" /><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" /><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.21.81-.63z" fill="#FBBC05" /><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" /></svg>
                                 </div>
-                                <span className="font-bold text-white ml-1">4.9/5</span>
-                                <span className="text-gray-400 text-sm">(127 avis)</span>
+                                <div className="flex flex-col">
+                                    <div className="flex text-yellow-500 text-sm">
+                                        {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" strokeWidth={0} />)}
+                                    </div>
+                                    <span className="font-bold text-white text-xs"><span className="text-lg">4.9</span>/5 (127 avis)</span>
+                                </div>
                             </div>
                         </div>
 
@@ -553,42 +517,58 @@ const Home = () => {
                                     title: "Je recommande avec plaisir",
                                     text: "Super entreprise, magnifique travail, avec un superbe accueil. Je recommande avec plaisir.",
                                     author: "Lydie, Paris",
-                                    stars: 5
+                                    stars: 5,
+                                    date: "Il y a 2 jours"
                                 },
                                 {
                                     title: "Très satisfaite",
                                     text: "Très satisfaite pour ma première visite. Très bon accueil et correct au niveau des tarifs. Contente d'avoir trouvé une entreprise sérieuse.",
                                     author: "Catherine, Lyon",
-                                    stars: 5
+                                    stars: 5,
+                                    date: "Il y a 1 semaine"
                                 },
                                 {
                                     title: "Les prix compétitifs",
                                     text: "L'accueil a été excellent, les prix compétitifs, et l'intervention rapide. Mon jardin est impeccable. Je recommande vivement !",
                                     author: "Marwan, Marseille",
-                                    stars: 5
+                                    stars: 5,
+                                    date: "Il y a 3 semaines"
                                 },
                                 {
                                     title: "Un rapport qualité-prix indéniable",
                                     text: "Très pro et surtout un rapport qualité-prix indéniable. Équipe réactive et efficace pour la dératisation.",
                                     author: "Laura, Montpellier",
-                                    stars: 5
+                                    stars: 5,
+                                    date: "Il y a 1 mois"
                                 }
                             ].map((review, i) => (
                                 <div
                                     key={i}
-
-
-
-                                    className="min-w-[85vw] md:min-w-[350px] bg-gray-900 p-6 md:p-8 rounded-3xl shadow-sm border border-gray-800 flex flex-col snap-center hover:shadow-md transition-shadow"
+                                    className="min-w-[85vw] md:min-w-[400px] bg-gray-900/60 backdrop-blur-xl p-8 rounded-3xl border border-gray-800 flex flex-col snap-center hover:border-welki-blue/30 hover:shadow-[0_0_30px_-5px_rgba(66,133,244,0.15)] transition-all duration-300 group"
                                 >
-                                    <div className="flex text-yellow-400 mb-4 text-sm gap-1">
-                                        {[...Array(review.stars)].map((_, i) => <Star key={i} size={16} fill="currentColor" strokeWidth={0} />)}
+                                    <div className="flex justify-between items-start mb-6">
+                                        <div className="flex text-yellow-400 gap-1">
+                                            {[...Array(review.stars)].map((_, i) => <Star key={i} size={18} fill="currentColor" strokeWidth={0} />)}
+                                        </div>
+                                        <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400">
+                                            <span className="font-serif text-2xl leading-none">"</span>
+                                        </div>
                                     </div>
-                                    <h3 className="text-lg font-black text-white mb-3">{review.title}</h3>
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                                        {review.text}
+
+                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-welki-blue transition-colors">{review.title}</h3>
+                                    <p className="text-gray-400 text-base leading-relaxed mb-8 flex-grow italic">
+                                        "{review.text}"
                                     </p>
-                                    <p className="font-bold text-gray-200 mt-auto">{review.author}</p>
+
+                                    <div className="flex items-center gap-4 mt-auto border-t border-gray-800 pt-4">
+                                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center text-white font-bold text-sm">
+                                            {review.author.charAt(0)}
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-white text-sm">{review.author}</p>
+                                            <p className="text-xs text-gray-500">{review.date}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -596,14 +576,14 @@ const Home = () => {
                         {/* Navigation Buttons */}
                         <div className="flex justify-end gap-4 mt-4">
                             <button
-                                onClick={() => document.getElementById('reviews-container').scrollBy({ left: -350, behavior: 'smooth' })}
-                                className="p-4 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-colors border border-gray-700"
+                                onClick={() => document.getElementById('reviews-container').scrollBy({ left: -400, behavior: 'smooth' })}
+                                className="w-12 h-12 rounded-full bg-gray-900 border border-gray-800 text-white hover:bg-welki-blue hover:border-welki-blue transition-all flex items-center justify-center shadow-lg"
                             >
                                 <ArrowRight size={20} className="rotate-180" />
                             </button>
                             <button
-                                onClick={() => document.getElementById('reviews-container').scrollBy({ left: 350, behavior: 'smooth' })}
-                                className="p-4 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-colors border border-gray-700"
+                                onClick={() => document.getElementById('reviews-container').scrollBy({ left: 400, behavior: 'smooth' })}
+                                className="w-12 h-12 rounded-full bg-gray-900 border border-gray-800 text-white hover:bg-welki-blue hover:border-welki-blue transition-all flex items-center justify-center shadow-lg"
                             >
                                 <ArrowRight size={20} />
                             </button>
