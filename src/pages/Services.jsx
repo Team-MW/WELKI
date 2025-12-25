@@ -98,7 +98,7 @@ const Services = ({ defaultTab }) => {
                                         /// SERVICES PROFESSIONNELS
                                     </span>
 
-                                    <h1 className="text-5xl md:text-7xl font-black mb-8 px-4 leading-tight text-white drop-shadow-xl tracking-tight">
+                                    <h1 className="text-2xl sm:text-4xl md:text-7xl font-black mb-8 px-4 leading-tight text-white drop-shadow-xl tracking-tight hyphens-auto">
                                         {currentContent.title.split(' & ').map((part, i, arr) => (
                                             <React.Fragment key={i}>
                                                 {part}
