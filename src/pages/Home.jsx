@@ -24,8 +24,8 @@ const Home = () => {
                     <div
                         className="
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-700 ease-in-out cursor-pointer 
-                            z-10 hover:z-50 md:hover:scale-[1.05] origin-center
+                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                         "
                         style={{
@@ -39,7 +39,7 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:from-[#0241cd]/90 group-hover:via-[#0241cd]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full">
+                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
 
                             <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
                                 <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
@@ -67,8 +67,8 @@ const Home = () => {
                     <div
                         className="
                             relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-700 ease-in-out cursor-pointer 
-                            z-10 hover:z-50 md:hover:scale-[1.05] origin-center
+                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
                         "
                         style={{
@@ -82,7 +82,7 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:from-[#E71D36]/90 group-hover:via-[#E71D36]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
+                        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
 
                             <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                 <span className="inline-block py-1 px-4 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
@@ -110,8 +110,8 @@ const Home = () => {
                     <div
                         className="
                             relative w-full h-[34vh] md:absolute md:inset-0 md:h-full 
-                            group transition-all duration-700 ease-in-out cursor-pointer 
-                            z-10 hover:z-50 md:hover:scale-[1.05] origin-center
+                            group transition-all duration-500 ease-in-out cursor-pointer 
+                            z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                         "
                         style={{
@@ -125,7 +125,7 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:from-[#037971]/90 group-hover:via-[#037971]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full">
+                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
                             <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
 
                                 <span className="inline-block py-1 pr-1 pl-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
@@ -164,8 +164,7 @@ const Home = () => {
                             strokeWidth="3"
                             vectorEffect="non-scaling-stroke"
                             fill="none"
-                            className="drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                            style={{ filter: 'url(#glow)' }}
+                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
                         />
                         <path
                             d="M 71 0 L 67 50 L 70 50 L 66 100"
@@ -175,8 +174,7 @@ const Home = () => {
                             strokeLinejoin="miter"
                             vectorEffect="non-scaling-stroke"
                             fill="none"
-                            className="drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] z-30 relative"
-                            style={{ filter: 'url(#glow)' }}
+                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
                         />
                     </svg>
 
@@ -219,7 +217,7 @@ const Home = () => {
                             ].map((item, i) => (
                                 <div
                                     key={i}
-                                    className="flex-1 flex flex-col items-center justify-center group p-6 hover:bg-white/5 transition-all duration-300 cursor-default relative"
+                                    className="flex-1 flex flex-col items-center justify-center group p-4 md:p-6 hover:bg-white/5 transition-all duration-300 cursor-default relative"
                                 >
                                     <div className={`w-16 h-16 md:w-20 md:h-20 bg-gray-900 border border-gray-800 rounded-3xl flex items-center justify-center ${item.color} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl group-hover:${item.glow}/50`}>
                                         {React.cloneElement(item.icon, { size: 32, strokeWidth: 2 })}
@@ -232,7 +230,7 @@ const Home = () => {
                 </div>
 
                 {/* 3. EXPERTISE SECTION - Cards with Depth */}
-                <Section className="bg-gray-950 py-24 relative overflow-hidden">
+                <Section className="bg-gray-950 py-12 md:py-24 relative overflow-hidden">
                     {/* Decorative background blobs */}
                     <div className="absolute top-0 right-0 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                     <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#037971]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -240,10 +238,10 @@ const Home = () => {
                     <div className="relative z-10">
 
                         <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                            <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
                                 /// NOS DOMAINES D'EXPERTISE
                             </span>
-                            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
                                 Une Expertise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Globale</span>
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -253,16 +251,17 @@ const Home = () => {
 
                         <div className="grid md:grid-cols-3 gap-8 px-4">
                             {/* Card 3: Cleaning */}
-                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/0 via-transparent to-[#0241cd]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div className="w-16 h-16 bg-[#0241cd]/10 rounded-2xl flex items-center justify-center text-[#0241cd] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(2,65,205,0.3)] shadow-inner border border-[#0241cd]/20 relative z-10">
+                            <div className="relative bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-300 group overflow-hidden hover:shadow-[0_0_20px_-5px_rgba(2,65,205,0.2)] hover:-translate-y-1 cursor-pointer">
+                                <Link to="/nettoyage" className="absolute inset-0 z-0" aria-label="Voir les services de nettoyage"></Link>
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/0 via-transparent to-[#0241cd]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                                <div className="w-16 h-16 bg-[#0241cd]/10 rounded-2xl flex items-center justify-center text-[#0241cd] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(2,65,205,0.3)] shadow-inner border border-[#0241cd]/20 relative z-10 pointer-events-none">
                                     <Sparkles size={32} />
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-4 relative z-10">Nettoyage</h3>
-                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                <h3 className="text-2xl font-black text-white mb-4 relative z-10 pointer-events-none">Nettoyage</h3>
+                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors pointer-events-none">
                                     Services de propreté pour une hygiène irréprochable. Bureaux, copropriétés et fin de chantier.
                                 </p>
-                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8">
+                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8 pointer-events-none">
                                     {["Bureaux & Immeubles", "Fin de chantier", "Débarras"].map(item => (
                                         <li key={item} className="flex items-center gap-3">
                                             <div className="w-6 h-6 rounded-full bg-[#0241cd]/10 flex items-center justify-center border border-[#0241cd]/20 text-[#0241cd] shadow-[0_0_10px_rgba(2,65,205,0.2)]">
@@ -272,22 +271,23 @@ const Home = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <Link to="/nettoyage" className="w-full py-4 rounded-xl border border-[#0241cd]/30 text-white font-bold flex items-center justify-center hover:bg-[#0241cd] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(2,65,205,0.4)] group-hover:border-[#0241cd]">
+                                <div className="w-full py-4 rounded-xl border border-[#0241cd]/30 text-white font-bold flex items-center justify-center hover:bg-[#0241cd] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(2,65,205,0.4)] group-hover:border-[#0241cd] pointer-events-none">
                                     En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                                </div>
                             </div>
 
                             {/* Card 1: 3D */}
-                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(231,29,54,0.3)] hover:-translate-y-2">
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/0 via-transparent to-[#E71D36]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div className="w-16 h-16 bg-[#E71D36]/10 rounded-2xl flex items-center justify-center text-[#E71D36] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(231,29,54,0.3)] shadow-inner border border-[#E71D36]/20 relative z-10">
+                            <div className="relative bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36]/50 transition-all duration-300 group overflow-hidden hover:shadow-[0_0_20px_-5px_rgba(231,29,54,0.2)] hover:-translate-y-1 cursor-pointer">
+                                <Link to="/hygiene-3d" className="absolute inset-0 z-0" aria-label="Voir les services d'hygiène 3D"></Link>
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/0 via-transparent to-[#E71D36]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                                <div className="w-16 h-16 bg-[#E71D36]/10 rounded-2xl flex items-center justify-center text-[#E71D36] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(231,29,54,0.3)] shadow-inner border border-[#E71D36]/20 relative z-10 pointer-events-none">
                                     <ShieldCheck size={32} />
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-4 relative z-10">Hygiène 3D</h3>
-                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                <h3 className="text-2xl font-black text-white mb-4 relative z-10 pointer-events-none">Hygiène 3D</h3>
+                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors pointer-events-none">
                                     Lutte contre les nuisibles par techniques certifiées. Protection durable de votre environnement.
                                 </p>
-                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8">
+                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8 pointer-events-none">
                                     {["Dératisation", "Désinsectisation", "Désinfection"].map(item => (
                                         <li key={item} className="flex items-center gap-3">
                                             <div className="w-6 h-6 rounded-full bg-[#E71D36]/10 flex items-center justify-center border border-[#E71D36]/20 text-[#E71D36] shadow-[0_0_10px_rgba(231,29,54,0.2)]">
@@ -297,25 +297,26 @@ const Home = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <Link to="/hygiene-3d" className="w-full py-4 rounded-xl border border-[#E71D36]/30 text-white font-bold flex items-center justify-center hover:bg-[#E71D36] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(231,29,54,0.4)] group-hover:border-[#E71D36]">
+                                <div className="w-full py-4 rounded-xl border border-[#E71D36]/30 text-white font-bold flex items-center justify-center hover:bg-[#E71D36] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(231,29,54,0.4)] group-hover:border-[#E71D36] pointer-events-none">
                                     En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                                </div>
                             </div>
 
                             {/* Card 2: Green */}
-                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2 md:-mt-8">
-                                <div className="absolute -top-12 -right-12 bg-[#037971] w-24 h-24 rotate-45 z-20"></div>
-                                <div className="absolute top-4 right-4 z-30 text-white font-bold text-xs bg-[#037971] px-3 py-1 rounded-full shadow-lg">POPULAIRE</div>
+                            <div className="relative bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group overflow-hidden hover:shadow-[0_0_20px_-5px_rgba(3,121,113,0.2)] hover:-translate-y-1 md:-mt-8 cursor-pointer">
+                                <Link to="/espaces-verts" className="absolute inset-0 z-0" aria-label="Voir les services espaces verts"></Link>
+                                <div className="absolute -top-12 -right-12 bg-[#037971] w-24 h-24 rotate-45 z-20 pointer-events-none"></div>
+                                <div className="absolute top-4 right-4 z-30 text-white font-bold text-xs bg-[#037971] px-3 py-1 rounded-full shadow-lg pointer-events-none">POPULAIRE</div>
 
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/0 via-transparent to-[#037971]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div className="w-16 h-16 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(3,121,113,0.3)] shadow-inner border border-[#037971]/20 relative z-10">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/0 via-transparent to-[#037971]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                                <div className="w-16 h-16 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(3,121,113,0.3)] shadow-inner border border-[#037971]/20 relative z-10 pointer-events-none">
                                     <TreePine size={32} />
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-4 relative z-10">Espaces Verts</h3>
-                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                <h3 className="text-2xl font-black text-white mb-4 relative z-10 pointer-events-none">Espaces Verts</h3>
+                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors pointer-events-none">
                                     Mise en valeur et entretien de vos extérieurs. Paysagisme et travaux en hauteur sécurisés.
                                 </p>
-                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8">
+                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8 pointer-events-none">
                                     {["Élagage & Abattage", "Tonte & Taille", "Débroussaillage"].map(item => (
                                         <li key={item} className="flex items-center gap-3">
                                             <div className="w-6 h-6 rounded-full bg-[#037971]/10 flex items-center justify-center border border-[#037971]/20 text-[#037971] shadow-[0_0_10px_rgba(3,121,113,0.2)]">
@@ -325,15 +326,15 @@ const Home = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <Link to="/espaces-verts" className="w-full py-4 rounded-xl bg-[#037971] text-white font-bold flex items-center justify-center hover:bg-[#025e57] shadow-[0_0_20px_rgba(3,121,113,0.4)] transition-all relative z-10">
+                                <div className="w-full py-4 rounded-xl bg-[#037971] text-white font-bold flex items-center justify-center hover:bg-[#025e57] shadow-[0_0_20px_rgba(3,121,113,0.4)] transition-all relative z-10 pointer-events-none">
                                     En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                                </div>
                             </div>
                         </div>
 
                         {/* NEW: Single Point of Contact Banner */}
                         <div className="mt-16 max-w-4xl mx-auto px-4">
-                            <div className="bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 shadow-2xl relative overflow-hidden group hover:border-[#037971]/30 transition-all duration-500">
+                            <div className="bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-700/50 shadow-xl relative overflow-hidden group hover:border-[#037971]/30 transition-all duration-300">
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#037971]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#037971] rounded-full blur-[100px] opacity-20 pointer-events-none group-hover:opacity-30 transition-opacity"></div>
 
@@ -364,19 +365,19 @@ const Home = () => {
                 </Section>
 
                 {/* 5. ZONES INTERVENTION - REDESIGNED */}
-                <section className="py-24 bg-gray-900 relative overflow-hidden">
+                <section className="py-12 md:py-24 bg-gray-900 relative overflow-hidden">
                     {/* Background decoration with Mountain icon */}
                     <div className="absolute -left-20 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none select-none">
                         <Mountain size={600} className="text-white" strokeWidth={1} />
                     </div>
 
                     <div className="max-w-7xl mx-auto px-4 relative z-10">
-                        <div className="flex flex-col md:flex-row items-center gap-16">
+                        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                             <div className="flex-1">
-                                <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
                                     /// NOTRE RAYON D'ACTION
                                 </span>
-                                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
                                     Une Présence <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Régionale</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
@@ -421,7 +422,7 @@ const Home = () => {
                                     />
                                     <div className="absolute bottom-6 left-6 z-20">
                                         <div className="flex items-center gap-2 bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-full border border-gray-700">
-                                            <div className="w-2 h-2 rounded-full bg-[#037971] animate-pulse"></div>
+                                            <div className="w-2 h-2 rounded-full bg-[#037971]"></div>
                                             <span className="text-white text-xs font-bold uppercase tracking-wide">Déplacements Quotidiens</span>
                                         </div>
                                     </div>
@@ -432,18 +433,18 @@ const Home = () => {
                 </section>
 
                 {/* 4. ABOUT / TRUST SECTION - REDESIGNED */}
-                <section className="py-24 bg-gray-950 relative overflow-hidden">
+                <section className="py-12 md:py-24 bg-gray-900 relative overflow-hidden">
                     {/* Decorative Elements */}
                     <div className="absolute left-0 bottom-0 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
 
                     <div className="max-w-7xl mx-auto px-4 relative z-10">
-                        <div className="grid md:grid-cols-2 gap-20 items-center">
+                        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
                             <div className="order-2 md:order-1">
                                 <div className="text-left mb-12">
-                                    <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                    <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
                                         /// CONFIANCE & EXPERTISE
                                     </span>
-                                    <h2 className="text-4xl md:text-5xl font-black mt-2 text-white leading-tight">
+                                    <h2 className="text-3xl md:text-5xl font-black mt-2 text-white leading-tight">
                                         Votre Confiance, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Notre Priorité</span>
                                     </h2>
                                     <p className="text-gray-400 mt-6 text-lg border-l-2 border-[#037971] pl-6 py-2 bg-gradient-to-r from-[#037971]/5 to-transparent">
@@ -481,12 +482,12 @@ const Home = () => {
                             </div>
 
                             <div className="order-1 md:order-2 flex justify-center">
-                                <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_50px_-10px_rgba(3,121,113,0.2)] group h-[500px] w-full max-w-md hover:border-[#037971]/50 transition-all duration-500 bg-gray-900 flex items-center justify-center p-8">
+                                <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_20px_-5px_rgba(3,121,113,0.2)] group h-[500px] w-full max-w-md hover:border-[#037971]/50 transition-all duration-300 bg-gray-900 flex items-center justify-center p-8">
                                     <div className="absolute inset-0 bg-[#037971]/5 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-700"></div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent z-10"></div>
 
                                     <div className="relative z-20 text-center">
-                                        <div className="absolute inset-0 bg-[#037971] blur-[80px] opacity-20 rounded-full animate-pulse"></div>
+                                        <div className="absolute inset-0 bg-[#037971] blur-[80px] opacity-20 rounded-full"></div>
                                         <img
                                             src={certibiocideImg}
                                             alt="Logo Certibiocide"
@@ -505,20 +506,20 @@ const Home = () => {
 
 
                 {/* 6. REVIEWS SECTION - REDESIGNED */}
-                <section className="py-24 bg-gray-950 relative overflow-hidden">
+                <section className="py-12 md:py-24 bg-gray-950 relative overflow-hidden">
                     <div className="max-w-7xl mx-auto px-4 relative z-10">
                         {/* Header */}
                         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                             <div>
-                                <span className="text-welki-blue font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                <span className="text-welki-blue font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
                                     /// PAROLES DE CLIENTS
                                 </span>
-                                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                                <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
                                     Ils nous font <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-welki-blue">Confiance</span>
                                 </h2>
                             </div>
 
-                            <div className="flex items-center gap-3 bg-gray-900/80 backdrop-blur-xl px-6 py-3 rounded-full shadow-lg border border-gray-800 hover:border-welki-blue/50 transition-colors">
+                            <div className="flex items-center gap-3 bg-gray-900/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-gray-800 hover:border-welki-blue/50 transition-all duration-300">
                                 <div className="flex -space-x-1">
                                     <svg viewBox="0 0 24 24" className="w-6 h-6 z-30" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" /><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" /><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.21.81-.63z" fill="#FBBC05" /><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" /></svg>
                                 </div>
@@ -565,7 +566,7 @@ const Home = () => {
                             ].map((review, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-[85vw] md:min-w-[400px] bg-gray-900/60 backdrop-blur-xl p-8 rounded-3xl border border-gray-800 flex flex-col snap-center hover:border-welki-blue/30 hover:shadow-[0_0_30px_-5px_rgba(66,133,244,0.15)] transition-all duration-300 group"
+                                    className="min-w-[85vw] md:min-w-[400px] bg-gray-900/60 backdrop-blur-md p-8 rounded-3xl border border-gray-800 flex flex-col snap-center hover:border-welki-blue/30 hover:shadow-[0_0_20px_-5px_rgba(66,133,244,0.15)] transition-all duration-300 group"
                                 >
                                     <div className="flex justify-between items-start mb-6">
                                         <div className="flex text-yellow-400 gap-1">
@@ -612,11 +613,11 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="py-24 relative overflow-hidden text-center text-white bg-gray-950">
+                <section className="py-12 md:py-24 relative overflow-hidden text-center text-white bg-gray-950">
                     <div className="absolute inset-0 bg-gray-950"></div>
                     <div className="relative z-10 max-w-4xl mx-auto px-4">
                         <h2
-                            className="text-4xl md:text-5xl font-black mb-8"
+                            className="text-3xl md:text-5xl font-black mb-8"
                         >
                             Besoin d'un devis immédiat ?
                         </h2>
@@ -628,7 +629,7 @@ const Home = () => {
                         </Link>
                     </div>
                 </section>
-            </div>
+            </div >
         </Layout >
     );
 };

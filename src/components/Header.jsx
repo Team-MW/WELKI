@@ -68,43 +68,69 @@ const Header = () => {
 
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-[100] bg-gray-950/90 backdrop-blur-md border-b border-gray-800 shadow-sm transition-all duration-300">
+            <header className="fixed top-0 left-0 right-0 z-[100] bg-gray-950/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-20">
+                    <div className="flex justify-between items-center h-24">
                         <div className="flex-shrink-0 flex items-center">
-                            <Link to="/" className="flex items-center gap-2 group">
+                            <Link to="/" className="flex items-center gap-2 group relative">
+                                <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 <img
                                     src={logoImg}
                                     alt="WELKI Logo"
-                                    className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+                                    className="h-12 w-auto object-contain relative z-10 transition-transform duration-300 group-hover:scale-105"
                                 />
                             </Link>
                         </div>
 
                         {/* Desktop Menu - Visible on Large Screens */}
-                        <nav className="hidden lg:flex space-x-8">
-                            {links.map((link) => (
-                                <Link
-                                    key={link.path}
-                                    to={link.path}
-                                    className={`text-sm font-bold uppercase tracking-wide transition-colors duration-200 ${isActive(link.path)
-                                        ? `${theme.main} border-b-2 ${theme.activeBorder} pb-1`
-                                        : `text-gray-300 ${theme.hoverText} hover:pb-1`
-                                        }`}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+                        <nav className="hidden lg:flex items-center space-x-10">
+                            {links.map((link) => {
+                                const active = isActive(link.path);
+                                return (
+                                    <Link
+                                        key={link.path}
+                                        to={link.path}
+                                        className="relative group py-2"
+                                    >
+                                        <span className={`text-sm font-bold uppercase tracking-[0.15em] transition-colors duration-300 ${active
+                                            ? theme.main
+                                            : 'text-gray-400 group-hover:text-white'
+                                            }`}>
+                                            {link.name}
+                                        </span>
+                                        {active && (
+                                            <motion.div
+                                                layoutId="navbar-indicator"
+                                                className={`absolute -bottom-1 left-0 right-0 h-[3px] rounded-full ${theme.bg} shadow-[0_0_10px_currentColor]`}
+                                                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                            />
+                                        )}
+                                        {/* Hover Effect for non-active */}
+                                        {!active && (
+                                            <div className={`absolute -bottom-1 left-0 right-0 h-[2px] bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full`} />
+                                        )}
+                                    </Link>
+                                );
+                            })}
+                            <Link
+                                to="/contact"
+                                className={`ml-4 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-wider border transition-all duration-300 ${isActive('/contact')
+                                    ? 'bg-white text-gray-950 border-white shadow-[0_0_20px_rgba(255,255,255,0.3)]'
+                                    : 'border-white/20 text-white hover:bg-white hover:text-gray-950 hover:border-white'
+                                    }`}
+                            >
+                                Devis Express
+                            </Link>
                         </nav>
 
                         {/* Mobile/Tablet Menu Button */}
                         <div className="lg:hidden">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
-                                className={`text-gray-700 ${theme.hoverText} focus:outline-none p-2`}
+                                className={`text-gray-300 hover:text-white focus:outline-none p-2 transition-colors`}
                                 aria-label="Menu"
                             >
-                                {isOpen ? <X size={28} className="text-white" /> : <Menu size={28} className="text-white" />}
+                                {isOpen ? <X size={32} /> : <Menu size={32} />}
                             </button>
                         </div>
                     </div>
@@ -120,46 +146,46 @@ const Header = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="fixed inset-0 bg-black/60 z-[105]"
+                            className="fixed inset-0 bg-black/80 z-[105]"
                             onClick={() => setIsOpen(false)}
                         />
 
-                        {/* Menu Panel */}
+                        {/* Menu Panel - Full Screen on small devices, fixed width on larger */}
                         <motion.div
                             initial={{ x: '100%' }}
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
-                            transition={{ type: 'tween', duration: 0.3 }}
-                            className="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl z-[110] border-l border-gray-100 flex flex-col"
+                            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                            className="fixed inset-y-0 right-0 w-full sm:w-[400px] bg-[#020617] z-[110] flex flex-col shadow-2xl"
                         >
-                            <div className="flex justify-between items-center h-20 px-6 border-b border-gray-800 bg-gray-950">
-                                <span className={`text-xl font-black ${theme.main}`}>MENU</span>
+                            <div className="flex justify-between items-center h-20 px-6 border-b border-gray-900 bg-[#020617]">
+                                <span className="text-2xl font-black text-[#0241cd] tracking-tighter">MENU</span>
                                 <button
                                     onClick={() => setIsOpen(false)}
-                                    className="p-2 bg-gray-800 rounded-full text-white hover:bg-red-900/50 hover:text-red-400 transition-colors"
+                                    className="p-2 bg-gray-800 rounded-full text-white hover:bg-gray-700 transition-colors"
                                 >
                                     <X size={24} />
                                 </button>
                             </div>
 
-                            <div className="flex flex-col p-6 space-y-3 overflow-y-auto bg-gray-950 h-full">
+                            <div className="flex flex-col p-6 space-y-4 overflow-y-auto bg-[#020617] h-full">
                                 {links.map((link) => (
                                     <Link
                                         key={link.path}
                                         to={link.path}
                                         onClick={() => setIsOpen(false)}
-                                        className={`flex items-center justify-between px-6 py-4 rounded-xl text-lg font-bold transition-all ${isActive(link.path)
-                                            ? `${theme.mobileActive} text-white shadow-lg ${theme.shadow}`
-                                            : 'bg-gray-900 text-gray-300 hover:bg-gray-800'
+                                        className={`flex items-center px-6 py-5 rounded-xl text-lg font-bold transition-all duration-200 ${isActive(link.path)
+                                            ? 'bg-[#0052cc] text-white shadow-[0_0_20px_rgba(0,82,204,0.4)]'
+                                            : 'bg-gray-900/50 text-gray-300 hover:bg-gray-800 border border-gray-800/50'
                                             }`}
                                     >
                                         {link.name}
                                     </Link>
                                 ))}
 
-                                <div className="mt-8 p-6 bg-blue-900/20 rounded-2xl border border-blue-900/50 text-center">
-                                    <p className="text-sm text-gray-400 font-semibold mb-2">Une urgence ?</p>
-                                    <a href="tel:0608070696" className={`block text-2xl font-black ${theme.main} hover:scale-105 transition-transform`}>
+                                <div className="mt-8 p-8 bg-gray-900/30 rounded-3xl border border-blue-900/30 text-center flex flex-col items-center justify-center flex-grow max-h-[250px]">
+                                    <p className="text-gray-400 font-medium mb-4">Une urgence ?</p>
+                                    <a href="tel:0608070696" className="block text-3xl md:text-4xl font-black text-[#0241cd] hover:scale-105 transition-transform tracking-wider">
                                         06.08.07.06.96
                                     </a>
                                 </div>

@@ -130,7 +130,7 @@ const Services = ({ defaultTab }) => {
                 {(defaultTab === '3d' || !defaultTab) && (
                     <div className="space-y-24">
                         {/* 1.5 VISUAL & TARGETS */}
-                        <section className="py-24 bg-gray-950 relative overflow-hidden">
+                        <section className="py-12 md:py-24 bg-gray-950 relative overflow-hidden">
                             {/* Decorative background elements matching the futuristic theme */}
                             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#E71D36]/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
                             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#E71D36]/5 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
@@ -138,7 +138,7 @@ const Services = ({ defaultTab }) => {
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                                 <div className="grid md:grid-cols-2 gap-16 items-center">
                                     {/* Left Image Column */}
-                                    <div className="relative group rounded-3xl overflow-hidden cursor-pointer shadow-[0_0_50px_-10px_rgba(231,29,54,0.15)] border border-gray-800 h-[600px] hover:border-[#E71D36]/50 transition-all duration-500">
+                                    <div className="relative group rounded-3xl overflow-hidden cursor-pointer shadow-[0_0_50px_-10px_rgba(231,29,54,0.15)] border border-gray-800 h-[400px] md:h-[600px] hover:border-[#E71D36]/50 transition-all duration-500">
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
                                         <div className="absolute inset-0 bg-[#E71D36]/10 mix-blend-overlay z-10 group-hover:bg-[#E71D36]/0 transition-colors duration-700"></div>
 
@@ -148,7 +148,7 @@ const Services = ({ defaultTab }) => {
                                             <div className="inline-flex items-center gap-2 bg-[#E71D36] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4 shadow-[0_0_20px_rgba(231,29,54,0.4)]">
                                                 <Sparkles size={12} /> EXPERTISE TOTALE
                                             </div>
-                                            <h3 className="text-4xl font-black text-white leading-tight mb-4 drop-shadow-lg">
+                                            <h3 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4 drop-shadow-lg">
                                                 Lutte Anti-Nuisibles
                                             </h3>
                                             <p className="text-gray-300 text-sm leading-relaxed max-w-md border-l-2 border-[#E71D36] pl-4">
@@ -163,7 +163,7 @@ const Services = ({ defaultTab }) => {
                                             <span className="text-[#E71D36] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
                                                 /// CIBLES IDENTIFIÉES
                                             </span>
-                                            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                            <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
                                                 Nous traitons <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E71D36] to-red-400">tous types</span> d'infestations
                                             </h2>
                                             <p className="text-gray-400 text-lg">
@@ -202,7 +202,7 @@ const Services = ({ defaultTab }) => {
                                 <span className="text-[#E71D36] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
                                     /// NOS DOMAINES D'EXPERTISE
                                 </span>
-                                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
                                     Une Protection <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E71D36] to-red-400">Complète</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -288,7 +288,7 @@ const Services = ({ defaultTab }) => {
                         </Section>
 
                         {/* 1.8 DANGERS SECTION (New) */}
-                        <section className="py-20 bg-gray-900 overflow-hidden relative">
+                        <section className="py-12 md:py-20 bg-gray-900 overflow-hidden relative">
                             {/* Background Gradients */}
                             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E71D36]/5 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
                             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#E71D36]/5 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
@@ -298,7 +298,7 @@ const Services = ({ defaultTab }) => {
                                     <span className="text-[#E71D36] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
                                         /// RISQUES MAJEURS
                                     </span>
-                                    <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
                                         Les <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E71D36] to-red-400">dangers</span> et nuisances
                                     </h2>
                                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -306,7 +306,7 @@ const Services = ({ defaultTab }) => {
                                     </p>
                                 </div>
 
-                                <div className="grid md:grid-cols-3 gap-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
                                     {[
                                         {
                                             icon: AlertTriangle,
@@ -356,7 +356,7 @@ const Services = ({ defaultTab }) => {
                         </section>
 
                         {/* 2. METHODOLOGY */}
-                        <section className="py-24 bg-gray-950 relative overflow-hidden">
+                        <section className="py-12 md:py-24 bg-gray-950 relative overflow-hidden">
                             {/* Decorative Background Elements */}
                             <div className="absolute top-1/2 left-0 w-[800px] h-[800px] bg-[#E71D36]/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
@@ -367,7 +367,7 @@ const Services = ({ defaultTab }) => {
                                             <span className="text-[#E71D36] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
                                                 /// NOTRE MÉTHODE
                                             </span>
-                                            <h2 className="text-4xl md:text-5xl font-black mt-2 text-white leading-tight">
+                                            <h2 className="text-3xl md:text-5xl font-black mt-2 text-white leading-tight">
                                                 Une intervention en <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E71D36] to-red-400">3 étapes clés</span>
                                             </h2>
                                             <p className="text-gray-400 mt-6 text-lg border-l-2 border-[#E71D36] pl-6 py-2 bg-gradient-to-r from-[#E71D36]/5 to-transparent">
@@ -410,7 +410,7 @@ const Services = ({ defaultTab }) => {
                                     </div>
 
                                     <div className="order-1 md:order-2">
-                                        <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_50px_-10px_rgba(231,29,54,0.2)] group h-[600px] hover:border-[#E71D36]/50 transition-all duration-500">
+                                        <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_50px_-10px_rgba(231,29,54,0.2)] group h-[400px] md:h-[600px] hover:border-[#E71D36]/50 transition-all duration-500">
                                             <div className="absolute inset-0 bg-[#E71D36]/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-700"></div>
                                             <img src={img3DDisinfection} alt="Technicien en combinaison" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 filter contrast-125 saturate-0 group-hover:saturate-100" />
                                             <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent z-10"></div>
@@ -431,7 +431,7 @@ const Services = ({ defaultTab }) => {
                         </section>
 
                         {/* 3. INTERVENTION SITES */}
-                        <section className="py-24 bg-gray-900 overflow-hidden relative">
+                        <section className="py-12 md:py-24 bg-gray-900 overflow-hidden relative">
                             {/* Decorative Background Elements */}
                             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#E71D36]/5 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
@@ -445,7 +445,7 @@ const Services = ({ defaultTab }) => {
                                     </p>
                                 </div>
 
-                                <div className="grid md:grid-cols-4 gap-6">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                                     {[
                                         { title: "Habitations", icon: Home, desc: "Maisons, Appartements, Caves" },
                                         { title: "Restauration", icon: Utensils, desc: "Cuisines, Salles, Stockage" },
@@ -465,7 +465,7 @@ const Services = ({ defaultTab }) => {
                         </section>
 
                         {/* 3. TRUST / CERTIFICATION - REDESIGNED */}
-                        <section className="py-24 bg-gray-950 relative overflow-hidden">
+                        <section className="py-12 md:py-24 bg-gray-950 relative overflow-hidden">
                             {/* Decorative Background Elements */}
                             <div className="absolute top-1/2 left-0 w-[800px] h-[800px] bg-[#E71D36]/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
@@ -476,7 +476,7 @@ const Services = ({ defaultTab }) => {
                                             <span className="text-[#E71D36] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
                                                 /// POURQUOI CHOISIR WELKI ?
                                             </span>
-                                            <h2 className="text-4xl md:text-5xl font-black mt-2 text-white leading-tight">
+                                            <h2 className="text-3xl md:text-5xl font-black mt-2 text-white leading-tight">
                                                 L'Expertise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E71D36] to-red-400">Certifiée</span>
                                             </h2>
                                             <p className="text-gray-400 mt-6 text-lg border-l-2 border-[#E71D36] pl-6 py-2 bg-gradient-to-r from-[#E71D36]/5 to-transparent">
