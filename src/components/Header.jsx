@@ -70,14 +70,14 @@ const Header = () => {
         <>
             <header className="fixed top-0 left-0 right-0 z-[100] bg-gray-950/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-24">
+                    <div className="flex justify-between items-center h-20">
                         <div className="flex-shrink-0 flex items-center">
                             <Link to="/" className="flex items-center gap-2 group relative">
                                 <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 <img
                                     src={logoImg}
                                     alt="WELKI Logo"
-                                    className="h-12 w-auto object-contain relative z-10 transition-transform duration-300 group-hover:scale-105"
+                                    className="h-10 w-auto object-contain relative z-10 transition-transform duration-300 group-hover:scale-105"
                                 />
                             </Link>
                         </div>
