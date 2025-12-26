@@ -19,112 +19,495 @@ import imgPaysagisme1 from '../assets/paysagisme.jpg';
 import imgPaysagisme2 from '../assets/paysagisme2.jpg';
 
 const Services = ({ defaultTab }) => {
-    // Simple scroll to section logic using URL params or props could be implemented
-    // For now, laying out all services clearly.
 
-    const headerContent = {
-        '3d': {
-            title: "Dératisation, Désinsectisation & Désinfection",
-            description: "Nous utilisons des méthodes certifiées pour éradiquer tout type de nuisibles tout en préservant votre sécurité.",
-            bgClass: "bg-gray-950",
-            textClass: "text-white",
-            descClass: "text-gray-100",
-            bgImage: imgCafardBg,
-            btnColor: "bg-[#E71D36]"
-        },
-        'green': {
-            title: "Élagage & Entretien de Jardin",
-            description: "Nos paysagistes interviennent pour la taille, l'abattage et l'entretien régulier de vos extérieurs.",
-            bgClass: "bg-gray-950",
-            textClass: "text-[#037971]",
-            descClass: "text-gray-100",
-            bgImage: imgPaysagisme1,
-            btnColor: "bg-[#037971]"
-        },
-        'clean': {
-            title: "Entretien & Nettoyage Pro",
-            description: "Services de nettoyage pour copropriétés, bureaux et fin de chantier.",
-            bgClass: "bg-gray-950",
-            textClass: "text-white",
-            descClass: "text-gray-100",
-            bgImage: imgCleanBg,
-            btnColor: "bg-[#0241cd]"
-        }
-    };
+    // Configuration for the Lightning Bolt Hero
+    // Hero configuration has been replaced by explicit rendering below for "3 distinctive but identical" sections
 
-    const currentContent = headerContent[defaultTab] || {
-        title: "Nos Expertises",
-        description: "Des professionnels qualifiés pour des interventions efficaces et durables.",
-        bgClass: "bg-gray-950",
-        textClass: "text-welki-blue",
-        descClass: "text-gray-300",
-        btnColor: "bg-welki-blue"
-    };
 
     return (
-        <Layout title="Nos Services" description="Découvrez nos prestations en hygiène 3D et entretien.">
+        <Layout title="Nos Services">
             <div className="bg-gray-950 min-h-screen text-white">
-                <Section
-                    className="pt-32 pb-16 md:pt-48 md:pb-32 relative overflow-hidden"
-                >
-                    {/* Clean Background Image with Subtle Overlay */}
-                    {currentContent.bgImage && (
+
+                {/* HERO SECTION: LIGHTNING SPLIT */}
+                <section className="relative flex flex-col md:block h-auto md:h-[95vh] bg-gray-950 overflow-hidden">
+
+                    {/* CASE 1: CLEANING (Nettoyage) */}
+                    {(defaultTab === 'clean') && (
                         <>
+                            {/* Panel 1: Bureaux & Tertiaire */}
                             <div
-                                className="absolute inset-0 z-0 scale-105"
-                                style={{
-                                    backgroundImage: `url(${currentContent.bgImage})`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center'
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('bureaux');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                            ></div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-900/60 to-gray-900/30 z-0"></div>
-                        </>
-                    )}
-
-                    <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col items-center justify-center min-h-[40vh]">
-
-                        {/* Premium Glassmorphic Card */}
-                        <div className="relative max-w-5xl mx-auto w-full">
-                            {/* Dynamic Glow Effect behind the card */}
-                            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] ${currentContent.btnColor.replace('bg-', 'bg-')}/20 blur-[100px] rounded-full pointer-events-none`}></div>
-
-                            <div className={`relative bg-gray-900/60 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-16 shadow-2xl border border-gray-700/50 text-center overflow-hidden group hover:border-gray-600 transition-all duration-500`}>
-                                {/* Gradient overlay */}
-                                <div className={`absolute inset-0 bg-gradient-to-tr from-gray-950 via-transparent to-${currentContent.bgClass === 'bg-gray-950' ? 'gray-800' : 'gray-900'}/10 opacity-50`}></div>
-
-                                <div className="relative z-10">
-                                    <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-6 border ${currentContent.textClass.replace('text-', 'border-').replace('white', 'gray-100')} ${currentContent.textClass} bg-gray-900/50 backdrop-blur-md shadow-lg`}>
-                                        /// SERVICES PROFESSIONNELS
-                                    </span>
-
-                                    <h1 className="text-2xl sm:text-4xl md:text-7xl font-black mb-8 px-4 leading-tight text-white drop-shadow-xl tracking-tight hyphens-auto">
-                                        {currentContent.title.split(' & ').map((part, i, arr) => (
-                                            <React.Fragment key={i}>
-                                                {part}
-                                                {i < arr.length - 1 && <span className={`${currentContent.textClass} opacity-80`}> & </span>}
-                                            </React.Fragment>
-                                        ))}
-                                    </h1>
-
-                                    <p className={`text-xl md:text-2xl max-w-3xl mx-auto px-4 mb-12 leading-relaxed font-medium ${currentContent.descClass}`}>
-                                        {currentContent.description}
-                                    </p>
-
-                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                                        <a
-                                            href="/contact"
-                                            className={`${currentContent.btnColor} text-white font-bold py-5 px-12 rounded-2xl shadow-[0_0_30px_-5px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.2)] hover:scale-[1.02] transition-all transform inline-flex items-center gap-3 text-lg border-t border-white/20`}
-                                        >
-                                            <span>Demander un devis</span>
-                                            <ArrowRight size={22} strokeWidth={2.5} />
-                                        </a>
+                            >
+                                <img
+                                    src={imgCleanMain}
+                                    alt="Bureaux & Tertiaire"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
+                                    <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
+                                        <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
+                                            /// CADRE DE TRAVAIL SAIN
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
+                                            Bureaux & <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Tertiaire</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                            {["Open Space & Bureaux", "Sanitaires & Cuisines", "Vitrerie & Sols"].map((feat, i) => (
+                                                <li key={i} className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>{feat}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </Section>
+
+                            {/* Panel 2: Immeubles / Copro */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('immeubles');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgCleanBg}
+                                    alt="Immeubles / Copro"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-4 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                                            /// PARTIES COMMUNES
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Immeubles <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Copro</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                            {["Halls & Escaliers", "Sortie Poubelles", "Parkings"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>{feat}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Panel 3: Fin de chantier */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('chantier');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgCleanMain}
+                                    alt="Fin de chantier"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
+                                    <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
+                                        <span className="inline-block py-1 pr-1 pl-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
+                                            /// REMISE EN ÉTAT
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
+                                            Fin de <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Chantier</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
+                                            {["Évacuation Gravats", "Nettoyage Approfondi", "Remise à Neuf"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-end gap-2">{feat}<div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div></li>
+                                            ))}
+                                        </ul>
+                                        <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
+                                            <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                                En découvrir plus
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* SEPARATORS: BLUE GLOW */}
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <defs>
+                                    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                </defs>
+                                <path
+                                    d="M 36 0 L 32 50 L 35 50 L 31 100"
+                                    stroke="white"
+                                    strokeWidth="3"
+                                    vectorEffect="non-scaling-stroke"
+                                    fill="none"
+                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                                />
+                                <path
+                                    d="M 71 0 L 67 50 L 70 50 L 66 100"
+                                    stroke="white"
+                                    strokeWidth="3"
+                                    strokeLinecap="square"
+                                    strokeLinejoin="miter"
+                                    vectorEffect="non-scaling-stroke"
+                                    fill="none"
+                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                                />
+                            </svg>
+                        </>
+                    )}
+
+                    {/* CASE 2: 3D (Hygiène 3D) */}
+                    {(defaultTab === '3d' || !defaultTab) && (
+                        <>
+                            {/* Panel 1: Dératisation */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('deratisation');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgRatBg}
+                                    alt="Dératisation"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
+                                    <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
+                                        <span className="inline-block py-1 pl-1 pr-3 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
+                                            /// RONGEURS
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
+                                            Dératisation <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Pro</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                            {["Rats & Souris", "Diagnostic Accès", "Prévention"].map((feat, i) => (
+                                                <li key={i} className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>{feat}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Panel 2: Désinsectisation */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('desinsectisation');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgCafardBg}
+                                    alt="Désinsectisation"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-4 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                                            /// INSECTES
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Désinsecti <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">sation</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                            {["Cafards & Blattes", "Punaises de Lit", "Frelons & Guêpes"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>{feat}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Panel 3: Désinfection */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('desinfection');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={img3DDisinfection}
+                                    alt="Désinfection"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
+                                    <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
+                                        <span className="inline-block py-1 pr-1 pl-3 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
+                                            /// VIRUS & BACTÉRIES
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
+                                            Désinfection <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Totale</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
+                                            {["Virus & Bactéries", "Odeurs Tenaces", "Post-Décès/Syndrome"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-end gap-2">{feat}<div className="w-1.5 h-1.5 rounded-full bg-red-300"></div></li>
+                                            ))}
+                                        </ul>
+                                        <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
+                                            <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                                En découvrir plus
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* SEPARATORS: RED GLOW */}
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <defs>
+                                    <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                </defs>
+                                <path
+                                    d="M 36 0 L 32 50 L 35 50 L 31 100"
+                                    stroke="white"
+                                    strokeWidth="3"
+                                    vectorEffect="non-scaling-stroke"
+                                    fill="none"
+                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                                />
+                                <path
+                                    d="M 71 0 L 67 50 L 70 50 L 66 100"
+                                    stroke="white"
+                                    strokeWidth="3"
+                                    strokeLinecap="square"
+                                    strokeLinejoin="miter"
+                                    vectorEffect="non-scaling-stroke"
+                                    fill="none"
+                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                                />
+                            </svg>
+                        </>
+                    )}
+
+                    {/* CASE 3: GREEN (Espaces Verts) */}
+                    {(defaultTab === 'green') && (
+                        <>
+                            {/* Panel 1: Élagage */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('elagage');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgGreenMain}
+                                    alt="Élagage"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
+                                    <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
+                                        <span className="inline-block py-1 pl-1 pr-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
+                                            /// SOIN DES ARBRES
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
+                                            Élagage <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Expert</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                            {["Taille Douce", "Abattage Délicat", "Dessouchage"].map((feat, i) => (
+                                                <li key={i} className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>{feat}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Panel 2: Entretien Jardin */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('entretien');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgGreenBg}
+                                    alt="Entretien Jardin"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-4 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                                            /// PARCS & JARDINS
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Entretien <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Jardin</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                            {["Tonte & Taille", "Débroussaillage", "Ramassage Feuilles"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>{feat}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Panel 3: Paysagisme */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('paysagisme');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgPaysagisme1}
+                                    alt="Paysagisme"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
+                                    <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
+                                        <span className="inline-block py-1 pr-1 pl-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
+                                            /// CRÉATION PAYSAGÈRE
+                                        </span>
+                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
+                                            Design <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Paysager</span>
+                                        </h2>
+                                        <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
+                                            {["Massifs & Plantes", "Arrosage Auto", "Aménagement"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-end gap-2">{feat}<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
+                                            ))}
+                                        </ul>
+                                        <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
+                                            <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                                En découvrir plus
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* SEPARATORS: GREEN GLOW */}
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <defs>
+                                    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
+                                </defs>
+                                <path
+                                    d="M 36 0 L 32 50 L 35 50 L 31 100"
+                                    stroke="white"
+                                    strokeWidth="3"
+                                    vectorEffect="non-scaling-stroke"
+                                    fill="none"
+                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                                />
+                                <path
+                                    d="M 71 0 L 67 50 L 70 50 L 66 100"
+                                    stroke="white"
+                                    strokeWidth="3"
+                                    strokeLinecap="square"
+                                    strokeLinejoin="miter"
+                                    vectorEffect="non-scaling-stroke"
+                                    fill="none"
+                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                                />
+                            </svg>
+                        </>
+                    )}
+                </section>
 
                 {/* 3D Section */}
                 {(defaultTab === '3d' || !defaultTab) && (
@@ -215,6 +598,7 @@ const Services = ({ defaultTab }) => {
                             >
                                 {/* Dératisation */}
                                 <div
+                                    id="deratisation"
                                     className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(231,29,54,0.3)] hover:-translate-y-2"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/0 via-transparent to-[#E71D36]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -239,6 +623,7 @@ const Services = ({ defaultTab }) => {
 
                                 {/* Désinsectisation */}
                                 <div
+                                    id="desinsectisation"
                                     className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(231,29,54,0.3)] hover:-translate-y-2"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/0 via-transparent to-[#E71D36]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -263,6 +648,7 @@ const Services = ({ defaultTab }) => {
 
                                 {/* Désinfection */}
                                 <div
+                                    id="desinfection"
                                     className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(231,29,54,0.3)] hover:-translate-y-2"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/0 via-transparent to-[#E71D36]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -570,7 +956,7 @@ const Services = ({ defaultTab }) => {
 
                                 <div className="grid md:grid-cols-3 gap-8">
                                     {/* Élagage */}
-                                    <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2">
+                                    <div id="elagage" className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2">
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/0 via-transparent to-[#037971]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         <div className="w-16 h-16 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(3,121,113,0.3)] shadow-inner border border-[#037971]/20 relative z-10">
                                             <TreePine size={32} />
@@ -592,7 +978,7 @@ const Services = ({ defaultTab }) => {
                                     </div>
 
                                     {/* Entretien */}
-                                    <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2">
+                                    <div id="entretien" className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2">
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/0 via-transparent to-[#037971]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         <div className="w-16 h-16 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(3,121,113,0.3)] shadow-inner border border-[#037971]/20 relative z-10">
                                             <Leaf size={32} />
@@ -614,7 +1000,7 @@ const Services = ({ defaultTab }) => {
                                     </div>
 
                                     {/* Création */}
-                                    <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2">
+                                    <div id="paysagisme" className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(3,121,113,0.3)] hover:-translate-y-2">
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/0 via-transparent to-[#037971]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         <div className="w-16 h-16 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(3,121,113,0.3)] shadow-inner border border-[#037971]/20 relative z-10">
                                             <Flower2 size={32} />
@@ -859,7 +1245,7 @@ const Services = ({ defaultTab }) => {
 
                                 <div className="grid md:grid-cols-3 gap-8">
                                     {/* Copropriétés */}
-                                    <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
+                                    <div id="immeubles" className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/0 via-transparent to-[#0241cd]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         <div className="w-16 h-16 bg-[#0241cd]/10 rounded-2xl flex items-center justify-center text-[#0241cd] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(2,65,205,0.3)] shadow-inner border border-[#0241cd]/20 relative z-10">
                                             <Building2 size={32} />
@@ -881,7 +1267,7 @@ const Services = ({ defaultTab }) => {
                                     </div>
 
                                     {/* Bureaux */}
-                                    <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
+                                    <div id="bureaux" className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/0 via-transparent to-[#0241cd]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         <div className="w-16 h-16 bg-[#0241cd]/10 rounded-2xl flex items-center justify-center text-[#0241cd] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(2,65,205,0.3)] shadow-inner border border-[#0241cd]/20 relative z-10">
                                             <Briefcase size={32} />
@@ -903,7 +1289,7 @@ const Services = ({ defaultTab }) => {
                                     </div>
 
                                     {/* Fin de Chantier */}
-                                    <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
+                                    <div id="chantier" className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-500 group overflow-hidden hover:shadow-[0_0_40px_-5px_rgba(2,65,205,0.3)] hover:-translate-y-2">
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/0 via-transparent to-[#0241cd]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                         <div className="w-16 h-16 bg-[#0241cd]/10 rounded-2xl flex items-center justify-center text-[#0241cd] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(2,65,205,0.3)] shadow-inner border border-[#0241cd]/20 relative z-10">
                                             <HardHat size={32} />
