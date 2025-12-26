@@ -28,12 +28,15 @@ const Home = () => {
                             z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                         "
-                        style={{
-                            backgroundImage: `url(${imgCleanHero})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
                     >
+                        {/* Optimized Image */}
+                        <img
+                            src={imgCleanHero}
+                            alt="Nettoyage Professionnel"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            fetchPriority="high"
+                        />
+
                         <Link to="/nettoyage" className="absolute inset-0 z-10" aria-label="Nettoyage"></Link>
                         {/* Improved Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:from-[#0241cd]/90 group-hover:via-[#0241cd]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
@@ -71,12 +74,15 @@ const Home = () => {
                             z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
                         "
-                        style={{
-                            backgroundImage: `url(${img3DHero})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
                     >
+                        {/* Optimized Image */}
+                        <img
+                            src={img3DHero}
+                            alt="Hygiène 3D et Anti-nuisibles"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            fetchPriority="high"
+                        />
+
                         <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Hygiène 3D"></Link>
                         {/* Improved Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:from-[#E71D36]/90 group-hover:via-[#E71D36]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
@@ -114,12 +120,15 @@ const Home = () => {
                             z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                         "
-                        style={{
-                            backgroundImage: `url(${imgGreenHero})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
                     >
+                        {/* Optimized Image */}
+                        <img
+                            src={imgGreenHero}
+                            alt="Espaces Verts et Paysagisme"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            fetchPriority="high"
+                        />
+
                         <Link to="/espaces-verts" className="absolute inset-0 z-10" aria-label="Espaces Verts"></Link>
                         {/* Improved Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:from-[#037971]/90 group-hover:via-[#037971]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
