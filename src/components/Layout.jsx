@@ -25,7 +25,7 @@ const Layout = ({ children, title, description }) => {
                             <div className="text-2xl font-black text-white">WELKI</div>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Votre expert certifié Certibiocide pour l'hygiène 3D (dératisation, désinsectisation, désinfection),
+                            Votre expert certifié Certibiocide pour l'anti nuisible (dératisation, désinsectisation, désinfection),
                             l'entretien des espaces verts et le nettoyage professionnel.
                         </p>
                     </div>

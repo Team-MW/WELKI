@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel, AlertTriangle, UtensilsCrossed, Wind, TrendingUp, Baby, ArrowRight } from 'lucide-react';
+import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel, AlertTriangle, UtensilsCrossed, Wind, TrendingUp, Baby, ArrowRight, Store, Scale, Gavel, Trophy, Users, HeartPulse } from 'lucide-react';
 
 import { useSearchParams } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
@@ -20,8 +20,6 @@ import imgPaysagisme2 from '../assets/paysagisme2.jpg';
 
 const Services = ({ defaultTab }) => {
 
-    // Configuration for the Lightning Bolt Hero
-    // Hero configuration has been replaced by explicit rendering below for "3 distinctive but identical" sections
 
 
     return (
@@ -32,7 +30,7 @@ const Services = ({ defaultTab }) => {
                 <section className="relative flex flex-col md:block h-auto md:h-[95vh] bg-gray-950 overflow-hidden">
 
                     {/* CASE 1: CLEANING (Nettoyage) */}
-                    {(defaultTab === 'clean') && (
+                    {(defaultTab === 'clean' || !defaultTab) && (
                         <>
                             {/* Panel 1: Bureaux & Tertiaire */}
                             <div
@@ -54,21 +52,24 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
-                                    <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
-                                        <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
-                                            /// CADRE DE TRAVAIL SAIN
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
+                                            /// ESPACES DE TRAVAIL
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
-                                            Bureaux & <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Tertiaire</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Nettoyage Bureaux
                                         </h2>
-                                        <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Open Space & Bureaux", "Sanitaires & Cuisines", "Vitrerie & Sols"].map((feat, i) => (
-                                                <li key={i} className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>{feat}</li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -90,27 +91,30 @@ const Services = ({ defaultTab }) => {
                                 }}
                             >
                                 <img
-                                    src={imgCleanBg}
+                                    src={imgCleanBg} // Using optimized netoyagepro.jpg equivalent
                                     alt="Immeubles / Copro"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
-                                        <span className="inline-block py-1 px-4 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                                            /// PARTIES COMMUNES
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
+                                            /// HABITAT COLLECTIF
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Immeubles <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Copro</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Entretien Immeubles
                                         </h2>
-                                        <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Halls & Escaliers", "Sortie Poubelles", "Parkings"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>{feat}</li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -138,60 +142,35 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
-                                    <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
-                                        <span className="inline-block py-1 pr-1 pl-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
-                                            /// REMISE EN ÉTAT
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
+                                            /// TRAVAUX TERMINÉS
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
-                                            Fin de <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Chantier</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Fin de Chantier
                                         </h2>
-                                        <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Évacuation Gravats", "Nettoyage Approfondi", "Remise à Neuf"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-end gap-2">{feat}<div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div></li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
-                                        <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
-                                            <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
-                                                En découvrir plus
-                                            </span>
-                                        </div>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-
-                            {/* SEPARATORS: BLUE GLOW */}
-                            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <defs>
-                                    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feGaussianBlur stdDeviation="1.5" result="blur" />
-                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                    </filter>
-                                </defs>
-                                <path
-                                    d="M 36 0 L 32 50 L 35 50 L 31 100"
-                                    stroke="white"
-                                    strokeWidth="3"
-                                    vectorEffect="non-scaling-stroke"
-                                    fill="none"
-                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
-                                />
-                                <path
-                                    d="M 71 0 L 67 50 L 70 50 L 66 100"
-                                    stroke="white"
-                                    strokeWidth="3"
-                                    strokeLinecap="square"
-                                    strokeLinejoin="miter"
-                                    vectorEffect="non-scaling-stroke"
-                                    fill="none"
-                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
-                                />
-                            </svg>
                         </>
                     )}
 
                     {/* CASE 2: 3D (Hygiène 3D) */}
-                    {(defaultTab === '3d' || !defaultTab) && (
+                    {(defaultTab === '3d') && (
                         <>
                             {/* Panel 1: Dératisation */}
                             <div
@@ -213,21 +192,24 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
-                                    <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
-                                        <span className="inline-block py-1 pl-1 pr-3 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
-                                            /// RONGEURS
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
+                                            /// STOP RONGEURS
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
-                                            Dératisation <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Pro</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Dératisation Choc
                                         </h2>
-                                        <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Rats & Souris", "Diagnostic Accès", "Prévention"].map((feat, i) => (
-                                                <li key={i} className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>{feat}</li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -255,21 +237,24 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
-                                        <span className="inline-block py-1 px-4 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                                            /// INSECTES
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
+                                            /// STOP INSECTES
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Désinsecti <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">sation</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Désinsectisation
                                         </h2>
-                                        <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Cafards & Blattes", "Punaises de Lit", "Frelons & Guêpes"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>{feat}</li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -297,55 +282,30 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
-                                    <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
-                                        <span className="inline-block py-1 pr-1 pl-3 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
-                                            /// VIRUS & BACTÉRIES
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
+                                            /// ASSAINISSEMENT
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
-                                            Désinfection <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Totale</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Désinfection Totale
                                         </h2>
-                                        <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Virus & Bactéries", "Odeurs Tenaces", "Post-Décès/Syndrome"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-end gap-2">{feat}<div className="w-1.5 h-1.5 rounded-full bg-red-300"></div></li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
-                                        <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
-                                            <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
-                                                En découvrir plus
-                                            </span>
-                                        </div>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-
-                            {/* SEPARATORS: RED GLOW */}
-                            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <defs>
-                                    <filter id="glow-red" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feGaussianBlur stdDeviation="1.5" result="blur" />
-                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                    </filter>
-                                </defs>
-                                <path
-                                    d="M 36 0 L 32 50 L 35 50 L 31 100"
-                                    stroke="white"
-                                    strokeWidth="3"
-                                    vectorEffect="non-scaling-stroke"
-                                    fill="none"
-                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
-                                />
-                                <path
-                                    d="M 71 0 L 67 50 L 70 50 L 66 100"
-                                    stroke="white"
-                                    strokeWidth="3"
-                                    strokeLinecap="square"
-                                    strokeLinejoin="miter"
-                                    vectorEffect="non-scaling-stroke"
-                                    fill="none"
-                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
-                                />
-                            </svg>
                         </>
                     )}
 
@@ -372,21 +332,24 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
-                                    <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
-                                        <span className="inline-block py-1 pl-1 pr-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// SOIN DES ARBRES
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
-                                            Élagage <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Expert</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Élagage Expert
                                         </h2>
-                                        <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Taille Douce", "Abattage Délicat", "Dessouchage"].map((feat, i) => (
-                                                <li key={i} className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>{feat}</li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -414,21 +377,24 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
-                                        <span className="inline-block py-1 px-4 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// PARCS & JARDINS
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Entretien <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Jardin</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Entretien Jardin
                                         </h2>
-                                        <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Tonte & Taille", "Débroussaillage", "Ramassage Feuilles"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>{feat}</li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -456,57 +422,60 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
-                                    <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
-                                        <span className="inline-block py-1 pr-1 pl-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// CRÉATION PAYSAGÈRE
                                         </span>
-                                        <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
-                                            Design <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Paysager</span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Design Paysager
                                         </h2>
-                                        <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Massifs & Plantes", "Arrosage Auto", "Aménagement"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-end gap-2">{feat}<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                                                    {feat}
+                                                </li>
                                             ))}
                                         </ul>
-                                        <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
-                                            <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
-                                                En découvrir plus
-                                            </span>
-                                        </div>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En découvrir plus
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-
-                            {/* SEPARATORS: GREEN GLOW */}
-                            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <defs>
-                                    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feGaussianBlur stdDeviation="1.5" result="blur" />
-                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                    </filter>
-                                </defs>
-                                <path
-                                    d="M 36 0 L 32 50 L 35 50 L 31 100"
-                                    stroke="white"
-                                    strokeWidth="3"
-                                    vectorEffect="non-scaling-stroke"
-                                    fill="none"
-                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
-                                />
-                                <path
-                                    d="M 71 0 L 67 50 L 70 50 L 66 100"
-                                    stroke="white"
-                                    strokeWidth="3"
-                                    strokeLinecap="square"
-                                    strokeLinejoin="miter"
-                                    vectorEffect="non-scaling-stroke"
-                                    fill="none"
-                                    className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
-                                />
-                            </svg>
                         </>
                     )}
+
+                    {/* LIGHTNING BOLT SEPARATORS (Desktop Only) */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <defs>
+                            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <path
+                            d="M 36 0 L 32 50 L 35 50 L 31 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                        />
+                        <path
+                            d="M 71 0 L 67 50 L 70 50 L 66 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            strokeLinecap="square"
+                            strokeLinejoin="miter"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                        />
+                    </svg>
                 </section>
 
                 {/* 3D Section */}
@@ -525,7 +494,7 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
                                         <div className="absolute inset-0 bg-[#E71D36]/10 mix-blend-overlay z-10 group-hover:bg-[#E71D36]/0 transition-colors duration-700"></div>
 
-                                        <img src={img3DMain} alt="Expert Hygiène 3D" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 filter contrast-125 saturate-0 group-hover:saturate-100" />
+                                        <img src={img3DMain} alt="Expert Anti Nuisible" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 filter contrast-125 saturate-0 group-hover:saturate-100" />
 
                                         <div className="absolute bottom-0 left-0 right-0 p-10 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                             <div className="inline-flex items-center gap-2 bg-[#E71D36] text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4 shadow-[0_0_20px_rgba(231,29,54,0.4)]">
@@ -574,6 +543,56 @@ const Services = ({ defaultTab }) => {
                                                 </div>
                                             ))}
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* HIGH IMPACT RISK WARNING */}
+                        <section className="relative py-16 bg-gradient-to-br from-[#E71D36] to-[#990a1b] overflow-hidden">
+                            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                            <div className="absolute inset-0 bg-black/10"></div>
+
+                            <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
+                                <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur border border-white/20 rounded-full px-4 py-1 text-white text-xs font-bold uppercase tracking-widest mb-6">
+                                    <AlertTriangle size={14} className="text-yellow-400" /> PROLIFÉRATION = DANGER
+                                </div>
+                                <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight drop-shadow-xl">
+                                    Une infestation vous expose à de <span className="underline decoration-black/30 decoration-4 underline-offset-4">Gros Risques</span>
+                                </h2>
+
+                                <div className="grid md:grid-cols-3 gap-6 text-left">
+                                    {/* Risk 1: Financial */}
+                                    <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors">
+                                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4">
+                                            <TrendingUp size={24} />
+                                        </div>
+                                        <h3 className="text-xl font-black text-white mb-2">Sanctions Financières</h3>
+                                        <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                            Amendements salubrité lourds, mises en demeure et coûts de remise en état  exorbitants si l'infestation n'est pas traitée immédiatement.
+                                        </p>
+                                    </div>
+
+                                    {/* Risk 2: Health */}
+                                    <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors">
+                                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4">
+                                            <Skull size={24} />
+                                        </div>
+                                        <h3 className="text-xl font-black text-white mb-2">Danger Sanitaire</h3>
+                                        <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                            Transmission de maladies graves (Leptospirose, Salmonellose) et contamination de vos stocks alimentaires imperceptibles à l'œil nu.
+                                        </p>
+                                    </div>
+
+                                    {/* Risk 3: Reputation */}
+                                    <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors">
+                                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4">
+                                            <Store size={24} />
+                                        </div>
+                                        <h3 className="text-xl font-black text-white mb-2">Fermeture & Réputation</h3>
+                                        <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                            Risque de fermeture administrative immédiate. Un seul avis client mentionnant un nuisible peut détruire votre e-réputation.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1023,8 +1042,55 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </Section>
 
+                            {/* LEGAL & RISKS WARNING - NEW SECTION */}
+                            <section className="relative py-16 bg-gradient-to-br from-[#037971] to-[#014d48] overflow-hidden">
+                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                <div className="absolute inset-0 bg-black/20"></div>
 
+                                <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
+                                    <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur border border-white/20 rounded-full px-4 py-1 text-white text-xs font-bold uppercase tracking-widest mb-6">
+                                        <AlertTriangle size={14} className="text-yellow-400" /> CADRE LÉGAL & OBLIGATIONS
+                                    </div>
+                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight drop-shadow-xl">
+                                        Entretien des haies : <span className="underline decoration-black/30 decoration-4 underline-offset-4">Que dit la Loi ?</span>
+                                    </h2>
 
+                                    <div className="grid md:grid-cols-3 gap-6 text-left">
+                                        {/* Risk 1: Code Civil */}
+                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
+                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                                                <Scale size={24} />
+                                            </div>
+                                            <h3 className="text-xl font-black text-white mb-2">Code Civil (Art. 671)</h3>
+                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                                Tout arbre ou haie dépassant <strong className="text-white">2 mètres</strong> de hauteur doit être planté à au moins 2 mètres de la limite séparative. Vous êtes légalement tenu de les élaguer.
+                                            </p>
+                                        </div>
+
+                                        {/* Risk 2: Parasites */}
+                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
+                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                                                <Bug size={24} />
+                                            </div>
+                                            <h3 className="text-xl font-black text-white mb-2">Nid à Parasites</h3>
+                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                                Une haie non entretenue devient dense et sombre, créant l'habitat parfait pour les <strong className="text-white">rats, frelons et autres nuisibles</strong> qui peuvent ensuite envahir votre domicile.
+                                            </p>
+                                        </div>
+
+                                        {/* Risk 3: Safety & Fines */}
+                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
+                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                                                <Gavel size={24} />
+                                            </div>
+                                            <h3 className="text-xl font-black text-white mb-2">Responsabilité & Amendes</h3>
+                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                                Empiéter sur la voie publique engage votre responsabilité pénale en cas d'accident sur le trottoir. Le maire peut ordonner un <strong className="text-white">élagage d'office à vos frais</strong>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
                             {/* 2. METHODOLOGY - GREEN - REDESIGNED */}
                             <section className="py-24 bg-gray-950 relative overflow-hidden">
@@ -1312,6 +1378,55 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </Section>
 
+                            {/* MARKETING ARGUMENTS - CLEANING - NEW SECTION */}
+                            <section className="relative py-16 bg-gradient-to-br from-[#0241cd] to-[#012a8a] overflow-hidden">
+                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                <div className="absolute inset-0 bg-black/20"></div>
+
+                                <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
+                                    <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur border border-white/20 rounded-full px-4 py-1 text-white text-xs font-bold uppercase tracking-widest mb-6">
+                                        <Sparkles size={14} className="text-blue-300" /> UN LEVIER DE PERFORMANCE
+                                    </div>
+                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight drop-shadow-xl">
+                                        Pourquoi la propreté est <span className="underline decoration-black/30 decoration-4 underline-offset-4">Stratégique</span> ?
+                                    </h2>
+
+                                    <div className="grid md:grid-cols-3 gap-6 text-left">
+                                        {/* Arg 1: Image de Marque */}
+                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
+                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                                                <Trophy size={24} />
+                                            </div>
+                                            <h3 className="text-xl font-black text-white mb-2">Image de Marque</h3>
+                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                                Vos locaux sont le reflet de votre professionnalisme. Une propreté irréprochable inspire instantanément <strong className="text-white">confiance et sérieux</strong> à vos clients et partenaires.
+                                            </p>
+                                        </div>
+
+                                        {/* Arg 2: Productivité */}
+                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
+                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                                                <Users size={24} />
+                                            </div>
+                                            <h3 className="text-xl font-black text-white mb-2">Bien-être & Productivité</h3>
+                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                                Des collaborateurs heureux sont plus performants. Un environnement sain et ordonné <strong className="text-white">réduit le stress</strong> et favorise la concentration de vos équipes.
+                                            </p>
+                                        </div>
+
+                                        {/* Arg 3: Santé */}
+                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
+                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                                                <HeartPulse size={24} />
+                                            </div>
+                                            <h3 className="text-xl font-black text-white mb-2">Santé & Hygiène</h3>
+                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
+                                                Limitez la propagation des virus et bactéries. Un entretien régulier des points de contact <strong className="text-white">réduit l'absentéisme</strong> et protège la santé de tous.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
                             {/* 2. METHODOLOGY - CLEANING - REDESIGNED */}
                             <section className="py-24 bg-gray-950 relative overflow-hidden">

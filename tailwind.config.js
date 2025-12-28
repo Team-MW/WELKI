@@ -18,10 +18,21 @@ export default {
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        tilt: {
+          '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(0.5deg)' },
+          '75%': { transform: 'rotate(-0.5deg)' },
+        },
+        shine: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' }
         }
       },
       animation: {
         gradient: 'gradient 6s ease infinite',
+        tilt: 'tilt 10s infinite linear',
+        shine: 'shine 1.5s',
       }
     },
   },

@@ -11,7 +11,7 @@ const Header = () => {
 
     const links = [
         { name: 'Accueil', path: '/' },
-        { name: 'Hygiène 3D', path: '/hygiene-3d' },
+        { name: 'Anti Nuisible', path: '/hygiene-3d' },
         { name: 'Espaces Verts', path: '/espaces-verts' },
         { name: 'Nettoyage', path: '/nettoyage' },
         { name: 'Contact', path: '/contact' },
@@ -84,6 +84,15 @@ const Header = () => {
 
                         {/* Desktop Menu - Visible on Large Screens */}
                         <nav className="hidden lg:flex items-center space-x-10">
+                            <Link
+                                to="/contact"
+                                className={`px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-wider border transition-all duration-300 ${isActive('/contact')
+                                    ? 'bg-white text-gray-950 border-white shadow-[0_0_20px_rgba(255,255,255,0.3)]'
+                                    : 'border-white/20 text-white hover:bg-white hover:text-gray-950 hover:border-white'
+                                    }`}
+                            >
+                                Devis Express
+                            </Link>
                             {links.map((link) => {
                                 const active = isActive(link.path);
                                 return (
@@ -112,15 +121,6 @@ const Header = () => {
                                     </Link>
                                 );
                             })}
-                            <Link
-                                to="/contact"
-                                className={`ml-4 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-wider border transition-all duration-300 ${isActive('/contact')
-                                    ? 'bg-white text-gray-950 border-white shadow-[0_0_20px_rgba(255,255,255,0.3)]'
-                                    : 'border-white/20 text-white hover:bg-white hover:text-gray-950 hover:border-white'
-                                    }`}
-                            >
-                                Devis Express
-                            </Link>
                         </nav>
 
                         {/* Mobile/Tablet Menu Button */}

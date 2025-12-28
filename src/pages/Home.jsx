@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { ArrowRight, ShieldCheck, TreePine, Sparkles, CheckCircle2, FileCheck, Star, MapPin, Mountain } from 'lucide-react';
+import { ArrowRight, ShieldCheck, TreePine, Sparkles, CheckCircle2, FileCheck, Star, MapPin, Mountain, CalendarCheck, ClipboardCheck, Award, UserCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
-import occitanieMap from '../assets/occitanie-map.png';
+import franceSudOuestMap from '../assets/france-sud-ouest-map-nobg.png';
 import imgGreenHero from '../assets/man-uniform-trimming-hedge-summer-time.jpg';
 import imgCleanHero from '../assets/full-shot-man-vacuuming-office-floor.jpg';
 import img3DHero from '../assets/people-wearing-protective-equipment-disinfecting-dangerous-area.jpg';
@@ -46,10 +46,10 @@ const Home = () => {
 
                             <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
                                 <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
-                                    /// PROPRETÉ & HYGIÈNE
+                                    /// NETTOYAGE PRO
                                 </span>
                                 <h2 className="text-4xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
-                                    Nettoyage <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Pro</span>
+                                    Propreté & <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Hygiène</span>
                                 </h2>
                                 <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>Bureaux & Tertiaire</li>
@@ -83,7 +83,7 @@ const Home = () => {
                             fetchPriority="high"
                         />
 
-                        <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Hygiène 3D"></Link>
+                        <Link to="/hygiene-3d" className="absolute inset-0 z-10" aria-label="Anti Nuisible"></Link>
                         {/* Improved Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:from-[#E71D36]/90 group-hover:via-[#E71D36]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
@@ -95,7 +95,7 @@ const Home = () => {
                                     /// LUTTE ANTI-NUISIBLES
                                 </span>
                                 <h2 className="text-4xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                    Hygiène <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">3D</span>
+                                    Anti <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Nuisible</span>
                                 </h2>
                                 <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80">
                                     <li className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Dératisation</li>
@@ -159,6 +159,7 @@ const Home = () => {
                     </div>
 
 
+
                     {/* LIGHTNING BOLT SEPARATORS (Desktop Only) - Enhanced with Glow */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-20" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <defs>
@@ -188,6 +189,40 @@ const Home = () => {
                     </svg>
 
                 </section>
+
+                {/* NEW: FIXED CTA POPUP (Bottom Left) */}
+                {/* NEW: FIXED CTA POPUP (Bottom Right) - Premium Design */}
+                <div className="fixed bottom-8 right-8 z-[100]">
+                    <Link to="/contact" className="relative group block">
+                        {/* Animated Glow Effect */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-[#037971] to-[#0241cd] rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                        {/* Main Container */}
+                        <div className="relative px-6 py-4 bg-gray-950 rounded-xl leading-none flex items-center gap-4 border border-gray-800 backdrop-blur-xl shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-300">
+
+                            {/* Glass Shine Effect */}
+                            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shine z-0"></div>
+
+                            {/* Icon Box */}
+                            <div className="relative z-10 w-12 h-12 bg-gradient-to-br from-[#037971] to-[#0241cd] rounded-lg flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform duration-300">
+                                <FileCheck size={24} strokeWidth={2} className="group-hover:scale-110 transition-transform" />
+                            </div>
+
+                            {/* Text Content */}
+                            <div className="relative z-10 flex flex-col items-start">
+                                <span className="text-gray-400 text-[10px] font-bold tracking-widest uppercase mb-1">Offre Limitée</span>
+                                <span className="text-white font-black text-lg tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-colors">
+                                    Audit Gratuit
+                                </span>
+                            </div>
+
+                            {/* Action Arrow */}
+                            <div className="relative z-10 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300 ml-2">
+                                <ArrowRight size={16} className="-rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                            </div>
+                        </div>
+                    </Link>
+                </div>
 
                 {/* 2. REASSURANCE STRIP - Interactive & Clean - REDESIGNED */}
                 <div className="bg-gray-950 py-10 md:py-12 border-b border-gray-900 relative z-20 shadow-2xl overflow-hidden">
@@ -238,174 +273,275 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* 3. EXPERTISE SECTION - Cards with Depth */}
-                <Section className="bg-gray-950 py-12 md:py-24 relative overflow-hidden">
-                    {/* Decorative background blobs */}
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#037971]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+                {/* NEW: Single Point of Contact Banner - Full Width */}
+                <div className="bg-gray-950 border-b border-gray-800 relative z-20 py-12 md:py-20 overflow-hidden">
+                    {/* Background Glow */}
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
-                    <div className="relative z-10">
-
-                        <div className="text-center max-w-3xl mx-auto mb-16">
-                            <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
-                                /// NOS DOMAINES D'EXPERTISE
+                    <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 text-center md:text-left">
+                        <div className="flex-1">
+                            <span className="inline-block px-4 py-1.5 bg-[#037971]/10 text-[#037971] rounded-full font-bold text-xs tracking-widest uppercase mb-6 border border-[#037971]/20">
+                                SIMPLIFIEZ-VOUS LA VIE
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
-                                Une Expertise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Globale</span>
+                            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                                1 Client = 1 Interlocuteur Unique
+                            </h2>
+                            <p className="text-gray-400 font-medium text-lg md:text-xl leading-relaxed max-w-2xl">
+                                Pas de multiplication des prestataires. WELKI centralise tout.
+                                <br className="hidden md:block" />
+                                <span className="text-[#037971] font-bold mt-2 block">Anti Nuisible + Espaces Verts + Nettoyage = Une seule facture.</span>
+                            </p>
+                        </div>
+                        <div className="flex-shrink-0">
+                            <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-[#037971] text-white font-bold text-lg hover:bg-[#025e57] transition-all shadow-[0_0_20px_-5px_rgba(3,121,113,0.4)] hover:shadow-[0_0_30px_-5px_rgba(3,121,113,0.6)] hover:-translate-y-1 group">
+                                Discuter de mon projet
+                                <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                {/* NEW: QUI SOMMES NOUS - Premium Feature Grid */}
+                <section className="py-12 md:py-20 relative overflow-hidden text-white">
+                    {/* Distinct Background - Premium Dark */}
+                    <div className="absolute inset-0 bg-gray-950"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800/50 via-gray-950 to-gray-950"></div>
+
+                    {/* Subtle Brand Glows */}
+                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#037971]/20 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+                    <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#0241cd]/20 rounded-full blur-[120px] translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+
+                    {/* Mesh Texture */}
+                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+
+                    {/* Borders */}
+                    <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+
+                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                        <div className="text-center mb-16">
+                            <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
+                                /// QUI SOMMES-NOUS ?
+                            </span>
+                            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-6">
+                                L'Excellence au Service de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Votre Sérénité</span>
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                                Une gestion centralisée de votre environnement pour plus d'efficacité et de sérénité.
+                                Plus qu'un prestataire, WELKI est votre partenaire de confiance pour la gestion globale de votre environnement.
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8 px-4">
-                            {/* Card 3: Cleaning */}
-                            <div className="relative bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-800 hover:border-[#0241cd]/50 transition-all duration-300 group overflow-hidden hover:shadow-[0_0_20px_-5px_rgba(2,65,205,0.2)] hover:-translate-y-1 cursor-pointer">
-                                <Link to="/nettoyage" className="absolute inset-0 z-0" aria-label="Voir les services de nettoyage"></Link>
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/0 via-transparent to-[#0241cd]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                                <div className="w-16 h-16 bg-[#0241cd]/10 rounded-2xl flex items-center justify-center text-[#0241cd] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(2,65,205,0.3)] shadow-inner border border-[#0241cd]/20 relative z-10 pointer-events-none">
-                                    <Sparkles size={32} />
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                            {/* Feature 1: Audit Gratuit */}
+                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
+                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
+                                    <ClipboardCheck size={28} strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-4 relative z-10 pointer-events-none">Nettoyage</h3>
-                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors pointer-events-none">
-                                    Services de propreté pour une hygiène irréprochable. Bureaux, copropriétés et fin de chantier.
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">Audit Totalement Gratuit</h3>
+                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
+                                    Analyse complète de vos besoins sur site sans aucun engagement de votre part.
                                 </p>
-                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8 pointer-events-none">
-                                    {["Bureaux & Immeubles", "Fin de chantier", "Débarras"].map(item => (
-                                        <li key={item} className="flex items-center gap-3">
-                                            <div className="w-6 h-6 rounded-full bg-[#0241cd]/10 flex items-center justify-center border border-[#0241cd]/20 text-[#0241cd] shadow-[0_0_10px_rgba(2,65,205,0.2)]">
-                                                <CheckCircle2 size={12} />
-                                            </div>
-                                            <span className="group-hover:text-white transition-colors">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="w-full py-4 rounded-xl border border-[#0241cd]/30 text-white font-bold flex items-center justify-center hover:bg-[#0241cd] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(2,65,205,0.4)] group-hover:border-[#0241cd] pointer-events-none">
-                                    En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </div>
                             </div>
 
-                            {/* Card 1: 3D */}
-                            <div className="relative bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-800 hover:border-[#E71D36]/50 transition-all duration-300 group overflow-hidden hover:shadow-[0_0_20px_-5px_rgba(231,29,54,0.2)] hover:-translate-y-1 cursor-pointer">
-                                <Link to="/hygiene-3d" className="absolute inset-0 z-0" aria-label="Voir les services d'hygiène 3D"></Link>
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/0 via-transparent to-[#E71D36]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                                <div className="w-16 h-16 bg-[#E71D36]/10 rounded-2xl flex items-center justify-center text-[#E71D36] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(231,29,54,0.3)] shadow-inner border border-[#E71D36]/20 relative z-10 pointer-events-none">
-                                    <ShieldCheck size={32} />
+                            {/* Feature 2: Accompagnement */}
+                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
+                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
+                                    <UserCheck size={28} strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-4 relative z-10 pointer-events-none">Hygiène 3D</h3>
-                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors pointer-events-none">
-                                    Lutte contre les nuisibles par techniques certifiées. Protection durable de votre environnement.
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">Accompagnement Personnalisé</h3>
+                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
+                                    Un interlocuteur dédié qui connaît votre dossier et vos contraintes sur le bout des doigts.
                                 </p>
-                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8 pointer-events-none">
-                                    {["Dératisation", "Désinsectisation", "Désinfection"].map(item => (
-                                        <li key={item} className="flex items-center gap-3">
-                                            <div className="w-6 h-6 rounded-full bg-[#E71D36]/10 flex items-center justify-center border border-[#E71D36]/20 text-[#E71D36] shadow-[0_0_10px_rgba(231,29,54,0.2)]">
-                                                <CheckCircle2 size={12} />
-                                            </div>
-                                            <span className="group-hover:text-white transition-colors">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="w-full py-4 rounded-xl border border-[#E71D36]/30 text-white font-bold flex items-center justify-center hover:bg-[#E71D36] transition-all relative z-10 hover:shadow-[0_0_20px_rgba(231,29,54,0.4)] group-hover:border-[#E71D36] pointer-events-none">
-                                    En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </div>
                             </div>
 
-                            {/* Card 2: Green */}
-                            <div className="relative bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group overflow-hidden hover:shadow-[0_0_20px_-5px_rgba(3,121,113,0.2)] hover:-translate-y-1 md:-mt-8 cursor-pointer">
-                                <Link to="/espaces-verts" className="absolute inset-0 z-0" aria-label="Voir les services espaces verts"></Link>
-                                <div className="absolute -top-12 -right-12 bg-[#037971] w-24 h-24 rotate-45 z-20 pointer-events-none"></div>
-                                <div className="absolute top-4 right-4 z-30 text-white font-bold text-xs bg-[#037971] px-3 py-1 rounded-full shadow-lg pointer-events-none">POPULAIRE</div>
-
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/0 via-transparent to-[#037971]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                                <div className="w-16 h-16 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(3,121,113,0.3)] shadow-inner border border-[#037971]/20 relative z-10 pointer-events-none">
-                                    <TreePine size={32} />
+                            {/* Feature 3: Planning Annuel */}
+                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
+                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
+                                    <CalendarCheck size={28} strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-4 relative z-10 pointer-events-none">Espaces Verts</h3>
-                                <p className="text-gray-400 mb-8 relative z-10 leading-relaxed group-hover:text-gray-300 transition-colors pointer-events-none">
-                                    Mise en valeur et entretien de vos extérieurs. Paysagisme et travaux en hauteur sécurisés.
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">Planification Automatisée</h3>
+                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
+                                    Tout est planifié à l'avance. Système de rappel automatique : nous ne vous oublions jamais.
                                 </p>
-                                <ul className="space-y-4 text-gray-300 text-sm font-medium relative z-10 mb-8 pointer-events-none">
-                                    {["Élagage & Abattage", "Tonte & Taille", "Débroussaillage"].map(item => (
-                                        <li key={item} className="flex items-center gap-3">
-                                            <div className="w-6 h-6 rounded-full bg-[#037971]/10 flex items-center justify-center border border-[#037971]/20 text-[#037971] shadow-[0_0_10px_rgba(3,121,113,0.2)]">
-                                                <CheckCircle2 size={12} />
-                                            </div>
-                                            <span className="group-hover:text-white transition-colors">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="w-full py-4 rounded-xl bg-[#037971] text-white font-bold flex items-center justify-center hover:bg-[#025e57] shadow-[0_0_20px_rgba(3,121,113,0.4)] transition-all relative z-10 pointer-events-none">
-                                    En savoir plus <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </div>
                             </div>
-                        </div>
 
-                        {/* NEW: Single Point of Contact Banner */}
-                        <div className="mt-16 max-w-4xl mx-auto px-4">
-                            <div className="bg-gray-900/60 backdrop-blur-md rounded-3xl p-8 border border-gray-700/50 shadow-xl relative overflow-hidden group hover:border-[#037971]/30 transition-all duration-300">
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#037971]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#037971] rounded-full blur-[100px] opacity-20 pointer-events-none group-hover:opacity-30 transition-opacity"></div>
-
-                                <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-                                    <div className="flex-1">
-                                        <div className="inline-block px-4 py-1 bg-[#037971]/20 text-[#037971] rounded-full font-bold text-sm mb-4 border border-[#037971]/20">
-                                            SIMPLIFIEZ-VOUS LA VIE
-                                        </div>
-                                        <h3 className="text-3xl font-black text-white mb-2 leading-tight">
-                                            1 Client = 1 Interlocuteur Unique
-                                        </h3>
-                                        <p className="text-gray-400 font-medium text-lg">
-                                            Pas de multiplication des prestataires. WELKI centralise tout.
-                                            <br />
-                                            <span className="text-[#037971]">Hygiène 3D + Espaces Verts + Nettoyage = Une seule facture.</span>
-                                        </p>
-                                    </div>
-                                    <div className="flex-shrink-0">
-                                        <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-[#037971] text-white font-bold hover:bg-[#025e57] transition-all shadow-[0_0_20px_-5px_rgba(3,121,113,0.4)] hover:shadow-[0_0_30px_-5px_rgba(3,121,113,0.6)] hover:-translate-y-1">
-                                            Discuter de mon projet
-                                            <ArrowRight className="ml-2" size={20} />
-                                        </Link>
-                                    </div>
+                            {/* Feature 4: Expertise */}
+                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
+                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
+                                    <Award size={28} strokeWidth={1.5} />
                                 </div>
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">11 Ans d'Expertise</h3>
+                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
+                                    Une décennie de savoir-faire éprouvé au service des entreprises exigeantes.
+                                </p>
                             </div>
                         </div>
                     </div>
-                </Section>
+                </section>
 
-                {/* 5. ZONES INTERVENTION - REDESIGNED */}
-                <section className="py-12 md:py-24 bg-gray-900 relative overflow-hidden">
-                    {/* Background decoration with Mountain icon */}
-                    <div className="absolute -left-20 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none select-none">
-                        <Mountain size={600} className="text-white" strokeWidth={1} />
+                {/* 3. EXPERTISE SECTION - Cards with Depth */}
+                {/* 3. EXPERTISE SECTION - Compact Strip - REDESIGNED */}
+                <section className="relative h-auto md:h-[400px] bg-gray-950 overflow-hidden text-white">
+
+                    {/* Panel 1: NETTOYAGE */}
+                    <div
+                        className="
+                             relative w-full h-[300px] md:absolute md:inset-0 md:h-full 
+                             flex flex-col justify-center items-center md:items-start p-8 md:pl-16 
+                             group z-10 hover:z-20
+                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                         "
+                    >
+                        <img src={imgCleanHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:from-[#0241cd]/90 group-hover:via-[#0241cd]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
+
+                        <div className="relative z-10 text-center md:text-left">
+                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
+                                Propreté &<br />Hygiène
+                            </h3>
+                            <ul className="space-y-2 text-blue-100 font-medium text-lg">
+                                <li className="flex items-center gap-2 justify-center md:justify-start">• Bureaux & Tertiaire</li>
+                                <li className="flex items-center gap-2 justify-center md:justify-start">• Immeubles / Copro</li>
+                                <li className="flex items-center gap-2 justify-center md:justify-start">• Fin de chantier</li>
+                            </ul>
+                            <Link to="/nettoyage" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
+                                En savoir plus
+                            </Link>
+                        </div>
                     </div>
 
-                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    {/* Panel 2: HYGIÈNE 3D */}
+                    <div
+                        className="
+                             relative w-full h-[300px] md:absolute md:inset-0 md:h-full 
+                             flex flex-col justify-center items-center p-8 
+                             group z-10 hover:z-20
+                             md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                         "
+                    >
+                        <img src={img3DHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:from-[#E71D36]/90 group-hover:via-[#E71D36]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
+
+                        <div className="relative z-10 text-center">
+                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
+                                Anti<br />Nuisible
+                            </h3>
+                            <ul className="space-y-2 text-red-100 font-medium text-lg">
+                                <li className="flex items-center gap-2 justify-center">• Dératisation</li>
+                                <li className="flex items-center gap-2 justify-center">• Désinsectisation</li>
+                                <li className="flex items-center gap-2 justify-center">• Désinfection</li>
+                            </ul>
+                            <Link to="/hygiene-3d" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
+                                En savoir plus
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Panel 3: ESPACES VERTS */}
+                    <div
+                        className="
+                             relative w-full h-[300px] md:absolute md:inset-0 md:h-full 
+                             flex flex-col justify-center items-center md:items-end p-8 md:pr-16 
+                             group z-10 hover:z-20
+                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                         "
+                    >
+                        <img src={imgGreenHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:from-[#037971]/90 group-hover:via-[#037971]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
+
+                        <div className="relative z-10 text-center md:text-right">
+                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
+                                Espaces<br />Verts
+                            </h3>
+                            <ul className="space-y-2 text-green-100 font-medium text-lg">
+                                <li className="flex items-center gap-2 justify-center md:justify-end">Élagage •</li>
+                                <li className="flex items-center gap-2 justify-center md:justify-end">Entretien Jardin •</li>
+                                <li className="flex items-center gap-2 justify-center md:justify-end">Paysagisme •</li>
+                            </ul>
+                            <Link to="/espaces-verts" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
+                                En savoir plus
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* SEPARATORS (Desktop Only) - Matching Hero Exact Paths */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-30" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <defs>
+                            <filter id="glow-expertise" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <path
+                            d="M 36 0 L 32 50 L 35 50 L 31 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                        />
+                        <path
+                            d="M 71 0 L 67 50 L 70 50 L 66 100"
+                            stroke="white"
+                            strokeWidth="3"
+                            strokeLinecap="square"
+                            strokeLinejoin="miter"
+                            vectorEffect="non-scaling-stroke"
+                            fill="none"
+                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                        />
+                    </svg>
+
+                </section>
+
+                {/* 5. ZONES & TRUST - MERGED SECTION */}
+                <section className="py-12 md:py-24 relative overflow-hidden text-white">
+                    {/* Distinct Background - Premium Dark */}
+                    <div className="absolute inset-0 bg-gray-950"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800/50 via-gray-950 to-gray-950"></div>
+
+                    {/* Subtle Brand Glows */}
+                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#037971]/20 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+                    <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#0241cd]/20 rounded-full blur-[120px] translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+
+                    {/* Mesh Texture */}
+                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+
+                    {/* Borders */}
+                    <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+
+                    {/* BLOCK 1: ZONES INTERVENTION */}
+                    <div className="max-w-7xl mx-auto px-4 relative z-10 py-12">
                         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                             <div className="flex-1">
                                 <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
                                     /// NOTRE RAYON D'ACTION
                                 </span>
                                 <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
-                                    Une Présence <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Régionale</span>
+                                    Une Présence <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Grand Sud Ouest</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                                    Nos équipes mobiles sillonnent la région Occitanie pour vous garantir une réactivité optimale.
+                                    Nos équipes mobiles sillonnent les grandes villes du Sud Ouest pour vous garantir une réactivité optimale.
+                                    <br />
+                                    <span className="text-white font-bold block mt-2">✨ Déplacement dans toute la France sur demande.</span>
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-6">
                                     {[
                                         { name: 'Haute-Garonne (31)', city: 'Toulouse' },
+                                        { name: 'Gironde (33)', city: 'Bordeaux' },
                                         { name: 'Hérault (34)', city: 'Montpellier' },
                                         { name: 'Gard (30)', city: 'Nîmes' },
+                                        { name: 'Pyrénées-Atlantiques (64)', city: 'Bayonne' },
+                                        { name: 'Pyrénées-Atlantiques (64)', city: 'Pau' },
+                                        { name: 'Hautes-Pyrénées (65)', city: 'Tarbes' },
+                                        { name: 'Lot-et-Garonne (47)', city: 'Agen' },
                                         { name: 'Pyrénées-Orientales (66)', city: 'Perpignan' },
-                                        { name: 'Hérault (34)', city: 'Béziers' },
-                                        { name: 'Aude (11)', city: 'Narbonne' },
-                                        { name: 'Tarn (81)', city: 'Albi' },
-                                        { name: 'Tarn-et-Garonne (82)', city: 'Montauban' }
+                                        { name: 'Aude (11)', city: 'Narbonne' }
                                     ].map((zone, i) => (
                                         <div
-                                            key={zone.name}
+                                            key={zone.city}
                                             className="flex items-center text-gray-300 p-3 rounded-xl hover:bg-white/5 border border-transparent hover:border-[#037971]/30 transition-all cursor-default group"
                                         >
                                             <div className="bg-[#037971]/10 p-2 rounded-lg mr-3 text-[#037971] group-hover:bg-[#037971] group-hover:text-white transition-colors">
@@ -425,9 +561,9 @@ const Home = () => {
                                 <div className="relative rounded-3xl overflow-hidden border border-gray-800 shadow-2xl group">
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent z-10 pointer-events-none"></div>
                                     <img
-                                        src={occitanieMap}
-                                        alt="Carte Zone d'Intervention Région Occitanie"
-                                        className="w-full h-auto drop-shadow-2xl relative z-0 transform group-hover:scale-105 transition-transform duration-700"
+                                        src={franceSudOuestMap}
+                                        alt="Carte Zone d'Intervention - France & Grand Sud Ouest"
+                                        className="w-full h-auto relative z-0 transform group-hover:scale-105 transition-transform duration-700 mix-blend-screen scale-125"
                                     />
                                     <div className="absolute bottom-6 left-6 z-20">
                                         <div className="flex items-center gap-2 bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-full border border-gray-700">
@@ -439,14 +575,9 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                </section>
 
-                {/* 4. ABOUT / TRUST SECTION - REDESIGNED */}
-                <section className="py-12 md:py-24 bg-gray-900 relative overflow-hidden">
-                    {/* Decorative Elements */}
-                    <div className="absolute left-0 bottom-0 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
-
-                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    {/* BLOCK 2: CONFIDENCE & EXPERTISE */}
+                    <div className="max-w-7xl mx-auto px-4 relative z-10 py-12">
                         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
                             <div className="order-2 md:order-1">
                                 <div className="text-left mb-12">
@@ -622,19 +753,36 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="py-12 md:py-24 relative overflow-hidden text-center text-white bg-gray-950">
+                <section className="py-20 md:py-32 relative overflow-hidden text-center text-white">
+                    {/* Distinct Background - Gradient Blue/Teal */}
+                    {/* Distinct Background - Premium Dark */}
                     <div className="absolute inset-0 bg-gray-950"></div>
-                    <div className="relative z-10 max-w-4xl mx-auto px-4">
-                        <h2
-                            className="text-3xl md:text-5xl font-black mb-8"
-                        >
-                            Besoin d'un devis immédiat ?
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800/50 via-gray-950 to-gray-950"></div>
+
+                    {/* Subtle Brand Glows */}
+                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#037971]/20 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+                    <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#0241cd]/20 rounded-full blur-[120px] translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+
+                    {/* Mesh Texture */}
+                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+
+                    {/* Borders */}
+                    <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+
+                    <div className="relative z-10 max-w-5xl mx-auto px-4">
+                        <span className="inline-block py-1 px-4 border border-white/30 rounded-full text-sm font-bold uppercase tracking-widest mb-6 bg-white/10 backdrop-blur-sm">
+                            Réponse sous 1 heure
+                        </span>
+                        <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight drop-shadow-lg">
+                            Besoin d'un audit <span className="text-white border-b-4 border-[#037971]">gratuit</span> ?
                         </h2>
-                        <p className="text-xl mb-12 text-gray-300 font-medium max-w-2xl mx-auto">
-                            Décrivez-nous votre besoin, nous vous répondons dans l'heure avec une solution chiffrée.
+                        <p className="text-xl md:text-2xl mb-12 text-blue-50 font-medium max-w-3xl mx-auto leading-relaxed opacity-90">
+                            Contactez-nous dès maintenant. Nos experts analysent votre situation et vous recontactent rapidement avec une solution sur-mesure.
                         </p>
-                        <Link to="/contact" className="inline-block bg-white text-gray-900 px-10 py-5 rounded-full text-xl font-bold hover:bg-welki-blue hover:text-white transition-all shadow-lg hover:shadow-blue-900/20 transform hover:-translate-y-1">
-                            Contactez-nous
+                        <Link to="/contact" className="group inline-flex items-center gap-3 bg-white text-[#0241cd] px-12 py-5 rounded-full text-xl font-black hover:bg-gray-50 transition-all shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]">
+                            CONTACTER UN EXPERT
+                            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
                 </section>
