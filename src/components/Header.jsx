@@ -14,7 +14,7 @@ const Header = () => {
         { name: 'Anti Nuisible', path: '/hygiene-3d' },
         { name: 'Espaces Verts', path: '/espaces-verts' },
         { name: 'Nettoyage', path: '/nettoyage' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'Multi-services', path: '/multi-services' },
     ];
 
     const isActive = (path) => location.pathname === path;

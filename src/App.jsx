@@ -21,6 +21,7 @@ function App() {
         <Route path="/hygiene-3d" element={<Services key="3d" defaultTab="3d" />} />
         <Route path="/espaces-verts" element={<Services key="green" defaultTab="green" />} />
         <Route path="/nettoyage" element={<Services key="clean" defaultTab="clean" />} />
+        <Route path="/multi-services" element={<Services key="multi" defaultTab="multi" />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
       </Routes>

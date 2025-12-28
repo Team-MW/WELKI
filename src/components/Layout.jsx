@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from './Header';
 
@@ -37,6 +38,9 @@ const Layout = ({ children, title, description }) => {
                             <li>✉️ WELKI@GMAIL.COM</li>
                             <li>📍 Intervention Rapide</li>
                         </ul>
+                        <Link to="/contact" className="mt-6 inline-block bg-white text-gray-950 px-5 py-2 rounded-full font-bold hover:bg-gray-200 transition-colors uppercase text-xs tracking-wider">
+                            Nous Contacter
+                        </Link>
                     </div>
 
                     <div>

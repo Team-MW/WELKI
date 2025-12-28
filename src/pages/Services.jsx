@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel, AlertTriangle, UtensilsCrossed, Wind, TrendingUp, Baby, ArrowRight, Store, Scale, Gavel, Trophy, Users, HeartPulse } from 'lucide-react';
+import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel, AlertTriangle, UtensilsCrossed, Wind, TrendingUp, Baby, ArrowRight, Store, Scale, Gavel, Trophy, Users, HeartPulse, Hammer, Paintbrush, Wrench } from 'lucide-react';
 
 import { useSearchParams } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
@@ -17,6 +17,10 @@ import imgGreenBg from '../assets/espacevert.jpg';
 import imgCleanBg from '../assets/netoyagepro.jpg';
 import imgPaysagisme1 from '../assets/paysagisme.jpg';
 import imgPaysagisme2 from '../assets/paysagisme2.jpg';
+
+import imgMultiMontage from '../assets/montage-meuble.jpg';
+import imgMultiPeinture from '../assets/peinture-interieur.jpg';
+import imgMultiBricolage from '../assets/bricolage-main.jpg';
 
 const Services = ({ defaultTab }) => {
 
@@ -442,6 +446,146 @@ const Services = ({ defaultTab }) => {
                                     <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    )}
+
+                    {/* CASE 4: MULTI-SERVICES */}
+                    {(defaultTab === 'multi') && (
+                        <>
+                            {/* Panel 1: Montage Meubles */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('montage');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgMultiMontage}
+                                    alt="Montage Meubles"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-[0.8]"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
+                                            /// MONTAGE & ASSEMBLAGE
+                                        </span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Montage Expert
+                                        </h2>
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                            {["Mobilier en Kit", "Fixation Murale", "Démontage"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
+                                                    {feat}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En savoir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Panel 2: Peinture */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('peinture');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgMultiPeinture}
+                                    alt="Peinture & Déco"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-[0.8]"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
+                                            /// PEINTURE & FINITIONS
+                                        </span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Peinture Pro
+                                        </h2>
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                            {["Murs & Plafonds", "Rénovation", "Décoration"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
+                                                    {feat}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En savoir plus
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Panel 3: Bricolage */}
+                            <div
+                                className="
+                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    group transition-all duration-500 ease-in-out cursor-pointer 
+                                    z-10 hover:z-50 origin-center
+                                    md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                "
+                                onClick={() => {
+                                    const element = document.getElementById('bricolage');
+                                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <img
+                                    src={imgMultiBricolage}
+                                    alt="Petit Bricolage"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-[0.8]"
+                                    fetchPriority="high"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                        <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
+                                            /// HOMME DE MAIN
+                                        </span>
+                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Multi-Services
+                                        </h2>
+                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                            {["Petit Bricolage", "Réparations", "Manutention"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
+                                                    {feat}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                        <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                            En savoir plus
                                         </span>
                                     </div>
                                 </div>
@@ -1092,11 +1236,25 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </section>
 
-                            {/* 2. METHODOLOGY - GREEN - REDESIGNED */}
-                            <section className="py-24 bg-gray-950 relative overflow-hidden">
-                                <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[#037971]/5 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+                            {/* MERGED SECTION: METHODOLOGY & PAYSAGISME */}
+                            <section className="py-12 md:py-24 relative overflow-hidden text-white">
+                                {/* Distinct Background - Premium Dark */}
+                                <div className="absolute inset-0 bg-gray-950"></div>
+                                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800/50 via-gray-950 to-gray-950"></div>
 
-                                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                                {/* Subtle Brand Glows */}
+                                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#037971]/20 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+                                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#0241cd]/20 rounded-full blur-[120px] translate-y-1/2 pointer-events-none mix-blend-screen"></div>
+
+                                {/* Mesh Texture */}
+                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+
+                                {/* Borders */}
+                                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+                                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+
+                                {/* BLOCK 1: METHODOLOGY - GREEN */}
+                                <div className="max-w-7xl mx-auto px-4 relative z-10 py-12">
                                     <div className="grid md:grid-cols-2 gap-20 items-center">
                                         <div className="order-2 md:order-1">
                                             <div className="text-left mb-12">
@@ -1150,13 +1308,9 @@ const Services = ({ defaultTab }) => {
                                         </div>
                                     </div>
                                 </div>
-                            </section>
 
-                            {/* PAYSAGISME GALLERY - REDESIGNED */}
-                            <section className="py-24 bg-gray-900 relative overflow-hidden">
-                                <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-
-                                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                                {/* BLOCK 2: PAYSAGISME GALLERY */}
+                                <div className="max-w-7xl mx-auto px-4 relative z-10 py-12">
                                     <div className="text-center mb-16">
                                         <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
                                             /// NOS RÉALISATIONS
@@ -1564,6 +1718,182 @@ const Services = ({ defaultTab }) => {
                                     </div>
                                 </div>
                             </section>
+                        </div>
+                    )
+                }
+
+                {/* Multi-services Section */}
+                {
+                    (defaultTab === 'multi') && (
+                        <div className="space-y-24">
+                            <div className="space-y-0">
+                                {/* FEATURE 1: MONTAGE MEUBLES (Image Right / Text Left) */}
+                                <section className="py-24 bg-gray-950 relative overflow-hidden border-b border-gray-800/50">
+                                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#F59E0B]/5 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                                        <div className="grid md:grid-cols-2 gap-16 items-center">
+                                            {/* Text Column */}
+                                            <div className="order-2 md:order-1">
+                                                <div className="mb-8">
+                                                    <span className="text-[#F59E0B] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                                        /// ASSEMBLAGE EXPERT
+                                                    </span>
+                                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                                        Montage de Meubles <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-amber-300">Sans Stress</span>
+                                                    </h2>
+                                                    <p className="text-gray-400 text-lg leading-relaxed border-l-2 border-[#F59E0B] pl-6">
+                                                        Oubliez la complexité des notices et les heures perdues. Nous montons vos meubles rapidement et solidement, quelle que soit la marque.
+                                                    </p>
+                                                </div>
+                                                <div className="space-y-6">
+                                                    {[
+                                                        { title: "Expertise Multi-Marques", desc: "IKEA, Conforama, But, ou mobilier design : nous maîtrisons toutes les techniques d'assemblage." },
+                                                        { title: "Fixation Sécurisée", desc: "Ancrage mural solide adapté à votre type de mur (placo, brique, béton) pour une sécurité totale." },
+                                                        { title: "Service Complet", desc: "Déballage, montage, mise en place définitive et évacuation des emballages." }
+                                                    ].map((item, i) => (
+                                                        <div key={i} className="flex gap-4 group">
+                                                            <div className="w-12 h-12 bg-[#F59E0B]/10 rounded-xl flex items-center justify-center text-[#F59E0B] shrink-0 border border-[#F59E0B]/20 group-hover:scale-110 transition-transform duration-300">
+                                                                <CheckCircle size={20} />
+                                                            </div>
+                                                            <div>
+                                                                <h4 className="text-white font-bold text-lg group-hover:text-[#F59E0B] transition-colors">{item.title}</h4>
+                                                                <p className="text-gray-400 text-sm">{item.desc}</p>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            {/* Image Column */}
+                                            <div className="order-1 md:order-2">
+                                                <div className="relative rounded-3xl overflow-hidden h-[500px] border border-gray-800 group shadow-[0_0_50px_-10px_rgba(245,158,11,0.15)] hover:border-[#F59E0B]/50 transition-all duration-500">
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
+                                                    <img src={imgMultiMontage} alt="Montage de meuble professionnel" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                    <div className="absolute bottom-8 left-8 right-8 z-20">
+                                                        <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                                            <div className="flex items-center gap-3 text-[#F59E0B] font-black uppercase text-sm tracking-wider">
+                                                                <Hammer size={16} />
+                                                                <span>Résultat Garanti</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                {/* FEATURE 2: PEINTURE (Image Left / Text Right) */}
+                                <section className="py-24 bg-gray-900/50 relative overflow-hidden border-b border-gray-800/50">
+                                    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#F59E0B]/5 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+                                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                                        <div className="grid md:grid-cols-2 gap-16 items-center">
+                                            {/* Image Column */}
+                                            <div className="order-1">
+                                                <div className="relative rounded-3xl overflow-hidden h-[500px] border border-gray-800 group shadow-[0_0_50px_-10px_rgba(245,158,11,0.15)] hover:border-[#F59E0B]/50 transition-all duration-500">
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
+                                                    <img src={imgMultiPeinture} alt="Peintre en action" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                    <div className="absolute bottom-8 left-8 right-8 z-20">
+                                                        <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                                            <div className="flex items-center gap-3 text-[#F59E0B] font-black uppercase text-sm tracking-wider">
+                                                                <Paintbrush size={16} />
+                                                                <span>Finitions Soignées</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* Text Column */}
+                                            <div className="order-2">
+                                                <div className="mb-8">
+                                                    <span className="text-[#F59E0B] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                                        /// PEINTURE & DÉCO
+                                                    </span>
+                                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                                        Redonnez Vie à <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-amber-300">Vos Espaces</span>
+                                                    </h2>
+                                                    <p className="text-gray-400 text-lg leading-relaxed border-l-2 border-[#F59E0B] pl-6">
+                                                        Du simple rafraîchissement au changement de couleur complet, nous assurons un travail de précision pour un rendu impeccable.
+                                                    </p>
+                                                </div>
+                                                <div className="space-y-6">
+                                                    {[
+                                                        { title: "Préparation Minutieuse", desc: "Protection des sols et meubles, ponçage, et enduit de lissage pour des murs parfaits avant peinture." },
+                                                        { title: "Peintures de Qualité", desc: "Utilisation de peintures professionnelles (Seigneurie, Tollens) pour un rendu durable et lessivable." },
+                                                        { title: "Chantier Propre", desc: "Nettoyage méticuleux en fin de chantier. Votre intérieur reste impeccable." }
+                                                    ].map((item, i) => (
+                                                        <div key={i} className="flex gap-4 group">
+                                                            <div className="w-12 h-12 bg-[#F59E0B]/10 rounded-xl flex items-center justify-center text-[#F59E0B] shrink-0 border border-[#F59E0B]/20 group-hover:scale-110 transition-transform duration-300">
+                                                                <CheckCircle size={20} />
+                                                            </div>
+                                                            <div>
+                                                                <h4 className="text-white font-bold text-lg group-hover:text-[#F59E0B] transition-colors">{item.title}</h4>
+                                                                <p className="text-gray-400 text-sm">{item.desc}</p>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                {/* FEATURE 3: HOMME DE MAIN (Image Right / Text Left) */}
+                                <section className="py-24 bg-gray-950 relative overflow-hidden">
+                                    <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-[#F59E0B]/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                                    <div className="max-w-7xl mx-auto px-4 relative z-10">
+                                        <div className="grid md:grid-cols-2 gap-16 items-center">
+                                            {/* Text Column */}
+                                            <div className="order-2 md:order-1">
+                                                <div className="mb-8">
+                                                    <span className="text-[#F59E0B] font-bold tracking-[0.2em] uppercase text-sm mb-3 block animate-pulse">
+                                                        /// HOMME DE MAIN
+                                                    </span>
+                                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+                                                        Le "Couteau Suisse" de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-amber-300">la Maison</span>
+                                                    </h2>
+                                                    <p className="text-gray-400 text-lg leading-relaxed border-l-2 border-[#F59E0B] pl-6">
+                                                        Tous ces petits travaux que vous repoussez faute de temps ou d'outils ? Nous les réalisons en un clin d'œil.
+                                                    </p>
+                                                </div>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                    {[
+                                                        "Pose de Tringles", "Fixation Cadres", "Changement Ampoules", "Pose Étatgères",
+                                                        "Joints Silicone", "Serrurerie Simple", "Rabotage Portes", "Installation Déco"
+                                                    ].map((item, i) => (
+                                                        <div key={i} className="flex items-center gap-3 bg-gray-900/50 p-3 rounded-lg border border-gray-800 hover:border-[#F59E0B]/30 transition-colors">
+                                                            <div className="w-2 h-2 rounded-full bg-[#F59E0B]"></div>
+                                                            <span className="text-gray-300 font-medium text-sm">{item}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <div className="mt-8 bg-[#F59E0B]/10 p-6 rounded-2xl border border-[#F59E0B]/20">
+                                                    <h4 className="text-[#F59E0B] font-bold mb-2 flex items-center gap-2">
+                                                        <Wrench size={20} /> Outillage Inclus
+                                                    </h4>
+                                                    <p className="text-gray-400 text-sm">
+                                                        Nous intervenons avec notre propre matériel professionnel (perceuse, visseuse, niveau laser, etc.). Vous n'avez rien à fournir.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            {/* Image Column */}
+                                            <div className="order-1 md:order-2">
+                                                <div className="relative rounded-3xl overflow-hidden h-[500px] border border-gray-800 group shadow-[0_0_50px_-10px_rgba(245,158,11,0.15)] hover:border-[#F59E0B]/50 transition-all duration-500">
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
+                                                    <img src={imgMultiBricolage} alt="Bricolage et travaux divers" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                    <div className="absolute bottom-8 left-8 right-8 z-20">
+                                                        <div className="bg-black/60 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                                                            <div className="flex items-center gap-3 text-[#F59E0B] font-black uppercase text-sm tracking-wider">
+                                                                <Briefcase size={16} />
+                                                                <span>Service Polyvalent</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
                     )
                 }
