@@ -180,7 +180,7 @@ const Services = ({ defaultTab }) => {
                     {/* CASE 2: 3D (Hygiène 3D) */}
                     {(defaultTab === '3d') && (
                         <>
-                            {/* Panel 1: Cafards & Blattes */}
+                            {/* Panel 1: Anti Nuisible (Rongeurs) */}
                             <div
                                 className="
                                     relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
@@ -189,13 +189,13 @@ const Services = ({ defaultTab }) => {
                                     md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                                 "
                                 onClick={() => {
-                                    const element = document.getElementById('desinsectisation');
+                                    const element = document.getElementById('deratisation');
                                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                                 }}
                             >
                                 <img
-                                    src={imgCafardBg}
-                                    alt="Cafards & Blattes"
+                                    src={imgRatBg}
+                                    alt="Anti Nuisible"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
@@ -203,13 +203,13 @@ const Services = ({ defaultTab }) => {
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
-                                            /// STOP CAFARDS
+                                            /// STOP RONGEURS
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Cafards <br /> & Blattes
+                                            Anti <br /> Nuisible
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
-                                            {["Traitement Gel", "Fumigation", "Préventif"].map((feat, i) => (
+                                            {["Rat", "Souris", "Rongeur"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
                                                     {feat}
@@ -225,7 +225,7 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </div>
 
-                            {/* Panel 2: Punaises de Lit */}
+                            {/* Panel 2: Désinsectisation */}
                             <div
                                 className="
                                     relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
@@ -239,8 +239,8 @@ const Services = ({ defaultTab }) => {
                                 }}
                             >
                                 <img
-                                    src={img3DDisinfection}
-                                    alt="Punaises de Lit"
+                                    src={imgCafardBg}
+                                    alt="Désinsectisation"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
@@ -248,13 +248,13 @@ const Services = ({ defaultTab }) => {
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
-                                            /// STOP PUNAISES
+                                            /// STOP INSECTES
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Punaises <br /> de Lit
+                                            Désinsectisation
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
-                                            {["Traitement Choc", "Vapeur Sèche", "Garantie"].map((feat, i) => (
+                                            {["Punaise de lit", "Cafard", "Frelon asiatique"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
                                                     {feat}
@@ -270,7 +270,7 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </div>
 
-                            {/* Panel 3: Frelons & Guêpes */}
+                            {/* Panel 3: Désinfection */}
                             <div
                                 className="
                                     relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
@@ -279,13 +279,13 @@ const Services = ({ defaultTab }) => {
                                     md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                                 "
                                 onClick={() => {
-                                    const element = document.getElementById('desinsectisation');
+                                    const element = document.getElementById('desinfection');
                                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                                 }}
                             >
                                 <img
-                                    src={img3DMain}
-                                    alt="Frelons & Guêpes"
+                                    src={img3DDisinfection}
+                                    alt="Désinfection"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
@@ -293,13 +293,13 @@ const Services = ({ defaultTab }) => {
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
-                                            /// STOP GUÊPES
+                                            /// ASSAINISSEMENT
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Frelons <br /> & Guêpes
+                                            Désinfection
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
-                                            {["Destruction Nids", "Accès Difficile", "Urgence 7j/7"].map((feat, i) => (
+                                            {["Intérieur", "Extérieur"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
                                                     {feat}
@@ -938,7 +938,7 @@ const Services = ({ defaultTab }) => {
                                             {[
                                                 {
                                                     icon: Search,
-                                                    title: "1. Diagnostic",
+                                                    title: "1. Mise en place solution de traitement",
                                                     desc: "Analyse complète des lieux pour identifier les nuisibles, leur nid et les points d'entrée."
                                                 },
                                                 {

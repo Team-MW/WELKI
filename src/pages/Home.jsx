@@ -85,7 +85,7 @@ const Home = () => {
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
 
                             <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
-                                <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
+                                <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
                                     /// NETTOYAGE PRO
                                 </span>
                                 <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
@@ -177,7 +177,7 @@ const Home = () => {
                         <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
                             <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
 
-                                <span className="inline-block py-1 pr-1 pl-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-l-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
+                                <span className="inline-block py-1 pr-1 pl-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
                                     /// EXPERTISE VÉGÉTALE
                                 </span>
 
@@ -319,7 +319,7 @@ const Home = () => {
                     <img
                         src={logoImg}
                         alt=""
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-[0.15] pointer-events-none select-none z-0 rotate-12"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-[0.15] pointer-events-none select-none z-0"
                     />
                     {/* Background Glow */}
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
@@ -367,10 +367,10 @@ const Home = () => {
                     <div className="max-w-7xl mx-auto px-4 relative z-10">
                         <div className="text-center mb-16">
                             <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
-                                /// QUI SOMMES-NOUS ?
+                                /// L'EXCELLENCE AU SERVICE DE VOTRE SÉRÉNITÉ
                             </span>
                             <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-6">
-                                L'Excellence au Service de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Votre Sérénité</span>
+                                QUI SOMMES-NOUS ?
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                                 Plus qu'un prestataire, WELKI est votre partenaire de confiance pour la gestion globale de votre environnement.
@@ -565,7 +565,7 @@ const Home = () => {
                                     /// NOTRE RAYON D'ACTION
                                 </span>
                                 <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
-                                    Une Présence <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Grand Sud Ouest</span>
+                                    Une Présence <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">dans tout le Sud Ouest</span>
                                 </h2>
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                                     Nos équipes mobiles sillonnent les grandes villes du Sud Ouest pour vous garantir une réactivité optimale.
@@ -573,7 +573,7 @@ const Home = () => {
                                     <span className="text-white font-bold block mt-2">✨ Déplacement dans toute la France sur demande.</span>
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-x-4 gap-y-6">
+                                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-6">
                                     {[
                                         { name: 'Haute-Garonne (31)', city: 'Toulouse' },
                                         { name: 'Gironde (33)', city: 'Bordeaux' },
@@ -584,7 +584,12 @@ const Home = () => {
                                         { name: 'Hautes-Pyrénées (65)', city: 'Tarbes' },
                                         { name: 'Lot-et-Garonne (47)', city: 'Agen' },
                                         { name: 'Pyrénées-Orientales (66)', city: 'Perpignan' },
-                                        { name: 'Aude (11)', city: 'Narbonne' }
+                                        { name: 'Aude (11)', city: 'Narbonne' },
+                                        { name: 'Charente-Maritime (17)', city: 'La Rochelle' },
+                                        { name: 'Haute-Vienne (87)', city: 'Limoges' },
+                                        { name: 'Dordogne (24)', city: 'Périgueux' },
+                                        { name: 'Aveyron (12)', city: 'Rodez' },
+                                        { name: 'Landes (40)', city: 'Mont-de-Marsan' }
                                     ].map((zone, i) => (
                                         <div
                                             key={zone.city}
@@ -624,7 +629,7 @@ const Home = () => {
 
                     {/* BLOCK 2: CONFIDENCE & EXPERTISE */}
                     <div className="max-w-7xl mx-auto px-4 relative z-10 py-12">
-                        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
                             <div className="order-2 md:order-1">
                                 <div className="text-left mb-12">
                                     <span className="text-[#037971] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
