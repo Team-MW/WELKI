@@ -8,6 +8,7 @@ import franceSudOuestMap from '../assets/france-sud-ouest-map-nobg.png';
 import imgGreenHero from '../assets/man-uniform-trimming-hedge-summer-time.jpg';
 import imgCleanHero from '../assets/full-shot-man-vacuuming-office-floor.jpg';
 import img3DHero from '../assets/people-wearing-protective-equipment-disinfecting-dangerous-area.jpg';
+import logoImg from '../assets/logo blanc.png';
 
 
 const Home = () => {
@@ -314,6 +315,12 @@ const Home = () => {
 
                 {/* NEW: Single Point of Contact Banner - Full Width */}
                 <div className="bg-gray-950 border-b border-gray-800 relative z-20 py-12 md:py-20 overflow-hidden">
+                    {/* Background Logo */}
+                    <img
+                        src={logoImg}
+                        alt=""
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-[0.15] pointer-events-none select-none z-0 rotate-12"
+                    />
                     {/* Background Glow */}
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 

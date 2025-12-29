@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import logoImg from '../assets/welkilgo.png';
+import logoImg from '../assets/logo blanc.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

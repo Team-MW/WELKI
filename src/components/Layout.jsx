@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from './Header';
+import logoImg from '../assets/logo blanc.png';
 
 const Layout = ({ children, title, description }) => {
     return (
@@ -23,7 +24,7 @@ const Layout = ({ children, title, description }) => {
 
                     <div>
                         <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
-                            <div className="text-2xl font-black text-white">WELKI</div>
+                            <img src={logoImg} alt="WELKI Logo" className="h-12 w-auto object-contain" />
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Votre expert certifié Certibiocide pour l'anti nuisible (dératisation, désinsectisation, désinfection),
