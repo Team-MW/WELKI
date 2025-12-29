@@ -24,6 +24,7 @@ import imgMultiBricolage from '../assets/bricolage-main.jpg';
 
 import imgNettoyageChantier1 from '../assets/netoyage chanter1.jpg';
 import imgNettoyageChantier2 from '../assets/netoyage chanttier2.jpg';
+import logoImg from '../assets/logo blanc.png';
 
 const Services = ({ defaultTab }) => {
 
@@ -205,7 +206,7 @@ const Services = ({ defaultTab }) => {
                                             /// STOP CAFARDS
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Cafards & Blattes
+                                            Cafards <br /> & Blattes
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Traitement Gel", "Fumigation", "Préventif"].map((feat, i) => (
@@ -250,7 +251,7 @@ const Services = ({ defaultTab }) => {
                                             /// STOP PUNAISES
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Punaises de Lit
+                                            Punaises <br /> de Lit
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Traitement Choc", "Vapeur Sèche", "Garantie"].map((feat, i) => (
@@ -295,7 +296,7 @@ const Services = ({ defaultTab }) => {
                                             /// STOP GUÊPES
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Frelons & Guêpes
+                                            Frelons <br /> & Guêpes
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Destruction Nids", "Accès Difficile", "Urgence 7j/7"].map((feat, i) => (
@@ -524,6 +525,9 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-15">
+                                    <img src={logoImg} alt="Watermark" className="w-[60%] h-auto object-contain" />
+                                </div>
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
