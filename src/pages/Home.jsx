@@ -63,7 +63,7 @@ const Home = () => {
                     {/* Section 1: NETTOYAGE - Mobile: Top / Desktop: Left Lightning */}
                     <div
                         className="
-                            relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                            relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
                             z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
@@ -88,7 +88,7 @@ const Home = () => {
                                 <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-r-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
                                     /// NETTOYAGE PRO
                                 </span>
-                                <h2 className="text-4xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
+                                <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
                                     Propreté & <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Hygiène</span>
                                 </h2>
                                 <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
@@ -109,7 +109,7 @@ const Home = () => {
                     {/* Section 2: HYGIÈNE 3D - Mobile: Middle / Desktop: Middle Lightning */}
                     <div
                         className="
-                            relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                            relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
                             z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
@@ -134,7 +134,7 @@ const Home = () => {
                                 <span className="inline-block py-1 px-4 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                                     /// LUTTE ANTI-NUISIBLES
                                 </span>
-                                <h2 className="text-4xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                     Anti <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Nuisible</span>
                                 </h2>
                                 <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80">
@@ -155,7 +155,7 @@ const Home = () => {
                     {/* Section 3: ESPACES VERTS - Mobile: Bottom / Desktop: Right Lightning */}
                     <div
                         className="
-                            relative w-full h-[34vh] md:absolute md:inset-0 md:h-full 
+                            relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                             group transition-all duration-500 ease-in-out cursor-pointer 
                             z-10 hover:z-50 origin-center
                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
@@ -181,7 +181,7 @@ const Home = () => {
                                     /// EXPERTISE VÉGÉTALE
                                 </span>
 
-                                <h2 className="text-2xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
+                                <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
                                     Espaces <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Verts</span>
                                 </h2>
                                 <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">

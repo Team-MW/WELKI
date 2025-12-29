@@ -22,6 +22,9 @@ import imgMultiMontage from '../assets/montage-meuble.jpg';
 import imgMultiPeinture from '../assets/peinture-interieur.jpg';
 import imgMultiBricolage from '../assets/bricolage-main.jpg';
 
+import imgNettoyageChantier1 from '../assets/netoyage chanter1.jpg';
+import imgNettoyageChantier2 from '../assets/netoyage chanttier2.jpg';
+
 const Services = ({ defaultTab }) => {
 
 
@@ -39,7 +42,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 1: Bureaux & Tertiaire */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
@@ -50,7 +53,7 @@ const Services = ({ defaultTab }) => {
                                 }}
                             >
                                 <img
-                                    src={imgCleanMain}
+                                    src={imgNettoyageChantier1}
                                     alt="Bureaux & Tertiaire"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
@@ -62,7 +65,7 @@ const Services = ({ defaultTab }) => {
                                             /// ESPACES DE TRAVAIL
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Nettoyage Bureaux
+                                            Nettoyage <br /> Bureaux
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Open Space & Bureaux", "Sanitaires & Cuisines", "Vitrerie & Sols"].map((feat, i) => (
@@ -84,7 +87,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 2: Immeubles / Copro */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
@@ -95,7 +98,7 @@ const Services = ({ defaultTab }) => {
                                 }}
                             >
                                 <img
-                                    src={imgCleanBg} // Using optimized netoyagepro.jpg equivalent
+                                    src={imgNettoyageChantier2}
                                     alt="Immeubles / Copro"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
@@ -107,7 +110,7 @@ const Services = ({ defaultTab }) => {
                                             /// HABITAT COLLECTIF
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Entretien Immeubles
+                                            Entretien <br /> Immeubles
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Halls & Escaliers", "Sortie Poubelles", "Parkings"].map((feat, i) => (
@@ -129,7 +132,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 3: Fin de chantier */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
@@ -152,7 +155,7 @@ const Services = ({ defaultTab }) => {
                                             /// TRAVAUX TERMINÉS
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Fin de Chantier
+                                            Fin de <br /> Chantier
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Évacuation Gravats", "Nettoyage Approfondi", "Remise à Neuf"].map((feat, i) => (
@@ -179,7 +182,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 1: Cafards & Blattes */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
@@ -224,7 +227,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 2: Punaises de Lit */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
@@ -269,7 +272,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 3: Frelons & Guêpes */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
@@ -319,7 +322,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 1: Élagage */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
@@ -364,7 +367,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 2: Entretien Jardin */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
@@ -409,7 +412,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 3: Paysagisme */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
@@ -459,7 +462,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 1: Montage Meubles */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
@@ -504,7 +507,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 2: Peinture */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
@@ -549,7 +552,7 @@ const Services = ({ defaultTab }) => {
                             {/* Panel 3: Bricolage */}
                             <div
                                 className="
-                                    relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
+                                    relative w-full min-h-[35vh] h-auto md:absolute md:inset-0 md:h-full 
                                     group transition-all duration-500 ease-in-out cursor-pointer 
                                     z-10 hover:z-50 origin-center
                                     md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
