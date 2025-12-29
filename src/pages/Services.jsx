@@ -56,7 +56,7 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
                                             /// ESPACES DE TRAVAIL
@@ -66,7 +66,7 @@ const Services = ({ defaultTab }) => {
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Open Space & Bureaux", "Sanitaires & Cuisines", "Vitrerie & Sols"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
                                                     {feat}
                                                 </li>
@@ -146,7 +146,7 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
                                             /// TRAVAUX TERMINÉS
@@ -156,7 +156,7 @@ const Services = ({ defaultTab }) => {
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Évacuation Gravats", "Nettoyage Approfondi", "Remise à Neuf"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
                                                     {feat}
                                                 </li>
@@ -176,7 +176,7 @@ const Services = ({ defaultTab }) => {
                     {/* CASE 2: 3D (Hygiène 3D) */}
                     {(defaultTab === '3d') && (
                         <>
-                            {/* Panel 1: Dératisation */}
+                            {/* Panel 1: Cafards & Blattes */}
                             <div
                                 className="
                                     relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
@@ -185,28 +185,28 @@ const Services = ({ defaultTab }) => {
                                     md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                                 "
                                 onClick={() => {
-                                    const element = document.getElementById('deratisation');
+                                    const element = document.getElementById('desinsectisation');
                                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                                 }}
                             >
                                 <img
-                                    src={imgRatBg}
-                                    alt="Dératisation"
+                                    src={imgCafardBg}
+                                    alt="Cafards & Blattes"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
-                                            /// STOP RONGEURS
+                                            /// STOP CAFARDS
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Dératisation Choc
+                                            Cafards & Blattes
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
-                                            {["Rats & Souris", "Diagnostic Accès", "Prévention"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                            {["Traitement Gel", "Fumigation", "Préventif"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
                                                     {feat}
                                                 </li>
@@ -221,7 +221,7 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </div>
 
-                            {/* Panel 2: Désinsectisation */}
+                            {/* Panel 2: Punaises de Lit */}
                             <div
                                 className="
                                     relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
@@ -235,8 +235,8 @@ const Services = ({ defaultTab }) => {
                                 }}
                             >
                                 <img
-                                    src={imgCafardBg}
-                                    alt="Désinsectisation"
+                                    src={img3DDisinfection}
+                                    alt="Punaises de Lit"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
@@ -244,13 +244,13 @@ const Services = ({ defaultTab }) => {
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
-                                            /// STOP INSECTES
+                                            /// STOP PUNAISES
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Désinsectisation
+                                            Punaises de Lit
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
-                                            {["Cafards & Blattes", "Punaises de Lit", "Frelons & Guêpes"].map((feat, i) => (
+                                            {["Traitement Choc", "Vapeur Sèche", "Garantie"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
                                                     {feat}
@@ -266,7 +266,7 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </div>
 
-                            {/* Panel 3: Désinfection */}
+                            {/* Panel 3: Frelons & Guêpes */}
                             <div
                                 className="
                                     relative w-full h-[33vh] md:absolute md:inset-0 md:h-full 
@@ -275,28 +275,28 @@ const Services = ({ defaultTab }) => {
                                     md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                                 "
                                 onClick={() => {
-                                    const element = document.getElementById('desinfection');
+                                    const element = document.getElementById('desinsectisation');
                                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                                 }}
                             >
                                 <img
-                                    src={img3DDisinfection}
-                                    alt="Désinfection"
+                                    src={img3DMain}
+                                    alt="Frelons & Guêpes"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
-                                            /// ASSAINISSEMENT
+                                            /// STOP GUÊPES
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Désinfection Totale
+                                            Frelons & Guêpes
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
-                                            {["Virus & Bactéries", "Odeurs Tenaces", "Post-Décès/Syndrome"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                            {["Destruction Nids", "Accès Difficile", "Urgence 7j/7"].map((feat, i) => (
+                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
                                                     {feat}
                                                 </li>
@@ -336,7 +336,7 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// SOIN DES ARBRES
@@ -346,7 +346,7 @@ const Services = ({ defaultTab }) => {
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Taille Douce", "Abattage Délicat", "Dessouchage"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
                                                     {feat}
                                                 </li>
@@ -426,7 +426,7 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// CRÉATION PAYSAGÈRE
@@ -436,7 +436,7 @@ const Services = ({ defaultTab }) => {
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Massifs & Plantes", "Arrosage Auto", "Aménagement"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
                                                     {feat}
                                                 </li>
@@ -476,7 +476,7 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
                                             /// MONTAGE & ASSEMBLAGE
@@ -486,7 +486,7 @@ const Services = ({ defaultTab }) => {
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Mobilier en Kit", "Fixation Murale", "Démontage"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
                                                     {feat}
                                                 </li>
@@ -566,7 +566,7 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
+                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
                                             /// HOMME DE MAIN
@@ -576,7 +576,7 @@ const Services = ({ defaultTab }) => {
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Petit Bricolage", "Réparations", "Manutention"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
+                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
                                                     {feat}
                                                 </li>
