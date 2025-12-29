@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { ArrowRight, ShieldCheck, TreePine, Sparkles, CheckCircle2, FileCheck, Star, MapPin, Mountain, CalendarCheck, ClipboardCheck, Award, UserCheck } from 'lucide-react';
+import { ArrowRight, ShieldCheck, TreePine, Sparkles, CheckCircle2, FileCheck, Star, MapPin, Mountain, CalendarCheck, ClipboardCheck, Award, UserCheck, Zap, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
 import franceSudOuestMap from '../assets/france-sud-ouest-map-nobg.png';
@@ -233,32 +233,49 @@ const Home = () => {
                 {/* NEW: FIXED CTA POPUP (Bottom Left) */}
                 {/* NEW: FIXED CTA POPUP (Bottom Right) - Premium Design */}
                 <div style={ctaStyle} className="z-[100] transition-all duration-100 ease-out animate-bounce-subtle">
-                    <Link to="/contact" className="relative group block">
-                        {/* Animated Glow Effect */}
-                        <div className="absolute -inset-1 bg-gradient-to-r from-[#037971] to-[#0241cd] rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <Link to="/contact" className="relative group block perspective-1000">
+                        {/* 1. OUTER GLOW - Static but strong */}
+                        <div className="absolute -inset-4 bg-[#037971] rounded-full blur-[40px] opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
 
-                        {/* Main Container */}
-                        <div className="relative px-6 py-4 bg-gray-950 rounded-xl leading-none flex items-center gap-4 border border-gray-800 backdrop-blur-xl shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-300">
+                        {/* 2. SPINNING BORDER CONTAINER */}
+                        <div className="relative p-[2px] rounded-2xl overflow-hidden bg-transparent transform transition-transform duration-300 group-hover:scale-105">
+                            {/* The Spinning Conic Gradient */}
+                            <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0deg_180deg,#037971_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite] opacity-100 group-hover:animate-[spin_2s_linear_infinite]"></div>
 
-                            {/* Glass Shine Effect */}
-                            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shine z-0"></div>
+                            {/* Secondary chaser for color richness */}
+                            <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#0241cd_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-100"></div>
 
-                            {/* Icon Box */}
-                            <div className="relative z-10 w-12 h-12 bg-gradient-to-br from-[#037971] to-[#0241cd] rounded-lg flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform duration-300">
-                                <FileCheck size={24} strokeWidth={2} className="group-hover:scale-110 transition-transform" />
-                            </div>
+                            {/* 3. INNER CARD CONTENT */}
+                            <div className="relative bg-gray-950 rounded-[14px] px-8 py-5 flex items-center gap-6 overflow-hidden">
 
-                            {/* Text Content */}
-                            <div className="relative z-10 flex flex-col items-start">
-                                <span className="text-gray-400 text-[10px] font-bold tracking-widest uppercase mb-1">Offre Limitée</span>
-                                <span className="text-white font-black text-lg tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-colors">
-                                    Audit Gratuit
-                                </span>
-                            </div>
+                                {/* Background Mesh/Noise */}
+                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 z-0"></div>
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#037971]/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
+                                <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#0241cd]/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
 
-                            {/* Action Arrow */}
-                            <div className="relative z-10 w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300 ml-2">
-                                <ArrowRight size={16} className="-rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                                {/* Icon with 'Holographic' feel */}
+                                <div className="relative z-10 w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-950 border border-gray-700/50 shadow-lg group-hover:border-[#037971]/50 transition-colors duration-300">
+                                    <div className="absolute inset-0 bg-[#037971]/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <FileCheck size={28} className="text-white relative z-10 group-hover:text-[#037971] transition-colors duration-300" strokeWidth={2} />
+                                </div>
+
+                                {/* Text Stack */}
+                                <div className="relative z-10 flex flex-col min-w-[150px]">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-[#037971] animate-ping"></div>
+                                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#037971] drop-shadow-sm">
+                                            Offre Spéciale
+                                        </span>
+                                    </div>
+                                    <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 group-hover:to-white transition-all duration-300 transform group-hover:translate-x-1">
+                                        Audit Gratuit
+                                    </span>
+                                </div>
+
+                                {/* Action Button */}
+                                <div className="relative z-10 w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white group-hover:bg-[#037971] group-hover:border-[#037971] transition-all duration-300 shadow-xl ml-auto">
+                                    <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                                </div>
                             </div>
                         </div>
                     </Link>
@@ -335,7 +352,9 @@ const Home = () => {
                             <p className="text-gray-400 font-medium text-lg md:text-xl leading-relaxed max-w-2xl">
                                 Pas de multiplication des prestataires. WELKI centralise tout.
                                 <br className="hidden md:block" />
-                                <span className="text-[#037971] font-bold mt-2 block">Anti Nuisible + Espaces Verts + Nettoyage = Une seule facture.</span>
+                                <span className="mt-4 block font-medium">
+                                    <span className="text-[#E71D36] font-bold">Anti Nuisible</span> + <span className="text-[#037971] font-bold">Espaces Verts</span> + <span className="text-[#0241cd] font-bold">Nettoyage</span> + <span className="text-[#F59E0B] font-bold">Multi Services</span> = <span className="text-white font-bold">Une seule facture.</span>
+                                </span>
                             </p>
                         </div>
                         <div className="flex-shrink-0">
@@ -377,50 +396,77 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                            {/* Feature 1: Audit Gratuit */}
-                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
-                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
-                                    <ClipboardCheck size={28} strokeWidth={1.5} />
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+
+                            {/* Card 1: Proximité & Réactivité (BLUE theme) */}
+                            <div className="relative group perspective-1000 h-full">
+                                {/* Glow */}
+                                <div className="absolute -inset-1 bg-[#0241cd] rounded-[2rem] blur-[20px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                                {/* Spinning Container */}
+                                <div className="relative p-[2px] rounded-[1.5rem] overflow-hidden bg-transparent h-full transform transition-transform duration-300 hover:scale-[1.02]">
+                                    {/* Spinners */}
+                                    <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0deg_180deg,#0241cd_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#ffffff_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-0 group-hover:opacity-10 opacity-0 transition-opacity duration-500"></div>
+
+                                    {/* Inner Content */}
+                                    <div className="relative bg-gray-950 rounded-[1.4rem] p-8 h-full border border-gray-800 group-hover:border-transparent transition-colors duration-300 flex flex-col items-center text-center">
+                                        <div className="w-16 h-16 rounded-2xl bg-[#0241cd]/10 flex items-center justify-center text-[#0241cd] mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_-5px_rgba(2,65,205,0.3)]">
+                                            <Zap size={32} strokeWidth={1.5} />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#0241cd] transition-colors">Proximité & Réactivité</h3>
+                                        <p className="text-gray-400 leading-relaxed">
+                                            Nos équipes locales interviennent en temps record. Une présence terrain qui garantit une compréhension immédiate de vos enjeux.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">Audit Totalement Gratuit</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
-                                    Analyse complète de vos besoins sur site sans aucun engagement de votre part.
-                                </p>
                             </div>
 
-                            {/* Feature 2: Accompagnement */}
-                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
-                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
-                                    <UserCheck size={28} strokeWidth={1.5} />
+                            {/* Card 2: Savoir-Faire Certifié (RED theme) */}
+                            <div className="relative group perspective-1000 h-full">
+                                {/* Glow */}
+                                <div className="absolute -inset-1 bg-[#E71D36] rounded-[2rem] blur-[20px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                                {/* Spinning Container */}
+                                <div className="relative p-[2px] rounded-[1.5rem] overflow-hidden bg-transparent h-full transform transition-transform duration-300 hover:scale-[1.02]">
+                                    {/* Spinners */}
+                                    <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0deg_180deg,#E71D36_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#ffffff_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-0 group-hover:opacity-10 opacity-0 transition-opacity duration-500"></div>
+
+                                    {/* Inner Content */}
+                                    <div className="relative bg-gray-950 rounded-[1.4rem] p-8 h-full border border-gray-800 group-hover:border-transparent transition-colors duration-300 flex flex-col items-center text-center">
+                                        <div className="w-16 h-16 rounded-2xl bg-[#E71D36]/10 flex items-center justify-center text-[#E71D36] mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_-5px_rgba(231,29,54,0.3)]">
+                                            <Award size={32} strokeWidth={1.5} />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#E71D36] transition-colors">Savoir-Faire Certifié</h3>
+                                        <p className="text-gray-400 leading-relaxed">
+                                            Agrément Certibiocide et protocoles stricts. Nos experts sont formés en continu pour vous offrir l'excellence technique.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">Accompagnement Personnalisé</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
-                                    Un interlocuteur dédié qui connaît votre dossier et vos contraintes sur le bout des doigts.
-                                </p>
                             </div>
 
-                            {/* Feature 3: Planning Annuel */}
-                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
-                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
-                                    <CalendarCheck size={28} strokeWidth={1.5} />
+                            {/* Card 3: Innovation & Écologie (GREEN theme) */}
+                            <div className="relative group perspective-1000 h-full">
+                                {/* Glow */}
+                                <div className="absolute -inset-1 bg-[#037971] rounded-[2rem] blur-[20px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                                {/* Spinning Container */}
+                                <div className="relative p-[2px] rounded-[1.5rem] overflow-hidden bg-transparent h-full transform transition-transform duration-300 hover:scale-[1.02]">
+                                    {/* Spinners */}
+                                    <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0deg_180deg,#037971_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#ffffff_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-0 group-hover:opacity-10 opacity-0 transition-opacity duration-500"></div>
+
+                                    {/* Inner Content */}
+                                    <div className="relative bg-gray-950 rounded-[1.4rem] p-8 h-full border border-gray-800 group-hover:border-transparent transition-colors duration-300 flex flex-col items-center text-center">
+                                        <div className="w-16 h-16 rounded-2xl bg-[#037971]/10 flex items-center justify-center text-[#037971] mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_-5px_rgba(3,121,113,0.3)]">
+                                            <Leaf size={32} strokeWidth={1.5} />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#037971] transition-colors">Innovation & Écologie</h3>
+                                        <p className="text-gray-400 leading-relaxed">
+                                            Nous privilégions les traitements raisonnés et les technologies de pointe pour protéger votre environnement durablement.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">Planification Automatisée</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
-                                    Tout est planifié à l'avance. Système de rappel automatique : nous ne vous oublions jamais.
-                                </p>
                             </div>
 
-                            {/* Feature 4: Expertise */}
-                            <div className="bg-gray-950 p-8 rounded-3xl border border-gray-800 hover:border-[#037971]/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(3,121,113,0.2)]">
-                                <div className="w-14 h-14 bg-[#037971]/10 rounded-2xl flex items-center justify-center text-[#037971] mb-6 group-hover:bg-[#037971] group-hover:text-white transition-all duration-300">
-                                    <Award size={28} strokeWidth={1.5} />
-                                </div>
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#037971] transition-colors">11 Ans d'Expertise</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400">
-                                    Une décennie de savoir-faire éprouvé au service des entreprises exigeantes.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </section>

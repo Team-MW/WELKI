@@ -346,7 +346,7 @@ const Services = ({ defaultTab }) => {
                                             /// SOIN DES ARBRES
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Élagage Expert
+                                            Élagage <br className="hidden md:block" /> Expert
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Taille Douce", "Abattage Délicat", "Dessouchage"].map((feat, i) => (
@@ -391,7 +391,7 @@ const Services = ({ defaultTab }) => {
                                             /// PARCS & JARDINS
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Entretien Jardin
+                                            Entretien <br className="hidden md:block" /> Jardin
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Tonte & Taille", "Débroussaillage", "Ramassage Feuilles"].map((feat, i) => (
@@ -436,7 +436,7 @@ const Services = ({ defaultTab }) => {
                                             /// CRÉATION PAYSAGÈRE
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Design Paysager
+                                            Design <br className="hidden md:block" /> Paysager
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Massifs & Plantes", "Arrosage Auto", "Aménagement"].map((feat, i) => (
