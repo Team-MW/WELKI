@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import { ArrowRight, ShieldCheck, TreePine, Sparkles, CheckCircle2, FileCheck, Star, MapPin, Mountain, CalendarCheck, ClipboardCheck, Award, UserCheck } from 'lucide-react';
@@ -11,6 +11,45 @@ import img3DHero from '../assets/people-wearing-protective-equipment-disinfectin
 
 
 const Home = () => {
+    const [ctaStyle, setCtaStyle] = useState({ position: 'fixed', bottom: '2rem', right: '2rem' });
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const footer = document.getElementById('site-footer');
+            if (footer) {
+                const footerRect = footer.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                // Stop 20px above footer
+                if (footerRect.top < windowHeight) {
+                    // Stick above footer
+                    setCtaStyle({
+                        position: 'absolute',
+                        bottom: `${window.scrollY + windowHeight - footerRect.top + 20}px`, // This logic is tricky with fixed. Better to switch to absolute relative to body if footer is visible? No, absolute relative to document is easier if we calculate offset.
+                        // SIMPLER APPROACH: Hide it or push it up? Pushing fixed element up is visually jarring if scrolling fast.
+                        // Let's use simple conditional fixed positioning:
+                        // If distance to bottom is small, add offset.
+                        // Actually, easiest way for "stops at footer":
+                        // Calculate how much of footer is visible.
+                        // If footer visible > 0, bottom = 2rem + visibleHeight.
+                    });
+                    // Using a purely fixed positioning approach with dynamic bottom
+                    const visibleFooterHeight = Math.max(0, windowHeight - footerRect.top);
+                    if (visibleFooterHeight > 0) {
+                        setCtaStyle({ position: 'fixed', bottom: `${20 + visibleFooterHeight}px`, right: '2rem' });
+                    } else {
+                        setCtaStyle({ position: 'fixed', bottom: '2rem', right: '2rem' });
+                    }
+                } else {
+                    setCtaStyle({ position: 'fixed', bottom: '2rem', right: '2rem' });
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
 
         <Layout title="Accueil">
@@ -192,7 +231,7 @@ const Home = () => {
 
                 {/* NEW: FIXED CTA POPUP (Bottom Left) */}
                 {/* NEW: FIXED CTA POPUP (Bottom Right) - Premium Design */}
-                <div className="fixed bottom-8 right-8 z-[100]">
+                <div style={ctaStyle} className="z-[100] transition-all duration-100 ease-out animate-bounce-subtle">
                     <Link to="/contact" className="relative group block">
                         {/* Animated Glow Effect */}
                         <div className="absolute -inset-1 bg-gradient-to-r from-[#037971] to-[#0241cd] rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>

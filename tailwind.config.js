@@ -27,15 +27,19 @@ export default {
         shine: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' }
+        },
+        'bounce-subtle': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
         }
       },
       animation: {
         gradient: 'gradient 6s ease infinite',
         tilt: 'tilt 10s infinite linear',
         shine: 'shine 1.5s',
+        'bounce-subtle': 'bounce-subtle 3s infinite ease-in-out',
       }
     },
   },
   plugins: [],
 }
-
