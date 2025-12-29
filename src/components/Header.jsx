@@ -51,6 +51,16 @@ const Header = () => {
                     mobileActive: 'bg-[#0241cd]',
                     shadow: 'shadow-[#0241cd]/40'
                 };
+            case '/multi-services':
+                return {
+                    main: 'text-[#F59E0B]',
+                    bg: 'bg-[#F59E0B]',
+                    border: 'border-[#F59E0B]',
+                    hoverText: 'hover:text-[#fbbf24]',
+                    activeBorder: 'border-[#F59E0B]',
+                    mobileActive: 'bg-[#F59E0B]',
+                    shadow: 'shadow-[#F59E0B]/40'
+                };
             default:
                 return {
                     main: 'text-welki-blue',
