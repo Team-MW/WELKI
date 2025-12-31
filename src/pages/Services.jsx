@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel, AlertTriangle, UtensilsCrossed, Wind, TrendingUp, Baby, ArrowRight, Store, Scale, Gavel, Trophy, Users, HeartPulse, Hammer, Paintbrush, Wrench } from 'lucide-react';
+import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash2, CheckCircle, Search, Skull, ShieldCheck, Clock, CalendarCheck, TreePine, Flower2, Shovel, Recycle, Building2, Briefcase, HardHat, FileText, UserCheck, Home, Warehouse, Utensils, Hotel, AlertTriangle, UtensilsCrossed, Wind, TrendingUp, Baby, ArrowRight, Store, Scale, Gavel, Trophy, Users, HeartPulse, Hammer, Paintbrush, Wrench, BadgeEuro, Award } from 'lucide-react';
 
 import { useSearchParams } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
@@ -700,52 +700,133 @@ const Services = ({ defaultTab }) => {
                         </section>
 
                         {/* HIGH IMPACT RISK WARNING */}
-                        <section className="relative py-16 bg-gradient-to-br from-[#E71D36] to-[#990a1b] overflow-hidden">
-                            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-                            <div className="absolute inset-0 bg-black/10"></div>
+                        {/* HIGH IMPACT RISK WARNING - REDESIGNED LIGHTNING BOLT (RED) */}
+                        <section className="relative py-12 md:py-24 bg-gray-950 overflow-hidden">
 
-                            <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
-                                <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur border border-white/20 rounded-full px-4 py-1 text-white text-xs font-bold uppercase tracking-widest mb-6">
-                                    <AlertTriangle size={14} className="text-yellow-400" /> PROLIFÉRATION = DANGER
+                            {/* 1. HEADER (Title above sections) */}
+                            <div className="max-w-7xl mx-auto px-4 relative z-20 text-center mb-12 md:mb-16">
+                                <div className="inline-flex items-center gap-2 bg-[#E71D36]/10 backdrop-blur border border-[#E71D36]/20 rounded-full px-4 py-1.5 text-[#E71D36] text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(231,29,54,0.2)]">
+                                    <AlertTriangle size={14} className="text-[#E71D36]" /> PROLIFÉRATION = DANGER
                                 </div>
-                                <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight drop-shadow-xl">
-                                    Une infestation vous expose à de <span className="underline decoration-black/30 decoration-4 underline-offset-4">Gros Risques</span>
+                                <h2 className="text-3xl md:text-6xl font-black text-white leading-tight drop-shadow-xl">
+                                    Une infestation vous expose à de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E71D36] to-red-400">Gros Risques</span>
                                 </h2>
+                            </div>
 
-                                <div className="grid md:grid-cols-3 gap-6 text-left">
-                                    {/* Risk 1: Financial */}
-                                    <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors">
-                                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4">
-                                            <TrendingUp size={24} />
-                                        </div>
-                                        <h3 className="text-xl font-black text-white mb-2">Sanctions Financières</h3>
-                                        <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                            Amendements salubrité lourds, mises en demeure et coûts de remise en état  exorbitants si l'infestation n'est pas traitée immédiatement.
-                                        </p>
-                                    </div>
+                            {/* 2. LIGHTNING BOLT CONTAINER */}
+                            <div className="relative w-full h-auto md:h-[500px] flex flex-col md:block">
 
-                                    {/* Risk 2: Health */}
-                                    <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors">
-                                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4">
-                                            <Skull size={24} />
-                                        </div>
-                                        <h3 className="text-xl font-black text-white mb-2">Danger Sanitaire</h3>
-                                        <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                            Transmission de maladies graves (Leptospirose, Salmonellose) et contamination de vos stocks alimentaires imperceptibles à l'œil nu.
-                                        </p>
-                                    </div>
+                                {/* Panel 1: Sanctions Financières (Left) */}
+                                <div
+                                    className="
+                                        relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                        flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                        group z-10 hover:z-20
+                                        md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                        bg-gray-900 border-b md:border-b-0 border-gray-800
+                                    "
+                                >
+                                    {/* Background */}
+                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/90 via-[#990a1b]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
-                                    {/* Risk 3: Reputation */}
-                                    <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors">
-                                        <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4">
-                                            <Store size={24} />
+                                    {/* Content */}
+                                    <div className="relative z-10 text-center md:text-left max-w-sm">
+                                        <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                            <TrendingUp size={32} />
                                         </div>
-                                        <h3 className="text-xl font-black text-white mb-2">Fermeture & Réputation</h3>
-                                        <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                            Risque de fermeture administrative immédiate. Un seul avis client mentionnant un nuisible peut détruire votre e-réputation.
+                                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                            Sanctions<br />Financières
+                                        </h3>
+                                        <p className="text-red-100 font-medium text-lg leading-snug">
+                                            Amendements salubrité lourds, mises en demeure et coûts de remise en état <strong className="text-white border-b border-white/30">exorbitants</strong>.
                                         </p>
                                     </div>
                                 </div>
+
+                                {/* Panel 2: Danger Sanitaire (Center) */}
+                                <div
+                                    className="
+                                        relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                        flex flex-col justify-center items-center p-8 
+                                        group z-10 hover:z-20
+                                        md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                        bg-gray-800 border-b md:border-b-0 border-gray-700
+                                    "
+                                >
+                                    {/* Background */}
+                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#E71D36]/20 transition-all duration-700"></div>
+
+                                    {/* Content */}
+                                    <div className="relative z-10 text-center max-w-sm mx-auto">
+                                        <div className="w-16 h-16 bg-[#E71D36]/20 rounded-2xl flex items-center justify-center text-[#E71D36] mb-6 mx-auto shadow-[0_0_20px_rgba(231,29,54,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#E71D36]/30">
+                                            <Skull size={32} />
+                                        </div>
+                                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                            Danger<br />Sanitaire
+                                        </h3>
+                                        <p className="text-gray-300 font-medium text-lg leading-snug">
+                                            Transmission de maladies graves et contamination de vos stocks <strong className="text-white border-b border-[#E71D36]/50">imperceptibles</strong> à l'œil nu.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Panel 3: Fermeture & Réputation (Right) */}
+                                <div
+                                    className="
+                                        relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                        flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                        group z-10 hover:z-20
+                                        md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                        bg-gray-900
+                                    "
+                                >
+                                    {/* Background */}
+                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-bl from-[#E71D36]/90 via-[#990a1b]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
+
+                                    {/* Content */}
+                                    <div className="relative z-10 text-center md:text-right max-w-sm">
+                                        <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                            <Store size={32} />
+                                        </div>
+                                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                            Fermeture &<br />Réputation
+                                        </h3>
+                                        <p className="text-red-100 font-medium text-lg leading-snug">
+                                            Risque de fermeture administrative immédiate. Un seul avis client négatif peut détruire votre <strong className="text-white border-b border-white/30">e-réputation</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* SEPARATORS (Desktop Only) */}
+                                <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-30" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <defs>
+                                        <filter id="glow-risk" x="-20%" y="-20%" width="140%" height="140%">
+                                            <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                        </filter>
+                                    </defs>
+                                    <path
+                                        d="M 36 0 L 32 50 L 35 50 L 31 100"
+                                        stroke="white"
+                                        strokeWidth="3"
+                                        vectorEffect="non-scaling-stroke"
+                                        fill="none"
+                                        className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                                    />
+                                    <path
+                                        d="M 71 0 L 67 50 L 70 50 L 66 100"
+                                        stroke="white"
+                                        strokeWidth="3"
+                                        strokeLinecap="square"
+                                        strokeLinejoin="miter"
+                                        vectorEffect="non-scaling-stroke"
+                                        fill="none"
+                                        className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                                    />
+                                </svg>
                             </div>
                         </section>
 
@@ -1193,53 +1274,134 @@ const Services = ({ defaultTab }) => {
                                 </div>
                             </Section>
 
-                            {/* LEGAL & RISKS WARNING - NEW SECTION */}
-                            <section className="relative py-16 bg-gradient-to-br from-[#037971] to-[#014d48] overflow-hidden">
-                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-                                <div className="absolute inset-0 bg-black/20"></div>
 
-                                <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
-                                    <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur border border-white/20 rounded-full px-4 py-1 text-white text-xs font-bold uppercase tracking-widest mb-6">
-                                        <AlertTriangle size={14} className="text-yellow-400" /> CADRE LÉGAL & OBLIGATIONS
+                            {/* HIGH IMPACT RISK WARNING - REDESIGNED LIGHTNING BOLT (GREEN) */}
+                            <section className="relative py-12 md:py-24 bg-gray-950 overflow-hidden">
+
+                                {/* 1. HEADER (Title above sections) */}
+                                <div className="max-w-7xl mx-auto px-4 relative z-20 text-center mb-12 md:mb-16">
+                                    <div className="inline-flex items-center gap-2 bg-[#037971]/10 backdrop-blur border border-[#037971]/20 rounded-full px-4 py-1.5 text-[#037971] text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(3,121,113,0.2)]">
+                                        <AlertTriangle size={14} className="text-[#037971]" /> CADRE LÉGAL & OBLIGATIONS
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight drop-shadow-xl">
-                                        Entretien des haies : <span className="underline decoration-black/30 decoration-4 underline-offset-4">Que dit la Loi ?</span>
+                                    <h2 className="text-3xl md:text-6xl font-black text-white leading-tight drop-shadow-xl">
+                                        Entretien des haies : <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#037971] to-teal-400">Que dit la Loi ?</span>
                                     </h2>
+                                </div>
 
-                                    <div className="grid md:grid-cols-3 gap-6 text-left">
-                                        {/* Risk 1: Code Civil */}
-                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
-                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                                                <Scale size={24} />
-                                            </div>
-                                            <h3 className="text-xl font-black text-white mb-2">Code Civil (Art. 671)</h3>
-                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                                Tout arbre ou haie dépassant <strong className="text-white">2 mètres</strong> de hauteur doit être planté à au moins 2 mètres de la limite séparative. Vous êtes légalement tenu de les élaguer.
-                                            </p>
-                                        </div>
+                                {/* 2. LIGHTNING BOLT CONTAINER */}
+                                <div className="relative w-full h-auto md:h-[500px] flex flex-col md:block">
 
-                                        {/* Risk 2: Parasites */}
-                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
-                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                                                <Bug size={24} />
-                                            </div>
-                                            <h3 className="text-xl font-black text-white mb-2">Nid à Parasites</h3>
-                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                                Une haie non entretenue devient dense et sombre, créant l'habitat parfait pour les <strong className="text-white">rats, frelons et autres nuisibles</strong> qui peuvent ensuite envahir votre domicile.
-                                            </p>
-                                        </div>
+                                    {/* Panel 1: Code Civil (Left) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                            bg-gray-900 border-b md:border-b-0 border-gray-800
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/90 via-[#025c56]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
-                                        {/* Risk 3: Safety & Fines */}
-                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
-                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                                                <Gavel size={24} />
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center md:text-left max-w-sm">
+                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                                <Scale size={32} />
                                             </div>
-                                            <h3 className="text-xl font-black text-white mb-2">Responsabilité & Amendes</h3>
-                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                                Empiéter sur la voie publique engage votre responsabilité pénale en cas d'accident sur le trottoir. Le maire peut ordonner un <strong className="text-white">élagage d'office à vos frais</strong>.
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Code Civil<br />(Art. 671)
+                                            </h3>
+                                            <p className="text-teal-100 font-medium text-lg leading-snug">
+                                                Tout arbre ou haie dépassant <strong className="text-white border-b border-white/30">2 mètres</strong> de hauteur doit être planté à distance réglementaire.
                                             </p>
                                         </div>
                                     </div>
+
+                                    {/* Panel 2: Nid à Parasites (Center) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center p-8 
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                            bg-gray-800 border-b md:border-b-0 border-gray-700
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#037971]/20 transition-all duration-700"></div>
+
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center max-w-sm mx-auto">
+                                            <div className="w-16 h-16 bg-[#037971]/20 rounded-2xl flex items-center justify-center text-[#037971] mb-6 mx-auto shadow-[0_0_20px_rgba(3,121,113,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#037971]/30">
+                                                <Bug size={32} />
+                                            </div>
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Nid à<br />Parasites
+                                            </h3>
+                                            <p className="text-gray-300 font-medium text-lg leading-snug">
+                                                Une haie non entretenue devient l'habitat parfait pour les <strong className="text-white border-b border-[#037971]/50">rats et frelons</strong>.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Panel 3: Responsabilité (Right) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                            bg-gray-900
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-bl from-[#037971]/90 via-[#025c56]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
+
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center md:text-right max-w-sm">
+                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                                <Gavel size={32} />
+                                            </div>
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Responsabilité<br />& Amendes
+                                            </h3>
+                                            <p className="text-teal-100 font-medium text-lg leading-snug">
+                                                Empiéter sur la voie publique engage votre responsabilité épnale. Le maire peut ordonner un <strong className="text-white border-b border-white/30">élagage d'office</strong>.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* SEPARATORS (Desktop Only) */}
+                                    <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-30" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <defs>
+                                            <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                            </filter>
+                                        </defs>
+                                        <path
+                                            d="M 36 0 L 32 50 L 35 50 L 31 100"
+                                            stroke="white"
+                                            strokeWidth="3"
+                                            vectorEffect="non-scaling-stroke"
+                                            fill="none"
+                                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                                        />
+                                        <path
+                                            d="M 71 0 L 67 50 L 70 50 L 66 100"
+                                            stroke="white"
+                                            strokeWidth="3"
+                                            strokeLinecap="square"
+                                            strokeLinejoin="miter"
+                                            vectorEffect="non-scaling-stroke"
+                                            fill="none"
+                                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                                        />
+                                    </svg>
                                 </div>
                             </section>
 
@@ -1814,6 +1976,137 @@ const Services = ({ defaultTab }) => {
                 {
                     (defaultTab === 'multi') && (
                         <div className="space-y-24">
+
+                            {/* NEW SECTION: POURQUOI DELEGUER (ORANGE) - LIGHTNING BOLT */}
+                            <section className="relative py-12 md:py-24 bg-gray-950 overflow-hidden">
+
+                                {/* 1. HEADER (Title above sections) */}
+                                <div className="max-w-7xl mx-auto px-4 relative z-20 text-center mb-12 md:mb-16">
+                                    <div className="inline-flex items-center gap-2 bg-[#F59E0B]/10 backdrop-blur border border-[#F59E0B]/20 rounded-full px-4 py-1.5 text-[#F59E0B] text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                                        <Hammer size={14} className="text-[#F59E0B]" /> POURQUOI DÉLÉGUER ?
+                                    </div>
+                                    <h2 className="text-3xl md:text-6xl font-black text-white leading-tight drop-shadow-xl">
+                                        Bricoler vous expose à des <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-amber-400">Risques Inutiles</span>
+                                    </h2>
+                                </div>
+
+                                {/* 2. LIGHTNING BOLT CONTAINER */}
+                                <div className="relative w-full h-auto md:h-[500px] flex flex-col md:block">
+
+                                    {/* Panel 1: Sécurité (Left) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                            bg-gray-900 border-b md:border-b-0 border-gray-800
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-[#F59E0B]/90 via-[#d97706]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
+
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center md:text-left max-w-sm">
+                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                                <HardHat size={32} />
+                                            </div>
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Risque de<br />Blessure
+                                            </h3>
+                                            <p className="text-amber-100 font-medium text-lg leading-snug">
+                                                Chutes d'escabeau, coupures... Le bricolage est la <strong className="text-white border-b border-white/30">1ère cause</strong> d'accidents domestiques en France.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Panel 2: Qualité (Center) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center p-8 
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                            bg-gray-800 border-b md:border-b-0 border-gray-700
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#F59E0B]/20 transition-all duration-700"></div>
+
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center max-w-sm mx-auto">
+                                            <div className="w-16 h-16 bg-[#F59E0B]/20 rounded-2xl flex items-center justify-center text-[#F59E0B] mb-6 mx-auto shadow-[0_0_20px_rgba(245,158,11,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#F59E0B]/30">
+                                                <Award size={32} />
+                                            </div>
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Finitions<br />Hasardeuses
+                                            </h3>
+                                            <p className="text-gray-300 font-medium text-lg leading-snug">
+                                                Un résultat amateur peut dévaloriser votre bien. Optez pour des <strong className="text-white border-b border-[#F59E0B]/50">finitions impeccables</strong> et durables.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Panel 3: Coût (Right) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                            bg-gray-900
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-bl from-[#F59E0B]/90 via-[#d97706]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
+
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center md:text-right max-w-sm">
+                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                                <BadgeEuro size={32} />
+                                            </div>
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Coût des<br />Outils
+                                            </h3>
+                                            <p className="text-amber-100 font-medium text-lg leading-snug">
+                                                Pourquoi acheter une perceuse à 200€ pour 2 trous ? Nous venons <strong className="text-white border-b border-white/30">100% équipés</strong>.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* SEPARATORS (Desktop Only) */}
+                                    <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-30" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <defs>
+                                            <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                            </filter>
+                                        </defs>
+                                        <path
+                                            d="M 36 0 L 32 50 L 35 50 L 31 100"
+                                            stroke="white"
+                                            strokeWidth="3"
+                                            vectorEffect="non-scaling-stroke"
+                                            fill="none"
+                                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                                        />
+                                        <path
+                                            d="M 71 0 L 67 50 L 70 50 L 66 100"
+                                            stroke="white"
+                                            strokeWidth="3"
+                                            strokeLinecap="square"
+                                            strokeLinejoin="miter"
+                                            vectorEffect="non-scaling-stroke"
+                                            fill="none"
+                                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                                        />
+                                    </svg>
+                                </div>
+                            </section>
+
                             <div className="space-y-0">
                                 {/* FEATURE 1: MONTAGE MEUBLES (Image Right / Text Left) */}
                                 <section className="py-24 bg-gray-950 relative overflow-hidden border-b border-gray-800/50">
