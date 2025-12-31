@@ -77,7 +77,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -122,7 +122,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -167,7 +167,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -199,7 +199,7 @@ const Services = ({ defaultTab }) => {
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/60 via-[#E71D36]/20 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
@@ -217,7 +217,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -244,14 +244,14 @@ const Services = ({ defaultTab }) => {
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/60 via-[#E71D36]/20 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
                                             /// STOP INSECTES
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Désinsectisation
+                                            Désin<br />sectisation
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Punaise de lit", "Cafard", "Frelon asiatique"].map((feat, i) => (
@@ -262,7 +262,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -289,7 +289,7 @@ const Services = ({ defaultTab }) => {
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     fetchPriority="high"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/60 via-[#E71D36]/20 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
                                 <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
                                     <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
@@ -307,7 +307,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -357,7 +357,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -402,7 +402,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -447,7 +447,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
@@ -486,7 +486,7 @@ const Services = ({ defaultTab }) => {
                                             /// MONTAGE & ASSEMBLAGE
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Montage Expert
+                                            Montage <br /> Expert
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Mobilier en Kit", "Fixation Murale", "Démontage"].map((feat, i) => (
@@ -497,7 +497,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En savoir plus
                                         </span>
@@ -534,7 +534,7 @@ const Services = ({ defaultTab }) => {
                                             /// PEINTURE & FINITIONS
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Peinture Pro
+                                            Peinture <br /> Pro
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Murs & Plafonds", "Rénovation", "Décoration"].map((feat, i) => (
@@ -545,7 +545,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En savoir plus
                                         </span>
@@ -579,7 +579,7 @@ const Services = ({ defaultTab }) => {
                                             /// HOMME DE MAIN
                                         </span>
                                         <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Multi-Services
+                                            Multi-<br />Services
                                         </h2>
                                         <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
                                             {["Petit Bricolage", "Réparations", "Manutention"].map((feat, i) => (
@@ -590,7 +590,7 @@ const Services = ({ defaultTab }) => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="hidden md:flex gap-4 mt-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-auto">
+                                    <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                             En savoir plus
                                         </span>
@@ -1540,52 +1540,133 @@ const Services = ({ defaultTab }) => {
                             </Section>
 
                             {/* MARKETING ARGUMENTS - CLEANING - NEW SECTION */}
-                            <section className="relative py-16 bg-gradient-to-br from-[#0241cd] to-[#012a8a] overflow-hidden">
-                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-                                <div className="absolute inset-0 bg-black/20"></div>
+                            {/* MARKETING ARGUMENTS - CLEANING - REDESIGNED LIGHTNING BOLT */}
+                            <section className="relative py-12 md:py-24 bg-gray-950 overflow-hidden">
 
-                                <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
-                                    <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur border border-white/20 rounded-full px-4 py-1 text-white text-xs font-bold uppercase tracking-widest mb-6">
-                                        <Sparkles size={14} className="text-blue-300" /> UN LEVIER DE PERFORMANCE
+                                {/* 1. HEADER (Title above sections) */}
+                                <div className="max-w-7xl mx-auto px-4 relative z-20 text-center mb-12 md:mb-16">
+                                    <div className="inline-flex items-center gap-2 bg-[#0241cd]/10 backdrop-blur border border-[#0241cd]/20 rounded-full px-4 py-1.5 text-[#0241cd] text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(2,65,205,0.2)]">
+                                        <Sparkles size={14} /> UN LEVIER DE PERFORMANCE
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight drop-shadow-xl">
-                                        Pourquoi la propreté est <span className="underline decoration-black/30 decoration-4 underline-offset-4">Stratégique</span> ?
+                                    <h2 className="text-3xl md:text-6xl font-black text-white leading-tight drop-shadow-xl">
+                                        Pourquoi la propreté est <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0241cd] to-blue-400">Stratégique</span> ?
                                     </h2>
+                                </div>
 
-                                    <div className="grid md:grid-cols-3 gap-6 text-left">
-                                        {/* Arg 1: Image de Marque */}
-                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
-                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                                                <Trophy size={24} />
-                                            </div>
-                                            <h3 className="text-xl font-black text-white mb-2">Image de Marque</h3>
-                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                                Vos locaux sont le reflet de votre professionnalisme. Une propreté irréprochable inspire instantanément <strong className="text-white">confiance et sérieux</strong> à vos clients et partenaires.
-                                            </p>
-                                        </div>
+                                {/* 2. LIGHTNING BOLT CONTAINER */}
+                                <div className="relative w-full h-auto md:h-[500px] flex flex-col md:block">
 
-                                        {/* Arg 2: Productivité */}
-                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
-                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                                                <Users size={24} />
-                                            </div>
-                                            <h3 className="text-xl font-black text-white mb-2">Bien-être & Productivité</h3>
-                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                                Des collaborateurs heureux sont plus performants. Un environnement sain et ordonné <strong className="text-white">réduit le stress</strong> et favorise la concentration de vos équipes.
-                                            </p>
-                                        </div>
+                                    {/* Panel 1: Image de Marque (Left) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
+                                            bg-gray-900 border-b md:border-b-0 border-gray-800
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/90 via-[#012a8a]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
-                                        {/* Arg 3: Santé */}
-                                        <div className="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-black/30 transition-colors group">
-                                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                                                <HeartPulse size={24} />
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center md:text-left max-w-sm">
+                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                                <Trophy size={32} />
                                             </div>
-                                            <h3 className="text-xl font-black text-white mb-2">Santé & Hygiène</h3>
-                                            <p className="text-white/80 text-sm font-medium leading-relaxed">
-                                                Limitez la propagation des virus et bactéries. Un entretien régulier des points de contact <strong className="text-white">réduit l'absentéisme</strong> et protège la santé de tous.
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Image de<br />Marque
+                                            </h3>
+                                            <p className="text-blue-100 font-medium text-lg leading-snug">
+                                                Une propreté irréprochable inspire instantanément <strong className="text-white border-b border-white/30">confiance et sérieux</strong> à vos clients et partenaires.
                                             </p>
                                         </div>
                                     </div>
+
+                                    {/* Panel 2: Productivité (Center) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center p-8 
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(36%_0,_71%_0,_67%_50%,_70%_50%,_66%_100%,_31%_100%,_35%_50%,_32%_50%)]
+                                            bg-gray-800 border-b md:border-b-0 border-gray-700
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#0241cd]/20 transition-all duration-700"></div>
+
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center max-w-sm mx-auto">
+                                            <div className="w-16 h-16 bg-[#0241cd]/20 rounded-2xl flex items-center justify-center text-[#0241cd] mb-6 mx-auto shadow-[0_0_20px_rgba(2,65,205,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#0241cd]/30">
+                                                <Users size={32} />
+                                            </div>
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Bien-être &<br />Productivité
+                                            </h3>
+                                            <p className="text-gray-300 font-medium text-lg leading-snug">
+                                                Un environnement sain et ordonné <strong className="text-white border-b border-[#0241cd]/50">réduit le stress</strong> et favorise la concentration de vos équipes.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Panel 3: Santé (Right) */}
+                                    <div
+                                        className="
+                                            relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
+                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                            group z-10 hover:z-20
+                                            md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
+                                            bg-gray-900
+                                        "
+                                    >
+                                        {/* Background */}
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-bl from-[#0241cd]/90 via-[#012a8a]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
+
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center md:text-right max-w-sm">
+                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
+                                                <HeartPulse size={32} />
+                                            </div>
+                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                                Santé &<br />Hygiène
+                                            </h3>
+                                            <p className="text-blue-100 font-medium text-lg leading-snug">
+                                                Un entretien régulier des points de contact <strong className="text-white border-b border-white/30">réduit l'absentéisme</strong> et protège la santé de tous.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* SEPARATORS (Desktop Only) */}
+                                    <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-30" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <defs>
+                                            <filter id="glow-strat" x="-20%" y="-20%" width="140%" height="140%">
+                                                <feGaussianBlur stdDeviation="1.5" result="blur" />
+                                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                            </filter>
+                                        </defs>
+                                        <path
+                                            d="M 36 0 L 32 50 L 35 50 L 31 100"
+                                            stroke="white"
+                                            strokeWidth="3"
+                                            vectorEffect="non-scaling-stroke"
+                                            fill="none"
+                                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]"
+                                        />
+                                        <path
+                                            d="M 71 0 L 67 50 L 70 50 L 66 100"
+                                            stroke="white"
+                                            strokeWidth="3"
+                                            strokeLinecap="square"
+                                            strokeLinejoin="miter"
+                                            vectorEffect="non-scaling-stroke"
+                                            fill="none"
+                                            className="drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] z-30 relative"
+                                        />
+                                    </svg>
                                 </div>
                             </section>
 

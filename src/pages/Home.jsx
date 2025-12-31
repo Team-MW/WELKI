@@ -98,7 +98,7 @@ const Home = () => {
                                 </ul>
                             </div>
 
-                            <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                            <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
                                 <Link to="/nettoyage" className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                     Découvrir
                                 </Link>
@@ -144,7 +144,7 @@ const Home = () => {
                                 </ul>
                             </div>
 
-                            <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
+                            <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
                                 <Link to="/hygiene-3d" className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                     Découvrir
                                 </Link>
@@ -189,7 +189,7 @@ const Home = () => {
                                     <li className="flex items-center justify-end gap-2">Entretien Jardin<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
                                     <li className="flex items-center justify-end gap-2">Paysagisme<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
                                 </ul>
-                                <div className="hidden md:flex gap-4 mt-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
+                                <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
                                     <Link to="/espaces-verts" className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                         Découvrir
                                     </Link>
@@ -232,7 +232,7 @@ const Home = () => {
 
                 {/* NEW: FIXED CTA POPUP (Bottom Left) */}
                 {/* NEW: FIXED CTA POPUP (Bottom Right) - Premium Design */}
-                <div style={ctaStyle} className="z-[100] transition-all duration-100 ease-out animate-bounce-subtle">
+                <div style={ctaStyle} className="z-[100] transition-all duration-100 ease-out animate-bounce-subtle max-w-[95vw] md:max-w-auto">
                     <Link to="/contact" className="relative group block perspective-1000">
                         {/* 1. OUTER GLOW - Static but strong */}
                         <div className="absolute -inset-4 bg-[#037971] rounded-full blur-[40px] opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
@@ -246,7 +246,7 @@ const Home = () => {
                             <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#0241cd_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-100"></div>
 
                             {/* 3. INNER CARD CONTENT */}
-                            <div className="relative bg-gray-950 rounded-[14px] px-8 py-5 flex items-center gap-6 overflow-hidden">
+                            <div className="relative bg-gray-950 rounded-[14px] px-4 py-3 md:px-8 md:py-5 flex items-center gap-3 md:gap-6 overflow-hidden">
 
                                 {/* Background Mesh/Noise */}
                                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 z-0"></div>
@@ -254,27 +254,27 @@ const Home = () => {
                                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#0241cd]/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
 
                                 {/* Icon with 'Holographic' feel */}
-                                <div className="relative z-10 w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-950 border border-gray-700/50 shadow-lg group-hover:border-[#037971]/50 transition-colors duration-300">
+                                <div className="relative z-10 w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-950 border border-gray-700/50 shadow-lg group-hover:border-[#037971]/50 transition-colors duration-300">
                                     <div className="absolute inset-0 bg-[#037971]/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                    <FileCheck size={28} className="text-white relative z-10 group-hover:text-[#037971] transition-colors duration-300" strokeWidth={2} />
+                                    <FileCheck size={20} className="text-white relative z-10 group-hover:text-[#037971] transition-colors duration-300 md:w-[28px] md:h-[28px]" strokeWidth={2} />
                                 </div>
 
                                 {/* Text Stack */}
-                                <div className="relative z-10 flex flex-col min-w-[150px]">
+                                <div className="relative z-10 flex flex-col min-w-[120px] md:min-w-[150px]">
                                     <div className="flex items-center gap-2 mb-1">
                                         <div className="w-1.5 h-1.5 rounded-full bg-[#037971] animate-ping"></div>
-                                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#037971] drop-shadow-sm">
+                                        <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-[#037971] drop-shadow-sm">
                                             Offre Spéciale
                                         </span>
                                     </div>
-                                    <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 group-hover:to-white transition-all duration-300 transform group-hover:translate-x-1">
+                                    <span className="text-lg md:text-2xl font-black text-[#E71D36] transition-all duration-300 transform group-hover:translate-x-1">
                                         Audit Gratuit
                                     </span>
                                 </div>
 
                                 {/* Action Button */}
-                                <div className="relative z-10 w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white group-hover:bg-[#037971] group-hover:border-[#037971] transition-all duration-300 shadow-xl ml-auto">
-                                    <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                                <div className="relative z-10 w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-[#E71D36] group-hover:bg-[#E71D36] group-hover:border-[#E71D36] group-hover:text-white transition-all duration-300 shadow-xl ml-auto">
+                                    <ArrowRight size={16} className="-rotate-45 group-hover:rotate-0 transition-transform duration-500 md:w-[20px] md:h-[20px]" />
                                 </div>
                             </div>
                         </div>
@@ -352,7 +352,7 @@ const Home = () => {
                             <p className="text-gray-400 font-medium text-lg md:text-xl leading-relaxed max-w-2xl">
                                 Pas de multiplication des prestataires. WELKI centralise tout.
                                 <br className="hidden md:block" />
-                                <span className="mt-4 block font-medium">
+                                <span className="mt-4 block font-medium text-xl md:text-2xl">
                                     <span className="text-[#E71D36] font-bold">Anti Nuisible</span> + <span className="text-[#037971] font-bold">Espaces Verts</span> + <span className="text-[#0241cd] font-bold">Nettoyage</span> + <span className="text-[#F59E0B] font-bold">Multi Services</span> = <span className="text-white font-bold">Une seule facture.</span>
                                 </span>
                             </p>
@@ -491,11 +491,9 @@ const Home = () => {
                             <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
                                 Propreté &<br />Hygiène
                             </h3>
-                            <ul className="space-y-2 text-blue-100 font-medium text-lg">
-                                <li className="flex items-center gap-2 justify-center md:justify-start">• Bureaux & Tertiaire</li>
-                                <li className="flex items-center gap-2 justify-center md:justify-start">• Immeubles / Copro</li>
-                                <li className="flex items-center gap-2 justify-center md:justify-start">• Fin de chantier</li>
-                            </ul>
+                            <p className="text-blue-100 font-medium text-lg leading-snug max-w-sm">
+                                Offrez à vos collaborateurs et visiteurs un environnement d'une propreté éclatante. L'hygiène parfaite, sans compromis.
+                            </p>
                             <Link to="/nettoyage" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
                                 En savoir plus
                             </Link>
@@ -518,13 +516,11 @@ const Home = () => {
                             <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
                                 Anti<br />Nuisible
                             </h3>
-                            <ul className="space-y-2 text-red-100 font-medium text-lg">
-                                <li className="flex items-center gap-2 justify-center">• Dératisation</li>
-                                <li className="flex items-center gap-2 justify-center">• Désinsectisation</li>
-                                <li className="flex items-center gap-2 justify-center">• Désinfection</li>
-                            </ul>
-                            <Link to="/hygiene-3d" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
-                                En savoir plus
+                            <p className="text-red-100 font-medium text-lg leading-snug max-w-sm mx-auto">
+                                Ne laissez aucune chance aux nuisibles. Sécurisez vos locaux avec une intervention choc, rapide et discrète.
+                            </p>
+                            <Link to="/hygiene-3d" className="mt-6 inline-flex items-center text-[#E71D36] font-bold border-b-2 border-[#E71D36]/30 hover:border-[#E71D36] transition-all text-sm uppercase tracking-wider pb-1">
+                                En savoir plus <ArrowRight className="ml-2" size={16} />
                             </Link>
                         </div>
                     </div>
@@ -545,11 +541,9 @@ const Home = () => {
                             <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
                                 Espaces<br />Verts
                             </h3>
-                            <ul className="space-y-2 text-green-100 font-medium text-lg">
-                                <li className="flex items-center gap-2 justify-center md:justify-end">Élagage •</li>
-                                <li className="flex items-center gap-2 justify-center md:justify-end">Entretien Jardin •</li>
-                                <li className="flex items-center gap-2 justify-center md:justify-end">Paysagisme •</li>
-                            </ul>
+                            <p className="text-green-100 font-medium text-lg leading-snug max-w-sm ml-auto">
+                                Sublimez vos extérieurs en toute saison. Des jardins soignés et vivants qui respirent la nature et le bien-être.
+                            </p>
                             <Link to="/espaces-verts" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
                                 En savoir plus
                             </Link>
@@ -869,15 +863,15 @@ const Home = () => {
 
                     <div className="relative z-10 max-w-5xl mx-auto px-4">
                         <span className="inline-block py-1 px-4 border border-white/30 rounded-full text-sm font-bold uppercase tracking-widest mb-6 bg-white/10 backdrop-blur-sm">
-                            Réponse sous 1 heure
+                            On vous repond en moins de 1 heure
                         </span>
-                        <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight drop-shadow-lg">
-                            Besoin d'un audit <span className="text-white border-b-4 border-[#037971]">gratuit</span> ?
+                        <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight drop-shadow-lg text-[#0241cd]">
+                            Besoin d'un audit gratuit ?
                         </h2>
                         <p className="text-xl md:text-2xl mb-12 text-blue-50 font-medium max-w-3xl mx-auto leading-relaxed opacity-90">
-                            Contactez-nous dès maintenant. Nos experts analysent votre situation et vous recontactent rapidement avec une solution sur-mesure.
+                            <span className="text-[#037971] font-bold">Contactez-nous dès maintenant.</span> Nos experts analysent votre besoin et vous recontactent rapidement avec une solution sur-mesure.
                         </p>
-                        <Link to="/contact" className="group inline-flex items-center gap-3 bg-white text-[#0241cd] px-12 py-5 rounded-full text-xl font-black hover:bg-gray-50 transition-all shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)]">
+                        <Link to="/contact" className="group inline-flex items-center gap-3 bg-[#E71D36] text-white px-12 py-5 rounded-full text-xl font-black hover:bg-[#ff4d63] transition-all shadow-[0_10px_40px_-10px_rgba(231,29,54,0.5)] hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(231,29,54,0.6)]">
                             CONTACTER UN EXPERT
                             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </Link>
