@@ -312,9 +312,9 @@ const Home = () => {
                     <div className="w-full h-full relative z-10">
                         <div className="flex flex-col md:flex-row w-full h-full">
                             {[
-                                { text: "Intervention 7j/7", icon: <CheckCircle2 />, color: "text-[#0241cd]", glow: "shadow-[#0241cd]" },
+                                { text: "24h/24 7j/7", icon: <Zap />, color: "text-[#0241cd]", glow: "shadow-[#0241cd]" },
                                 { text: "Devis 100% Gratuit", icon: <FileCheck />, color: "text-[#E71D36]", glow: "shadow-[#E71D36]" },
-                                { text: "Produits Homologués", icon: <ShieldCheck />, color: "text-[#037971]", glow: "shadow-[#037971]" }
+                                { text: "Entreprise Agréée", icon: <ShieldCheck />, color: "text-[#037971]", glow: "shadow-[#037971]" }
                             ].map((item, i) => (
                                 <div
                                     key={i}
@@ -487,15 +487,12 @@ const Home = () => {
                         <img src={imgCleanHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:from-[#0241cd]/90 group-hover:via-[#0241cd]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
-                        <div className="relative z-10 text-center md:text-left">
-                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
-                                Propreté &<br />Hygiène
-                            </h3>
-                            <p className="text-blue-100 font-medium text-lg leading-snug max-w-sm">
-                                Offrez à vos collaborateurs et visiteurs un environnement d'une propreté éclatante. L'hygiène parfaite, sans compromis.
+                        <div className="relative z-10 text-center md:text-left h-full flex flex-col justify-center">
+                            <p className="text-white font-semibold text-xl md:text-3xl leading-tight max-w-md drop-shadow-lg">
+                                Propreté éclatante pour vos locaux.<br />L'hygiène parfaite, sans compromis.
                             </p>
-                            <Link to="/nettoyage" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
-                                En savoir plus
+                            <Link to="/nettoyage" className="mt-8 inline-flex items-center gap-2 text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1 w-fit group-hover:translate-x-2 duration-300">
+                                En savoir plus <ArrowRight size={16} />
                             </Link>
                         </div>
                     </div>
@@ -512,15 +509,12 @@ const Home = () => {
                         <img src={img3DHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:from-[#E71D36]/90 group-hover:via-[#E71D36]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
-                        <div className="relative z-10 text-center">
-                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
-                                Anti<br />Nuisible
-                            </h3>
-                            <p className="text-red-100 font-medium text-lg leading-snug max-w-sm mx-auto">
-                                Ne laissez aucune chance aux nuisibles. Sécurisez vos locaux avec une intervention choc, rapide et discrète.
+                        <div className="relative z-10 text-center h-full flex flex-col justify-center items-center">
+                            <p className="text-white font-semibold text-xl md:text-3xl leading-tight max-w-md mx-auto drop-shadow-lg">
+                                Stop aux nuisibles.<br />Intervention choc, rapide et discrète.
                             </p>
-                            <Link to="/hygiene-3d" className="mt-6 inline-flex items-center text-[#E71D36] font-bold border-b-2 border-[#E71D36]/30 hover:border-[#E71D36] transition-all text-sm uppercase tracking-wider pb-1">
-                                En savoir plus <ArrowRight className="ml-2" size={16} />
+                            <Link to="/hygiene-3d" className="mt-8 inline-flex items-center gap-2 text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1 group-hover:scale-105 duration-300">
+                                En savoir plus <ArrowRight size={16} />
                             </Link>
                         </div>
                     </div>
@@ -537,15 +531,12 @@ const Home = () => {
                         <img src={imgGreenHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:from-[#037971]/90 group-hover:via-[#037971]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
-                        <div className="relative z-10 text-center md:text-right">
-                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-none drop-shadow-lg">
-                                Espaces<br />Verts
-                            </h3>
-                            <p className="text-green-100 font-medium text-lg leading-snug max-w-sm ml-auto">
-                                Sublimez vos extérieurs en toute saison. Des jardins soignés et vivants qui respirent la nature et le bien-être.
+                        <div className="relative z-10 text-center md:text-right h-full flex flex-col justify-center items-center md:items-end">
+                            <p className="text-white font-semibold text-xl md:text-3xl leading-tight max-w-md ml-auto drop-shadow-lg">
+                                Sublimez vos extérieurs.<br />Des jardins soignés en toute saison.
                             </p>
-                            <Link to="/espaces-verts" className="mt-6 inline-block text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1">
-                                En savoir plus
+                            <Link to="/espaces-verts" className="mt-8 inline-flex items-center gap-2 text-white font-bold border-b-2 border-white/30 hover:border-white transition-all text-sm uppercase tracking-wider pb-1 w-fit group-hover:-translate-x-2 duration-300">
+                                En savoir plus <ArrowRight size={16} />
                             </Link>
                         </div>
                     </div>
