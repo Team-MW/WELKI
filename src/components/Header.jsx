@@ -94,16 +94,7 @@ const Header = () => {
 
                         {/* Desktop Menu - Visible on Large Screens */}
                         <nav className="hidden lg:flex items-center space-x-10">
-                            <Link
-                                to="/contact"
-                                className="relative group rounded-full p-[2px] overflow-hidden transition-all duration-300 transform hover:scale-105"
-                            >
-                                <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0deg_180deg,#037971_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite] opacity-100 transition-opacity duration-300"></div>
-                                <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#E71D36_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-100 transition-opacity duration-300"></div>
-                                <div className="relative px-6 py-2.5 rounded-full bg-white text-gray-950 text-xs font-black uppercase tracking-wider border border-transparent transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                                    Devis Express
-                                </div>
-                            </Link>
+
                             {links.map((link) => {
                                 const active = isActive(link.path);
                                 return (
@@ -132,6 +123,16 @@ const Header = () => {
                                     </Link>
                                 );
                             })}
+                            <Link
+                                to="/contact"
+                                className="relative group rounded-full p-[2px] overflow-hidden transition-all duration-300 transform hover:scale-105"
+                            >
+                                <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0deg_180deg,#037971_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite] opacity-100 transition-opacity duration-300"></div>
+                                <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#E71D36_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative px-6 py-2.5 rounded-full bg-white text-gray-950 text-xs font-black uppercase tracking-wider border border-transparent transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                                    Devis Express
+                                </div>
+                            </Link>
                         </nav>
 
                         {/* Mobile/Tablet Menu Button */}

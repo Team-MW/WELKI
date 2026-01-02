@@ -138,9 +138,9 @@ const Home = () => {
                                     Anti <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Nuisible</span>
                                 </h2>
                                 <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80">
-                                    <li className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Dératisation</li>
-                                    <li className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Désinsectisation</li>
-                                    <li className="flex items-center justify-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Désinfection</li>
+                                    <li className="flex items-center justify-center gap-2">Dératisation</li>
+                                    <li className="flex items-center justify-center gap-2">Désinsectisation</li>
+                                    <li className="flex items-center justify-center gap-2">Désinfection</li>
                                 </ul>
                             </div>
 
@@ -332,12 +332,7 @@ const Home = () => {
 
                 {/* NEW: Single Point of Contact Banner - Full Width */}
                 <div className="bg-gray-950 border-b border-gray-800 relative z-20 py-12 md:py-20 overflow-hidden">
-                    {/* Background Logo */}
-                    <img
-                        src={logoImg}
-                        alt=""
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-[0.15] pointer-events-none select-none z-0"
-                    />
+
                     {/* Background Glow */}
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#037971]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
@@ -357,7 +352,13 @@ const Home = () => {
                                 </span>
                             </p>
                         </div>
-                        <div className="flex-shrink-0">
+                        <div className="flex-shrink-0 relative">
+                            {/* Logo positioned just above the button */}
+                            <img
+                                src={logoImg}
+                                alt=""
+                                className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-[250px] opacity-[0.8] pointer-events-none select-none z-0"
+                            />
                             <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-[#037971] text-white font-bold text-lg hover:bg-[#025e57] transition-all shadow-[0_0_20px_-5px_rgba(3,121,113,0.4)] hover:shadow-[0_0_30px_-5px_rgba(3,121,113,0.6)] hover:-translate-y-1 group">
                                 Discuter de mon projet
                                 <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
