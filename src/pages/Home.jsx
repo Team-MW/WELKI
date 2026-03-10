@@ -10,7 +10,6 @@ import imgCleanHero from '../assets/full-shot-man-vacuuming-office-floor.jpg';
 import img3DHero from '../assets/people-wearing-protective-equipment-disinfecting-dangerous-area.jpg';
 import logoImg from '../assets/logo blanc.png';
 
-
 const Home = () => {
     const [ctaStyle, setCtaStyle] = useState({ position: 'fixed', bottom: '2rem', right: '2rem' });
 
@@ -20,29 +19,23 @@ const Home = () => {
             if (footer) {
                 const footerRect = footer.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
+                const isSmallScreen = window.innerWidth < 640;
+                const right = isSmallScreen ? '1rem' : '2rem';
+                const baseBottom = isSmallScreen ? 16 : 32;
 
                 // Stop 20px above footer
                 if (footerRect.top < windowHeight) {
                     // Stick above footer
-                    setCtaStyle({
-                        position: 'absolute',
-                        bottom: `${window.scrollY + windowHeight - footerRect.top + 20}px`, // This logic is tricky with fixed. Better to switch to absolute relative to body if footer is visible? No, absolute relative to document is easier if we calculate offset.
-                        // SIMPLER APPROACH: Hide it or push it up? Pushing fixed element up is visually jarring if scrolling fast.
-                        // Let's use simple conditional fixed positioning:
-                        // If distance to bottom is small, add offset.
-                        // Actually, easiest way for "stops at footer":
-                        // Calculate how much of footer is visible.
-                        // If footer visible > 0, bottom = 2rem + visibleHeight.
-                    });
+                    setCtaStyle((prev) => ({ ...prev, position: 'fixed', right }));
                     // Using a purely fixed positioning approach with dynamic bottom
                     const visibleFooterHeight = Math.max(0, windowHeight - footerRect.top);
                     if (visibleFooterHeight > 0) {
-                        setCtaStyle({ position: 'fixed', bottom: `${20 + visibleFooterHeight}px`, right: '2rem' });
+                        setCtaStyle({ position: 'fixed', bottom: `${baseBottom + visibleFooterHeight}px`, right });
                     } else {
-                        setCtaStyle({ position: 'fixed', bottom: '2rem', right: '2rem' });
+                        setCtaStyle({ position: 'fixed', bottom: `${baseBottom}px`, right });
                     }
                 } else {
-                    setCtaStyle({ position: 'fixed', bottom: '2rem', right: '2rem' });
+                    setCtaStyle({ position: 'fixed', bottom: `${baseBottom}px`, right });
                 }
             }
         };
@@ -232,7 +225,7 @@ const Home = () => {
 
                 {/* NEW: FIXED CTA POPUP (Bottom Left) */}
                 {/* NEW: FIXED CTA POPUP (Bottom Right) - Premium Design */}
-                <div style={ctaStyle} className="z-[100] transition-all duration-100 ease-out animate-bounce-subtle max-w-[95vw] md:max-w-auto">
+                <div style={ctaStyle} className="z-[100] transition-all duration-100 ease-out animate-bounce-subtle max-w-[95vw] md:max-w-none">
                     <Link to="/contact" className="relative group block perspective-1000">
                         {/* 1. OUTER GLOW - Static but strong */}
                         <div className="absolute -inset-4 bg-[#037971] rounded-full blur-[40px] opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
