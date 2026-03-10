@@ -31,7 +31,10 @@ const Services = ({ defaultTab }) => {
 
 
     return (
-        <Layout title="Nos Services">
+        <Layout
+            title="Nos services"
+            description="Découvrez l'ensemble des services WELKI : lutte anti-nuisibles (dératisation, désinsectisation, désinfection), nettoyage professionnel, entretien des espaces verts et multi-services dans tout le Sud-Ouest."
+        >
             <div className="bg-gray-950 min-h-screen text-white">
 
                 {/* HERO SECTION: LIGHTNING SPLIT */}

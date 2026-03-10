@@ -3,13 +3,21 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from './Header';
 import logoImg from '../assets/logo blanc.png';
+import favicon from '../assets/logo.png';
 
 const Layout = ({ children, title, description }) => {
+    const baseTitle = 'WELKI - Anti-nuisibles, nettoyage, espaces verts & multi-services';
+    const fullTitle = title ? `${title} | ${baseTitle}` : 'WELKI - Anti-nuisibles, nettoyage, espaces verts & multi-services dans le Sud-Ouest';
+
+    const defaultDescription =
+        "WELKI est une entreprise certifiée Certibiocide spécialisée dans la lutte anti-nuisibles, le nettoyage professionnel, l'entretien des espaces verts et les multi-services pour particuliers et professionnels dans le Sud-Ouest.";
+
     return (
         <div className="flex flex-col min-h-screen">
             <Helmet>
-                <title>{title ? `${title} | Welki2` : 'Welki2 - Modern Web Development'}</title>
-                <meta name="description" content={description || "Votre partenaire pour le développement web moderne."} />
+                <title>{fullTitle}</title>
+                <meta name="description" content={description || defaultDescription} />
+                <link rel="icon" type="image/png" href={favicon} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Helmet>
 

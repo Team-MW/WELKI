@@ -46,7 +46,10 @@ const Home = () => {
 
     return (
 
-        <Layout title="Accueil">
+        <Layout
+            title="Accueil"
+            description="WELKI, entreprise certifiée Certibiocide, accompagne particuliers et professionnels du Sud-Ouest pour la lutte anti-nuisibles, le nettoyage professionnel, l'entretien des espaces verts et les multi-services."
+        >
             <div className="bg-gray-950 min-h-screen text-white">
 
                 {/* 1. HERO SECTION - Lightning Bolt Layout - Swapped Order */}
