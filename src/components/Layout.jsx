@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from './Header';
+import FloatingCTA from './FloatingCTA';
 import logoImg from '../assets/logo blanc.png';
 import favicon from '../assets/logo.png';
 
@@ -71,8 +72,9 @@ const Layout = ({ children, title, description }) => {
                         Développé par <a href="https://microdidact.com/" target="_blank" rel="noopener noreferrer" className="text-welki-green font-bold hover:underline transition-all">Microdidact</a>
                     </div>
                 </div>
-            </footer >
-        </div >
+            </footer>
+            <FloatingCTA />
+        </div>
     );
 };
 
