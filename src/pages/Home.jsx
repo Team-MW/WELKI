@@ -46,23 +46,22 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:from-[#0241cd]/90 group-hover:via-[#0241cd]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:p-12 text-center md:text-left w-full md:w-[40%] h-full pointer-events-none">
-
-                            <div className="relative z-20 transform md:group-hover:translate-x-4 transition-transform duration-500">
-                                <span className="inline-block py-1 pl-1 pr-3 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:ml-1">
+                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:pl-16 md:pr-12 text-center md:text-left w-full h-full pointer-events-none">
+                            <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:translate-x-4 transition-transform duration-500">
+                                <span className="inline-block py-1 px-4 text-[#0241cd] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                                     /// NETTOYAGE PRO
                                 </span>
-                                <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:ml-1">
+                                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                     Propreté & <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-white">Hygiène</span>
                                 </h2>
-                                <ul className="hidden md:block text-blue-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:ml-2">
+                                <ul className="hidden md:block text-blue-50 text-base lg:text-lg font-medium space-y-1 mt-6 opacity-80">
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>Bureaux & Tertiaire</li>
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>Immeubles / Copro</li>
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>Fin de chantier</li>
                                 </ul>
                             </div>
 
-                            <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 md:ml-2 pointer-events-auto">
+                            <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                 <Link to="/nettoyage" className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                     Découvrir
                                 </Link>
@@ -92,16 +91,15 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/80 via-[#E71D36]/40 to-gray-900/60 group-hover:from-[#E71D36]/90 group-hover:via-[#E71D36]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center p-4 text-center pointer-events-none">
-
-                            <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                        <div className="absolute inset-0 flex flex-col justify-center items-center p-8 text-center pointer-events-none">
+                            <div className="relative z-20 max-w-[85%] md:max-w-[30%] transform md:group-hover:scale-105 transition-transform duration-500">
                                 <span className="inline-block py-1 px-4 text-[#E71D36] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                                     /// LUTTE ANTI-NUISIBLES
                                 </span>
-                                <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                    Anti <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Nuisible</span>
+                                <h2 className="text-3xl md:text-3xl lg:text-5xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.85]">
+                                    Anti-<br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Nuisible</span>
                                 </h2>
-                                <ul className="hidden md:block text-red-50 text-xl font-medium space-y-1 mt-6 opacity-80">
+                                <ul className="hidden md:block text-red-50 text-base lg:text-lg font-medium space-y-1 mt-6 opacity-80">
                                     <li className="flex items-center justify-center gap-2">Dératisation</li>
                                     <li className="flex items-center justify-center gap-2">Désinsectisation</li>
                                     <li className="flex items-center justify-center gap-2">Désinfection</li>
@@ -138,22 +136,21 @@ const Home = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:from-[#037971]/90 group-hover:via-[#037971]/60 group-hover:to-gray-900/80 transition-all duration-700"></div>
 
                         {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:p-12 text-center md:text-right w-full h-full pointer-events-none">
-                            <div className="w-full md:w-[40%] flex flex-col items-center md:items-end relative z-20 transform md:group-hover:-translate-x-4 transition-transform duration-500">
-
-                                <span className="inline-block py-1 pr-1 pl-3 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] md:mr-12">
+                        <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:pr-16 md:pl-12 text-center md:text-right w-full h-full pointer-events-none">
+                            <div className="w-full flex flex-col items-center md:items-end relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:-translate-x-4 transition-transform duration-500">
+                                <span className="inline-block py-1 px-4 text-[#037971] bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                                     /// EXPERTISE VÉGÉTALE
                                 </span>
 
-                                <h2 className="text-3xl md:text-7xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9] md:mr-12">
+                                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                     Espaces <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Verts</span>
                                 </h2>
-                                <ul className="hidden md:block text-green-50 text-xl font-medium space-y-1 mt-6 opacity-80 md:mr-12 text-right">
-                                    <li className="flex items-center justify-end gap-2">Élagage<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
-                                    <li className="flex items-center justify-end gap-2">Entretien Jardin<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
-                                    <li className="flex items-center justify-end gap-2">Paysagisme<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
+                                <ul className="hidden md:block text-green-50 text-base lg:text-lg font-medium space-y-1 mt-6 opacity-80 text-center md:text-right">
+                                    <li className="flex items-center justify-center md:justify-end gap-2">Élagage<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
+                                    <li className="flex items-center justify-center md:justify-end gap-2">Entretien Jardin<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
+                                    <li className="flex items-center justify-center md:justify-end gap-2">Paysagisme<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
                                 </ul>
-                                <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 md:mr-12 pointer-events-auto">
+                                <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                     <Link to="/espaces-verts" className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                         Découvrir
                                     </Link>

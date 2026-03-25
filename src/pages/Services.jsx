@@ -63,15 +63,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:pl-16 md:pr-12 text-center md:text-left w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
                                             /// ESPACES DE TRAVAIL
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Nettoyage <br /> Bureaux
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Open Space & Bureaux", "Sanitaires & Cuisines", "Vitrerie & Sols"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
@@ -108,15 +108,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-12 text-center w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[30%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
                                             /// HABITAT COLLECTIF
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Entretien <br /> Immeubles
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Halls & Escaliers", "Sortie Poubelles", "Parkings"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
@@ -153,15 +153,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#0241cd]/80 via-[#0241cd]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:pr-16 md:pl-12 text-center md:text-right w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#0241cd]">
                                             /// TRAVAUX TERMINÉS
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Fin de <br /> Chantier
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Évacuation Gravats", "Nettoyage Approfondi", "Remise à Neuf"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
@@ -203,15 +203,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/60 via-[#E71D36]/20 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:pl-16 md:pr-12 text-center md:text-left w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
                                             /// STOP RONGEURS
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Anti <br /> Nuisible
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Rat", "Souris", "Rongeur"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
@@ -221,7 +221,7 @@ const Services = ({ defaultTab }) => {
                                         </ul>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
-                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(231,29,54,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
                                     </div>
@@ -248,15 +248,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/60 via-[#E71D36]/20 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-12 text-center w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[30%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
                                             /// STOP INSECTES
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Désin<br />sectisation
+                                        <h2 className="text-3xl md:text-3xl lg:text-5xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.85]">
+                                            Désin-<br />secti-<br />sation
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Punaise de lit", "Cafard", "Frelon asiatique"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
@@ -266,7 +266,7 @@ const Services = ({ defaultTab }) => {
                                         </ul>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
-                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(231,29,54,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
                                     </div>
@@ -293,15 +293,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#E71D36]/60 via-[#E71D36]/20 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:pr-16 md:pl-12 text-center md:text-right w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#E71D36]">
                                             /// ASSAINISSEMENT
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
-                                            Désinfection
+                                        <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                            Désin-<br />fection
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Intérieur", "Extérieur"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
@@ -311,7 +311,7 @@ const Services = ({ defaultTab }) => {
                                         </ul>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
-                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
+                                        <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(231,29,54,0.3)] relative z-20 hover:scale-105">
                                             En découvrir plus
                                         </span>
                                     </div>
@@ -343,15 +343,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:pl-16 md:pr-12 text-center md:text-left w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// SOIN DES ARBRES
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Élagage <br className="hidden md:block" /> Expert
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Taille Douce", "Abattage Délicat", "Dessouchage"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
@@ -388,15 +388,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-12 text-center w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[30%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// PARCS & JARDINS
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Entretien <br className="hidden md:block" /> Jardin
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Tonte & Taille", "Débroussaillage", "Ramassage Feuilles"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
@@ -433,15 +433,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#037971]/80 via-[#037971]/40 to-gray-900/60 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:pr-16 md:pl-12 text-center md:text-right w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#037971]">
                                             /// CRÉATION PAYSAGÈRE
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Design <br className="hidden md:block" /> Paysager
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Massifs & Plantes", "Arrosage Auto", "Aménagement"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
@@ -483,15 +483,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-left items-center md:items-start pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start p-6 md:pl-16 md:pr-12 text-center md:text-left w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
                                             /// MONTAGE & ASSEMBLAGE
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Montage <br /> Expert
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Mobilier en Kit", "Fixation Murale", "Démontage"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-start gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
@@ -531,15 +531,15 @@ const Services = ({ defaultTab }) => {
                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-15">
                                     <img src={logoImg} alt="Watermark" className="w-[60%] h-auto object-contain" />
                                 </div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center items-center pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-6 md:p-12 text-center w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[30%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
                                             /// PEINTURE & FINITIONS
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Peinture <br /> Pro
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Murs & Plafonds", "Rénovation", "Décoration"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
@@ -576,15 +576,15 @@ const Services = ({ defaultTab }) => {
                                     fetchPriority="high"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-b from-[#F59E0B]/90 via-[#F59E0B]/40 to-gray-900/80 group-hover:opacity-90 transition-all duration-700"></div>
-                                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 text-center md:text-right items-center md:items-end pointer-events-none w-full h-full">
-                                    <div className="relative z-20 transform md:group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end p-6 md:pr-16 md:pl-12 text-center md:text-right w-full h-full pointer-events-none">
+                                    <div className="relative z-20 max-w-[85%] md:max-w-[32%] transform md:group-hover:scale-105 transition-transform duration-500">
                                         <span className="inline-block py-1 px-3 bg-white/90 backdrop-blur-md text-xs font-bold uppercase tracking-widest mb-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[#F59E0B]">
                                             /// HOMME DE MAIN
                                         </span>
-                                        <h2 className="text-3xl md:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
+                                        <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Multi-<br />Services
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
                                             {["Petit Bricolage", "Réparations", "Manutention"].map((feat, i) => (
                                                 <li key={i} className="flex items-center justify-center md:justify-end gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
@@ -723,7 +723,7 @@ const Services = ({ defaultTab }) => {
                                 <div
                                     className="
                                         relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                        flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                        flex flex-col justify-center items-center md:items-start p-8 md:pl-32 
                                         group z-10 hover:z-20
                                         md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                                         bg-gray-900 border-b md:border-b-0 border-gray-800
@@ -734,15 +734,13 @@ const Services = ({ defaultTab }) => {
                                     <div className="absolute inset-0 bg-gradient-to-br from-[#E71D36]/90 via-[#990a1b]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                     {/* Content */}
-                                    <div className="relative z-10 text-center md:text-left max-w-sm">
-                                        <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                            <TrendingUp size={32} />
-                                        </div>
-                                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                    <div className="relative z-10 text-center md:text-left max-w-[300px] md:max-w-[28%]">
+
+                                        <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                             Sanctions<br />Financières
                                         </h3>
-                                        <p className="text-red-100 font-medium text-lg leading-snug">
-                                            Amendements salubrité lourds, mises en demeure et coûts de remise en état <strong className="text-white border-b border-white/30">exorbitants</strong>.
+                                        <p className="text-red-100 font-medium text-base xl:text-lg leading-snug">
+                                            Amendements salubrité lourds,<br className="hidden md:block" /> mises en demeure<br className="hidden md:block" /> et coûts de remise en état<br className="hidden md:block" /> <strong className="text-white border-b border-white/30">exorbitants</strong>.
                                         </p>
                                     </div>
                                 </div>
@@ -762,14 +760,12 @@ const Services = ({ defaultTab }) => {
                                     <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#E71D36]/20 transition-all duration-700"></div>
 
                                     {/* Content */}
-                                    <div className="relative z-10 text-center max-w-sm mx-auto">
-                                        <div className="w-16 h-16 bg-[#E71D36]/20 rounded-2xl flex items-center justify-center text-[#E71D36] mb-6 mx-auto shadow-[0_0_20px_rgba(231,29,54,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#E71D36]/30">
-                                            <Skull size={32} />
-                                        </div>
-                                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                    <div className="relative z-10 text-center max-w-[300px] md:max-w-[28%] mx-auto">
+
+                                        <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                             Danger<br />Sanitaire
                                         </h3>
-                                        <p className="text-gray-300 font-medium text-lg leading-snug">
+                                        <p className="text-gray-300 font-medium text-base xl:text-lg leading-snug">
                                             Transmission de maladies graves et contamination de vos stocks <strong className="text-white border-b border-[#E71D36]/50">imperceptibles</strong> à l'œil nu.
                                         </p>
                                     </div>
@@ -779,7 +775,7 @@ const Services = ({ defaultTab }) => {
                                 <div
                                     className="
                                         relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                        flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                        flex flex-col justify-center items-center md:items-end p-8 md:pr-32 
                                         group z-10 hover:z-20
                                         md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                                         bg-gray-900
@@ -790,15 +786,13 @@ const Services = ({ defaultTab }) => {
                                     <div className="absolute inset-0 bg-gradient-to-bl from-[#E71D36]/90 via-[#990a1b]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                     {/* Content */}
-                                    <div className="relative z-10 text-center md:text-right max-w-sm">
-                                        <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                            <Store size={32} />
-                                        </div>
-                                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                    <div className="relative z-10 text-center md:text-right max-w-[300px] md:max-w-[28%]">
+
+                                        <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                             Fermeture &<br />Réputation
                                         </h3>
-                                        <p className="text-red-100 font-medium text-lg leading-snug">
-                                            Risque de fermeture administrative immédiate. Un seul avis client négatif peut détruire votre <strong className="text-white border-b border-white/30">e-réputation</strong>.
+                                        <p className="text-red-100 font-medium text-base xl:text-lg leading-snug">
+                                            Risque de fermeture administrative immédiate.<br className="hidden md:block" /> Un seul avis client négatif peut détruire<br className="hidden md:block" /> votre <strong className="text-white border-b border-white/30">e-réputation</strong>.
                                         </p>
                                     </div>
                                 </div>
@@ -1298,7 +1292,7 @@ const Services = ({ defaultTab }) => {
                                     <div
                                         className="
                                             relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-32 
                                             group z-10 hover:z-20
                                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                                             bg-gray-900 border-b md:border-b-0 border-gray-800
@@ -1309,14 +1303,12 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#037971]/90 via-[#025c56]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center md:text-left max-w-sm">
-                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                                <Scale size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        <div className="relative z-10 text-center md:text-left max-w-xs">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Code Civil<br />(Art. 671)
                                             </h3>
-                                            <p className="text-teal-100 font-medium text-lg leading-snug">
+                                            <p className="text-teal-100 font-medium text-base xl:text-lg leading-snug">
                                                 Tout arbre ou haie dépassant <strong className="text-white border-b border-white/30">2 mètres</strong> de hauteur doit être planté à distance réglementaire.
                                             </p>
                                         </div>
@@ -1337,14 +1329,12 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#037971]/20 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center max-w-sm mx-auto">
-                                            <div className="w-16 h-16 bg-[#037971]/20 rounded-2xl flex items-center justify-center text-[#037971] mb-6 mx-auto shadow-[0_0_20px_rgba(3,121,113,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#037971]/30">
-                                                <Bug size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        <div className="relative z-10 text-center max-w-xs mx-auto">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Nid à<br />Parasites
                                             </h3>
-                                            <p className="text-gray-300 font-medium text-lg leading-snug">
+                                            <p className="text-gray-300 font-medium text-base xl:text-lg leading-snug">
                                                 Une haie non entretenue devient l'habitat parfait pour les <strong className="text-white border-b border-[#037971]/50">rats et frelons</strong>.
                                             </p>
                                         </div>
@@ -1354,7 +1344,7 @@ const Services = ({ defaultTab }) => {
                                     <div
                                         className="
                                             relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-32 
                                             group z-10 hover:z-20
                                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                                             bg-gray-900
@@ -1365,15 +1355,13 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-bl from-[#037971]/90 via-[#025c56]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center md:text-right max-w-sm">
-                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                                <Gavel size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        <div className="relative z-10 text-center md:text-right max-w-xs">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Responsabilité<br />& Amendes
                                             </h3>
-                                            <p className="text-teal-100 font-medium text-lg leading-snug">
-                                                Empiéter sur la voie publique engage votre responsabilité épnale. Le maire peut ordonner un <strong className="text-white border-b border-white/30">élagage d'office</strong>.
+                                            <p className="text-teal-100 font-medium text-base xl:text-lg leading-snug">
+                                                Empiéter sur la voie publique engage votre responsabilité <strong className="text-white border-b border-white/30">pénale</strong>. Le maire peut ordonner un élagage d'office.
                                             </p>
                                         </div>
                                     </div>
@@ -1725,7 +1713,7 @@ const Services = ({ defaultTab }) => {
                                     <div
                                         className="
                                             relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-32 
                                             group z-10 hover:z-20
                                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                                             bg-gray-900 border-b md:border-b-0 border-gray-800
@@ -1736,14 +1724,12 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#0241cd]/90 via-[#012a8a]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center md:text-left max-w-sm">
-                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                                <Trophy size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        <div className="relative z-10 text-center md:text-left max-w-xs">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Image de<br />Marque
                                             </h3>
-                                            <p className="text-blue-100 font-medium text-lg leading-snug">
+                                            <p className="text-blue-100 font-medium text-base xl:text-lg leading-snug">
                                                 Une propreté irréprochable inspire instantanément <strong className="text-white border-b border-white/30">confiance et sérieux</strong> à vos clients et partenaires.
                                             </p>
                                         </div>
@@ -1764,14 +1750,13 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#0241cd]/20 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center max-w-sm mx-auto">
-                                            <div className="w-16 h-16 bg-[#0241cd]/20 rounded-2xl flex items-center justify-center text-[#0241cd] mb-6 mx-auto shadow-[0_0_20px_rgba(2,65,205,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#0241cd]/30">
-                                                <Users size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center max-w-xs mx-auto">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Bien-être &<br />Productivité
                                             </h3>
-                                            <p className="text-gray-300 font-medium text-lg leading-snug">
+                                            <p className="text-gray-300 font-medium text-base xl:text-lg leading-snug">
                                                 Un environnement sain et ordonné <strong className="text-white border-b border-[#0241cd]/50">réduit le stress</strong> et favorise la concentration de vos équipes.
                                             </p>
                                         </div>
@@ -1781,7 +1766,7 @@ const Services = ({ defaultTab }) => {
                                     <div
                                         className="
                                             relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-32 
                                             group z-10 hover:z-20
                                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                                             bg-gray-900
@@ -1792,14 +1777,12 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-bl from-[#0241cd]/90 via-[#012a8a]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center md:text-right max-w-sm">
-                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                                <HeartPulse size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        <div className="relative z-10 text-center md:text-right max-w-xs">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Santé &<br />Hygiène
                                             </h3>
-                                            <p className="text-blue-100 font-medium text-lg leading-snug">
+                                            <p className="text-blue-100 font-medium text-base xl:text-lg leading-snug">
                                                 Un entretien régulier des points de contact <strong className="text-white border-b border-white/30">réduit l'absentéisme</strong> et protège la santé de tous.
                                             </p>
                                         </div>
@@ -2000,7 +1983,7 @@ const Services = ({ defaultTab }) => {
                                     <div
                                         className="
                                             relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-20 
+                                            flex flex-col justify-center items-center md:items-start p-8 md:pl-32 
                                             group z-10 hover:z-20
                                             md:[clip-path:polygon(0_0,_36%_0,_32%_50%,_35%_50%,_31%_100%,_0_100%)]
                                             bg-gray-900 border-b md:border-b-0 border-gray-800
@@ -2011,14 +1994,12 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#F59E0B]/90 via-[#d97706]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center md:text-left max-w-sm">
-                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                                <HardHat size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        <div className="relative z-10 text-center md:text-left max-w-xs">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Risque de<br />Blessure
                                             </h3>
-                                            <p className="text-amber-100 font-medium text-lg leading-snug">
+                                            <p className="text-amber-100 font-medium text-base xl:text-lg leading-snug">
                                                 Chutes d'escabeau, coupures... Le bricolage est la <strong className="text-white border-b border-white/30">1ère cause</strong> d'accidents domestiques en France.
                                             </p>
                                         </div>
@@ -2039,14 +2020,13 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-black/80 group-hover:from-[#F59E0B]/20 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center max-w-sm mx-auto">
-                                            <div className="w-16 h-16 bg-[#F59E0B]/20 rounded-2xl flex items-center justify-center text-[#F59E0B] mb-6 mx-auto shadow-[0_0_20px_rgba(245,158,11,0.2)] group-hover:scale-110 transition-transform duration-300 border border-[#F59E0B]/30">
-                                                <Award size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        {/* Content */}
+                                        <div className="relative z-10 text-center max-w-xs mx-auto">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Finitions<br />Hasardeuses
                                             </h3>
-                                            <p className="text-gray-300 font-medium text-lg leading-snug">
+                                            <p className="text-gray-300 font-medium text-base xl:text-lg leading-snug">
                                                 Un résultat amateur peut dévaloriser votre bien. Optez pour des <strong className="text-white border-b border-[#F59E0B]/50">finitions impeccables</strong> et durables.
                                             </p>
                                         </div>
@@ -2056,7 +2036,7 @@ const Services = ({ defaultTab }) => {
                                     <div
                                         className="
                                             relative w-full h-[350px] md:absolute md:inset-0 md:h-full 
-                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-20
+                                            flex flex-col justify-center items-center md:items-end p-8 md:pr-32 
                                             group z-10 hover:z-20
                                             md:[clip-path:polygon(71%_0,_100%_0,_100%_100%,_66%_100%,_70%_50%,_67%_50%)]
                                             bg-gray-900
@@ -2067,15 +2047,13 @@ const Services = ({ defaultTab }) => {
                                         <div className="absolute inset-0 bg-gradient-to-bl from-[#F59E0B]/90 via-[#d97706]/80 to-gray-900/90 group-hover:opacity-100 transition-all duration-700"></div>
 
                                         {/* Content */}
-                                        <div className="relative z-10 text-center md:text-right max-w-sm">
-                                            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto md:ml-auto shadow-[0_0_20px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform duration-300">
-                                                <BadgeEuro size={32} />
-                                            </div>
-                                            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
+                                        <div className="relative z-10 text-center md:text-right max-w-xs">
+
+                                            <h3 className="text-xl md:text-2xl font-black text-white mb-4 uppercase tracking-tight">
                                                 Coût des<br />Outils
                                             </h3>
-                                            <p className="text-amber-100 font-medium text-lg leading-snug">
-                                                Pourquoi acheter une perceuse à 200€ pour 2 trous ? Nous venons <strong className="text-white border-b border-white/30">100% équipés</strong>.
+                                            <p className="text-amber-100 font-medium text-base xl:text-lg leading-snug">
+                                                Pourquoi acheter une<br className="hidden md:block" /> perceuse à 200€<br className="hidden md:block" /> pour 2 trous ?<br className="hidden md:block" /> Nous venons <strong className="text-white border-b border-white/30">100% équipés</strong>.
                                             </p>
                                         </div>
                                     </div>

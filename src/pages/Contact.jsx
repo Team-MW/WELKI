@@ -61,8 +61,8 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-1">Téléphone</p>
-                                <a href="tel:0608070696" className="text-2xl font-bold text-white hover:text-welki-green transition-colors block">
-                                    06.08.07.06.96
+                                <a href="tel:+33782729347" className="text-2xl font-bold text-white hover:text-welki-green transition-colors block">
+                                    +33 7 82 72 93 47
                                 </a>
                                 <p className="text-sm text-welki-green font-medium mt-1 flex items-center">
                                     <CheckCircle size={12} className="mr-1" /> 7j/7 pour urgences
@@ -76,8 +76,8 @@ const Contact = () => {
                             </div>
                             <div>
                                 <p className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-1">Email</p>
-                                <a href="mailto:WELKI@GMAIL.COM" className="text-lg font-bold text-white hover:text-welki-green transition-colors break-all block">
-                                    WELKI@GMAIL.COM
+                                <a href="mailto:welkifrance@gmail.com" className="text-lg font-bold text-white hover:text-welki-green transition-colors break-all block">
+                                    welkifrance@gmail.com
                                 </a>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                             <div>
                                 <p className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-1">Zone d'intervention</p>
                                 <p className="text-lg font-medium text-white">
-                                    Paris et Île-de-France
+                                    Toulouse et ses environs
                                 </p>
                             </div>
                         </div>

@@ -82,14 +82,22 @@ const Header = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         <div className="flex-shrink-0 flex items-center">
-                            <Link to="/" className="flex items-center gap-2 group relative">
-                                <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <img
-                                    src={logoImg}
-                                    alt="WELKI Logo"
-                                    className="h-10 w-auto object-contain relative z-10 transition-transform duration-300 group-hover:scale-105"
-                                />
-                            </Link>
+                            <Link to="/" className="flex items-center gap-3 group relative">
+                                    {/* Themed Logo using Mask for color control */}
+                                    <div 
+                                        className={`h-10 w-32 md:w-40 ${theme.bg} transition-all duration-500 group-hover:scale-105`}
+                                        style={{
+                                            WebkitMaskImage: `url(${logoImg})`,
+                                            maskImage: `url(${logoImg})`,
+                                            WebkitMaskSize: 'contain',
+                                            maskSize: 'contain',
+                                            WebkitMaskRepeat: 'no-repeat',
+                                            maskRepeat: 'no-repeat',
+                                            WebkitMaskPosition: 'left center'
+                                        }}
+                                        aria-label="WELKI Logo"
+                                    />
+                                </Link>
                         </div>
 
                         {/* Desktop Menu - Visible on Large Screens */}
@@ -197,8 +205,8 @@ const Header = () => {
 
                                 <div className="mt-8 p-8 bg-gray-900/30 rounded-3xl border border-blue-900/30 text-center flex flex-col items-center justify-center flex-grow max-h-[250px]">
                                     <p className="text-gray-400 font-medium mb-4">Une urgence ?</p>
-                                    <a href="tel:0608070696" className="block text-3xl md:text-4xl font-black text-[#0241cd] hover:scale-105 transition-transform tracking-wider">
-                                        06.08.07.06.96
+                                    <a href="tel:+33782729347" className="block text-3xl md:text-4xl font-black text-[#0241cd] hover:scale-105 transition-transform tracking-wider">
+                                        +33 7 82 72 93 47
                                     </a>
                                 </div>
                             </div>

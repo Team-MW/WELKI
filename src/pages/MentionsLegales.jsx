@@ -12,21 +12,25 @@ const MentionsLegales = () => {
                     <h2 className="text-xl font-bold mb-4 text-white">1. Éditeur du site</h2>
                     <p className="mb-6">
                         Le présent site est la propriété de l'entreprise <strong className="text-white">WELKI</strong>.<br />
-                        <strong className="text-white">Siège social :</strong> [Adresse complète à compléter]<br />
-                        <strong className="text-white">Téléphone :</strong> 06.08.07.06.96<br />
-                        <strong className="text-white">Email :</strong> WELKI@GMAIL.COM<br />
-                        <strong className="text-white">SIRET :</strong> [Numéro SIRET à compléter]
+                        <strong className="text-white">Forme juridique :</strong> Société par actions simplifiée (Société à associé unique)<br />
+                        <strong className="text-white">Capital social :</strong> 1 000,00 Euros<br />
+                        <strong className="text-white">Siège social :</strong> 26 chemin Azais 31100 Toulouse<br />
+                        <strong className="text-white">Immatriculation :</strong> 934 772 344 R.C.S. Toulouse<br />
+                        <strong className="text-white">Téléphone :</strong> <a href="tel:+33782729347" className="hover:text-white transition-colors underline">+33 7 82 72 93 47</a><br />
+                        <strong className="text-white">Email :</strong> <a href="mailto:welkifrance@gmail.com" className="hover:text-white transition-colors underline">welkifrance@gmail.com</a><br />
+                        <strong className="text-white">Activités :</strong> Nettoyage courant des bâtiments, homme toutes mains, entretien des parcs et jardins, agents et hôtesses d'accueil, sécurité incendie, désinfection, dératisation et désinsectisation, élimination de nuisibles.<br />
                     </p>
 
                     <h2 className="text-xl font-bold mb-4 text-white">2. Directeur de la publication</h2>
                     <p className="mb-6">
-                        Le directeur de la publication du site est [Nom du dirigeant].
+                        Le directeur de la publication du site est <strong className="text-white">Mr FEROUANI Yassine</strong>, en sa qualité de Président.<br />
+                        <strong className="text-white">Adresse de gestion :</strong> 54 rue Jean Lebas, 31400 Toulouse.
                     </p>
 
                     <h2 className="text-xl font-bold mb-4 text-white">3. Hébergement</h2>
                     <p className="mb-6">
-                        Le site est hébergé par [Nom de l'hébergeur - ex: Vercel, Netlify, OVH],<br />
-                        [Adresse de l'hébergeur].
+                        Le site est hébergé par <strong className="text-white">Vercel Inc.</strong>,<br />
+                        440 N Barranca Ave #4133 Covina, CA 91723.
                     </p>
 
                     <h2 className="text-xl font-bold mb-4 text-white">4. Propriété intellectuelle</h2>
