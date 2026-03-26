@@ -792,7 +792,7 @@ const Services = ({ defaultTab }) => {
                                             Fermeture &<br />Réputation
                                         </h3>
                                         <p className="text-red-100 font-medium text-base xl:text-lg leading-snug">
-                                            Risque de fermeture administrative immédiate.<br className="hidden md:block" /> Un seul avis client négatif peut détruire<br className="hidden md:block" /> votre <strong className="text-white border-b border-white/30">e-réputation</strong>.
+                                            Risque de fermeture administrative immédiate.<br className="hidden md:block" /> Un seul avis client négatif peut<br /> détruire votre <strong className="text-white border-b border-white/30">e-réputation</strong>.
                                         </p>
                                     </div>
                                 </div>
