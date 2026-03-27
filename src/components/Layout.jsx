@@ -55,7 +55,14 @@ const Layout = ({ children, title, description }) => {
                             </div>
                             <div className="flex items-center justify-center gap-3">
                                 <span className="w-8 h-8 rounded-full bg-welki-green/10 flex items-center justify-center text-welki-green">📍</span>
-                                <span>26 chemin Azais, 31100 Toulouse</span>
+                                <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=26+chemin+Azais,+31100+Toulouse" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="hover:text-welki-green transition-colors"
+                                >
+                                    26 chemin Azais, 31100 Toulouse
+                                </a>
                             </div>
                         </div>
                         <Link to="/contact" className="mt-8 inline-flex items-center gap-2 bg-welki-green text-white px-8 py-3 rounded-xl font-bold hover:bg-welki-green/80 transition-all uppercase text-xs tracking-widest shadow-lg shadow-welki-green/20">

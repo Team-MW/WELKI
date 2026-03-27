@@ -137,7 +137,7 @@ const Header = () => {
                             >
                                 <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0deg_180deg,#037971_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite] opacity-100 transition-opacity duration-300"></div>
                                 <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_180deg,transparent_0deg_180deg,#E71D36_180deg_250deg,transparent_250deg_360deg)] animate-[spin_4s_linear_infinite_reverse] opacity-100 transition-opacity duration-300"></div>
-                                <div className="relative px-6 py-2.5 rounded-full bg-white text-gray-950 text-xs font-black uppercase tracking-wider border border-transparent transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                                <div className="relative px-6 py-2.5 rounded-full bg-[#F59E0B] text-gray-950 text-xs font-black uppercase tracking-wider border border-transparent transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
                                     Devis Express
                                 </div>
                             </Link>

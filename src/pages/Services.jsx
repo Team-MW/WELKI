@@ -6,12 +6,12 @@ import { ShieldAlert, Leaf, Sparkles, Bug, Rat, Droplets, Ruler, Scissors, Trash
 import { useSearchParams } from 'react-router-dom';
 import certibiocideImg from '../assets/certibiocide-1.png';
 import img3DMain from '../assets/full-shot-man-holding-disinfectant-tank.jpg';
-import img3DDisinfection from '../assets/unrecognizable-person-white-chemical-protection-suit-doing-disinfection-public-areas-stop-spreading-highly-contagious-corona-virus.jpg';
+import img3DDisinfection from '../assets/3d-disinfection.jpg';
 import imgGreenMain from '../assets/man-uniform-trimming-hedge-summer-time.jpg';
 
 import imgCleanMain from '../assets/full-shot-man-vacuuming-office-floor.jpg';
 import imgCafardBg from '../assets/cafard.jpg';
-import imgRatBg from '../assets/rat.jpg';
+import imgRatBg from '../assets/stop-rongeurs.jpg';
 
 import imgGreenBg from '../assets/espacevert.jpg';
 import imgCleanBg from '../assets/netoyagepro.jpg';
@@ -71,14 +71,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Nettoyage <br /> Bureaux
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Open Space & Bureaux", "Sanitaires & Cuisines", "Vitrerie & Sols"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center md:justify-start">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Open Space & Bureaux", "Sanitaires & Cuisines", "Vitrerie & Sols"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
@@ -116,14 +118,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Entretien <br /> Immeubles
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Halls & Escaliers", "Sortie Poubelles", "Parkings"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Halls & Escaliers", "Sortie Poubelles", "Parkings"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#0241cd] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
@@ -161,9 +165,9 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Fin de <br /> Chantier
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
                                             {["Évacuation Gravats", "Nettoyage Approfondi", "Remise à Neuf"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
+                                                <li key={i} className="flex items-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-300"></div>
                                                     {feat}
                                                 </li>
@@ -211,14 +215,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Anti <br /> Nuisible
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Rat", "Souris", "Rongeur"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center md:justify-start">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Rat", "Souris", "Rongeur"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(231,29,54,0.3)] relative z-20 hover:scale-105">
@@ -256,14 +262,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-3xl lg:text-5xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.85]">
                                             Désin-<br />secti-<br />sation
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Punaise de lit", "Cafard", "Frelon asiatique"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Punaise de lit", "Cafard", "Frelon asiatique"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#E71D36] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(231,29,54,0.3)] relative z-20 hover:scale-105">
@@ -301,9 +309,9 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Désin-<br />fection
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
                                             {["Intérieur", "Extérieur"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
+                                                <li key={i} className="flex items-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>
                                                     {feat}
                                                 </li>
@@ -351,14 +359,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Élagage <br className="hidden md:block" /> Expert
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Taille Douce", "Abattage Délicat", "Dessouchage"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center md:justify-start">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Taille Douce", "Abattage Délicat", "Dessouchage"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
@@ -396,14 +406,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Entretien <br className="hidden md:block" /> Jardin
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Tonte & Taille", "Débroussaillage", "Ramassage Feuilles"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Tonte & Taille", "Débroussaillage", "Ramassage Feuilles"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
@@ -441,9 +453,9 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Design <br className="hidden md:block" /> Paysager
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
                                             {["Massifs & Plantes", "Arrosage Auto", "Aménagement"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
+                                                <li key={i} className="flex items-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>
                                                     {feat}
                                                 </li>
@@ -491,14 +503,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Montage <br /> Expert
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Mobilier en Kit", "Fixation Murale", "Démontage"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-start gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center md:justify-start">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Mobilier en Kit", "Fixation Murale", "Démontage"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
@@ -539,14 +553,16 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Peinture <br /> Pro
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
-                                            {["Murs & Plafonds", "Rénovation", "Décoration"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center gap-2">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
-                                                    {feat}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="flex justify-center">
+                                            <ul className="hidden md:flex flex-col items-start text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
+                                                {["Murs & Plafonds", "Rénovation", "Décoration"].map((feat, i) => (
+                                                    <li key={i} className="flex items-center gap-2">
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
+                                                        {feat}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div className="hidden md:flex gap-4 mt-8 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                         <span className="px-8 py-3 bg-white text-[#F59E0B] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
@@ -584,9 +600,9 @@ const Services = ({ defaultTab }) => {
                                         <h2 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                             Multi-<br />Services
                                         </h2>
-                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80">
+                                        <ul className="hidden md:block text-white/90 text-base lg:text-lg font-medium space-y-1 opacity-80 text-left">
                                             {["Petit Bricolage", "Réparations", "Manutention"].map((feat, i) => (
-                                                <li key={i} className="flex items-center justify-center md:justify-end gap-2">
+                                                <li key={i} className="flex items-center gap-2">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-amber-300"></div>
                                                     {feat}
                                                 </li>

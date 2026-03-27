@@ -7,7 +7,7 @@ import certibiocideImg from '../assets/certibiocide-1.png';
 import franceSudOuestMap from '../assets/france-sud-ouest-map-nobg.png';
 import imgGreenHero from '../assets/man-uniform-trimming-hedge-summer-time.jpg';
 import imgCleanHero from '../assets/full-shot-man-vacuuming-office-floor.jpg';
-import img3DHero from '../assets/people-wearing-protective-equipment-disinfecting-dangerous-area.jpg';
+import img3DHero from '../assets/stop-rongeurs.jpg';
 import logoImg from '../assets/logo blanc.png';
 
 const Home = () => {
@@ -99,11 +99,13 @@ const Home = () => {
                                 <h2 className="text-3xl md:text-3xl lg:text-5xl font-black text-white mb-4 uppercase tracking-tighter drop-shadow-2xl leading-[0.85]">
                                     Anti-<br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-100 to-white">Nuisible</span>
                                 </h2>
-                                <ul className="hidden md:block text-red-50 text-base lg:text-lg font-medium space-y-1 mt-6 opacity-80">
-                                    <li className="flex items-center justify-center gap-2">Dératisation</li>
-                                    <li className="flex items-center justify-center gap-2">Désinsectisation</li>
-                                    <li className="flex items-center justify-center gap-2">Désinfection</li>
-                                </ul>
+                                <div className="flex justify-center md:justify-start">
+                                    <ul className="hidden md:flex flex-col items-start text-red-50 text-base lg:text-lg font-medium space-y-1 mt-6 opacity-80 text-left">
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Dératisation</li>
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Désinsectisation</li>
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-red-300"></div>Désinfection</li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 justify-center pointer-events-auto">
@@ -145,11 +147,13 @@ const Home = () => {
                                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-2 uppercase tracking-tighter drop-shadow-2xl leading-[0.9]">
                                     Espaces <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-green-100 to-white">Verts</span>
                                 </h2>
-                                <ul className="hidden md:block text-green-50 text-base lg:text-lg font-medium space-y-1 mt-6 opacity-80 text-center md:text-right">
-                                    <li className="flex items-center justify-center md:justify-end gap-2">Élagage<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
-                                    <li className="flex items-center justify-center md:justify-end gap-2">Entretien Jardin<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
-                                    <li className="flex items-center justify-center md:justify-end gap-2">Paysagisme<div className="w-1.5 h-1.5 rounded-full bg-green-300"></div></li>
-                                </ul>
+                                <div className="flex justify-center md:justify-end">
+                                    <ul className="hidden md:flex flex-col items-start text-green-50 text-base lg:text-lg font-medium space-y-1 mt-6 opacity-80 text-left">
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>Élagage</li>
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>Entretien Jardin</li>
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-300"></div>Paysagisme</li>
+                                    </ul>
+                                </div>
                                 <div className="hidden md:flex gap-4 mt-10 opacity-100 transform translate-y-0 transition-all duration-500 pointer-events-auto">
                                     <Link to="/espaces-verts" className="px-8 py-3 bg-white text-[#037971] font-bold text-sm rounded-xl hover:bg-gray-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] relative z-20 hover:scale-105">
                                         Découvrir

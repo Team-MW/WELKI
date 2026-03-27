@@ -87,10 +87,16 @@ const Contact = () => {
                                 <MapPin size={24} />
                             </div>
                             <div>
-                                <p className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-1">Zone d'intervention</p>
-                                <p className="text-lg font-medium text-white">
-                                    Toulouse et ses environs
-                                </p>
+                                <p className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-1">Notre Adresse</p>
+                                <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=26+chemin+Azais,+31100+Toulouse" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-lg font-medium text-white hover:text-welki-green transition-colors block"
+                                >
+                                    26 chemin Azais, 31100 Toulouse
+                                </a>
+                                <p className="text-sm text-gray-500 mt-1">Intervention Toulouse & environs</p>
                             </div>
                         </div>
                     </div>

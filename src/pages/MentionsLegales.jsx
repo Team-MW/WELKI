@@ -14,7 +14,7 @@ const MentionsLegales = () => {
                         Le présent site est la propriété de l'entreprise <strong className="text-white">WELKI</strong>.<br />
                         <strong className="text-white">Forme juridique :</strong> Société par actions simplifiée (Société à associé unique)<br />
                         <strong className="text-white">Capital social :</strong> 1 000,00 Euros<br />
-                        <strong className="text-white">Siège social :</strong> 26 chemin Azais 31100 Toulouse<br />
+                        <strong className="text-white">Siège social :</strong> <a href="https://www.google.com/maps/search/?api=1&query=26+chemin+Azais,+31100+Toulouse" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">26 chemin Azais 31100 Toulouse</a><br />
                         <strong className="text-white">Immatriculation :</strong> 934 772 344 R.C.S. Toulouse<br />
                         <strong className="text-white">Téléphone :</strong> <a href="tel:+33782729347" className="hover:text-white transition-colors underline">+33 7 82 72 93 47</a><br />
                         <strong className="text-white">Email :</strong> <a href="mailto:welkifrance@gmail.com" className="hover:text-white transition-colors underline">welkifrance@gmail.com</a><br />
